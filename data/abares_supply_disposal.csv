@@ -1,0 +1,1621 @@
+crop,marketing_year,item,sub_item,year,year_start,status,kt
+Wheat,Oct–Sep,production,,1989-90,1989,final,14214.6
+Wheat,Oct–Sep,production,,1990-91,1990,final,15066.1
+Wheat,Oct–Sep,production,,1991-92,1991,final,10557.3
+Wheat,Oct–Sep,production,,1992-93,1992,final,14738.7
+Wheat,Oct–Sep,production,,1993-94,1993,final,16479.2
+Wheat,Oct–Sep,production,,1994-95,1994,final,8961.4
+Wheat,Oct–Sep,production,,1995-96,1995,final,16503.9
+Wheat,Oct–Sep,production,,1996-97,1996,final,22924.2
+Wheat,Oct–Sep,production,,1997-98,1997,final,19226.7
+Wheat,Oct–Sep,production,,1998-99,1998,final,21464.8
+Wheat,Oct–Sep,production,,1999-00,1999,final,24757.4
+Wheat,Oct–Sep,production,,2000-01,2000,final,22108.2
+Wheat,Oct–Sep,production,,2001-02,2001,final,24299.4
+Wheat,Oct–Sep,production,,2002-03,2002,final,10131.8
+Wheat,Oct–Sep,production,,2003-04,2003,final,26131.8
+Wheat,Oct–Sep,production,,2004-05,2004,final,21905.1
+Wheat,Oct–Sep,production,,2005-06,2005,final,25150.4
+Wheat,Oct–Sep,production,,2006-07,2006,final,10821.7
+Wheat,Oct–Sep,production,,2007-08,2007,final,13569.4
+Wheat,Oct–Sep,production,,2008-09,2008,final,21420.1
+Wheat,Oct–Sep,production,,2009-10,2009,final,21834.0
+Wheat,Oct–Sep,production,,2010-11,2010,final,27410.0
+Wheat,Oct–Sep,production,,2011-12,2011,final,29905.009
+Wheat,Oct–Sep,production,,2012-13,2012,final,22855.166
+Wheat,Oct–Sep,production,,2013-14,2013,final,25302.707
+Wheat,Oct–Sep,production,,2014-15,2014,final,23742.56
+Wheat,Oct–Sep,production,,2015-16,2015,final,22274.514
+Wheat,Oct–Sep,production,,2016-17,2016,final,31818.744
+Wheat,Oct–Sep,production,,2017-18,2017,final,20941.133
+Wheat,Oct–Sep,production,,2018-19,2018,final,17597.561
+Wheat,Oct–Sep,production,,2019-20,2019,final,14480.217
+Wheat,Oct–Sep,production,,2020-21,2020,final,31922.555
+Wheat,Oct–Sep,production,,2021-22,2021,final,36237.477
+Wheat,Oct–Sep,production,,2022-23,2022,estimate,40545.42
+Wheat,Oct–Sep,production,,2023-24,2023,estimate,25960.0
+Wheat,Oct–Sep,production,,2024-25,2024,estimate,34110.0
+Wheat,Oct–Sep,domestic_use,,1989-90,1989,final,2416.801
+Wheat,Oct–Sep,domestic_use,,1990-91,1990,final,3343.459
+Wheat,Oct–Sep,domestic_use,,1991-92,1991,final,4152.236
+Wheat,Oct–Sep,domestic_use,,1992-93,1992,final,2794.077
+Wheat,Oct–Sep,domestic_use,,1993-94,1993,final,3959.136
+Wheat,Oct–Sep,domestic_use,,1994-95,1994,final,3935.681
+Wheat,Oct–Sep,domestic_use,,1995-96,1995,final,4167.249
+Wheat,Oct–Sep,domestic_use,,1996-97,1996,final,3584.326
+Wheat,Oct–Sep,domestic_use,,1997-98,1997,final,4207.388
+Wheat,Oct–Sep,domestic_use,,1998-99,1998,final,4606.533
+Wheat,Oct–Sep,domestic_use,,1999-00,1999,final,5064.813
+Wheat,Oct–Sep,domestic_use,,2000-01,2000,final,5073.655
+Wheat,Oct–Sep,domestic_use,,2001-02,2001,final,5258.311
+Wheat,Oct–Sep,domestic_use,,2002-03,2002,final,6312.934
+Wheat,Oct–Sep,domestic_use,,2003-04,2003,final,5537.031
+Wheat,Oct–Sep,domestic_use,,2004-05,2004,final,6312.3
+Wheat,Oct–Sep,domestic_use,,2005-06,2005,final,6952.698
+Wheat,Oct–Sep,domestic_use,,2006-07,2006,final,7717.753
+Wheat,Oct–Sep,domestic_use,,2007-08,2007,final,6796.289
+Wheat,Oct–Sep,domestic_use,,2008-09,2008,final,7552.817
+Wheat,Oct–Sep,domestic_use,,2009-10,2009,final,5138.09
+Wheat,Oct–Sep,domestic_use,,2010-11,2010,final,5793.229
+Wheat,Oct–Sep,domestic_use,,2011-12,2011,final,6402.721
+Wheat,Oct–Sep,domestic_use,,2012-13,2012,final,6509.146
+Wheat,Oct–Sep,domestic_use,,2013-14,2013,final,6825.42
+Wheat,Oct–Sep,domestic_use,,2014-15,2014,final,7185.376
+Wheat,Oct–Sep,domestic_use,,2015-16,2015,final,7230.802
+Wheat,Oct–Sep,domestic_use,,2016-17,2016,final,7755.959
+Wheat,Oct–Sep,domestic_use,,2017-18,2017,final,8690.114
+Wheat,Oct–Sep,domestic_use,,2018-19,2018,final,9083.159
+Wheat,Oct–Sep,domestic_use,,2019-20,2019,final,8732.161
+Wheat,Oct–Sep,domestic_use,,2020-21,2020,final,7736.413
+Wheat,Oct–Sep,domestic_use,,2021-22,2021,final,8362.25
+Wheat,Oct–Sep,domestic_use,,2022-23,2022,estimate,7738.62
+Wheat,Oct–Sep,domestic_use,,2023-24,2023,estimate,8483.0
+Wheat,Oct–Sep,domestic_use,,2024-25,2024,estimate,9260.6
+Wheat,Oct–Sep,domestic_use,seed,1989-90,1989,final,414.819
+Wheat,Oct–Sep,domestic_use,seed,1990-91,1990,final,323.235
+Wheat,Oct–Sep,domestic_use,seed,1991-92,1991,final,372.362
+Wheat,Oct–Sep,domestic_use,seed,1992-93,1992,final,377.24
+Wheat,Oct–Sep,domestic_use,seed,1993-94,1993,final,355.077
+Wheat,Oct–Sep,domestic_use,seed,1994-95,1994,final,414.936
+Wheat,Oct–Sep,domestic_use,seed,1995-96,1995,final,492.098
+Wheat,Oct–Sep,domestic_use,seed,1996-97,1996,final,469.827
+Wheat,Oct–Sep,domestic_use,seed,1997-98,1997,final,519.417
+Wheat,Oct–Sep,domestic_use,seed,1998-99,1998,final,547.542
+Wheat,Oct–Sep,domestic_use,seed,1999-00,1999,final,546.359
+Wheat,Oct–Sep,domestic_use,seed,2000-01,2000,final,518.819
+Wheat,Oct–Sep,domestic_use,seed,2001-02,2001,final,502.664
+Wheat,Oct–Sep,domestic_use,seed,2002-03,2002,final,588.02
+Wheat,Oct–Sep,domestic_use,seed,2003-04,2003,final,669.97
+Wheat,Oct–Sep,domestic_use,seed,2004-05,2004,final,622.13
+Wheat,Oct–Sep,domestic_use,seed,2005-06,2005,final,589.895
+Wheat,Oct–Sep,domestic_use,seed,2006-07,2006,final,628.91
+Wheat,Oct–Sep,domestic_use,seed,2007-08,2007,final,676.51
+Wheat,Oct–Sep,domestic_use,seed,2008-09,2008,final,694.055
+Wheat,Oct–Sep,domestic_use,seed,2009-10,2009,final,675.09
+Wheat,Oct–Sep,domestic_use,seed,2010-11,2010,final,695.107
+Wheat,Oct–Sep,domestic_use,seed,2011-12,2011,final,648.962
+Wheat,Oct–Sep,domestic_use,seed,2012-13,2012,final,630.654
+Wheat,Oct–Sep,domestic_use,seed,2013-14,2013,final,619.184
+Wheat,Oct–Sep,domestic_use,seed,2014-15,2014,final,564.11
+Wheat,Oct–Sep,domestic_use,seed,2015-16,2015,final,609.558
+Wheat,Oct–Sep,domestic_use,seed,2016-17,2016,final,545.959
+Wheat,Oct–Sep,domestic_use,seed,2017-18,2017,final,520.114
+Wheat,Oct–Sep,domestic_use,seed,2018-19,2018,final,493.159
+Wheat,Oct–Sep,domestic_use,seed,2019-20,2019,final,632.161
+Wheat,Oct–Sep,domestic_use,seed,2020-21,2020,final,636.413
+Wheat,Oct–Sep,domestic_use,seed,2021-22,2021,final,652.25
+Wheat,Oct–Sep,domestic_use,seed,2022-23,2022,estimate,618.62
+Wheat,Oct–Sep,domestic_use,seed,2023-24,2023,estimate,653.0
+Wheat,Oct–Sep,domestic_use,seed,2024-25,2024,estimate,620.6
+Wheat,Oct–Sep,domestic_use,other,1989-90,1989,final,2001.982
+Wheat,Oct–Sep,domestic_use,other,1990-91,1990,final,3020.224
+Wheat,Oct–Sep,domestic_use,other,1991-92,1991,final,3779.875
+Wheat,Oct–Sep,domestic_use,other,1992-93,1992,final,2416.838
+Wheat,Oct–Sep,domestic_use,other,1993-94,1993,final,3604.059
+Wheat,Oct–Sep,domestic_use,other,1994-95,1994,final,3520.745
+Wheat,Oct–Sep,domestic_use,other,1995-96,1995,final,3675.151
+Wheat,Oct–Sep,domestic_use,other,1996-97,1996,final,3114.499
+Wheat,Oct–Sep,domestic_use,other,1997-98,1997,final,3687.971
+Wheat,Oct–Sep,domestic_use,other,1998-99,1998,final,4058.991
+Wheat,Oct–Sep,domestic_use,other,1999-00,1999,final,4518.455
+Wheat,Oct–Sep,domestic_use,other,2000-01,2000,final,4554.837
+Wheat,Oct–Sep,domestic_use,other,2001-02,2001,final,4755.647
+Wheat,Oct–Sep,domestic_use,other,2002-03,2002,final,5724.915
+Wheat,Oct–Sep,domestic_use,other,2003-04,2003,final,4867.061
+Wheat,Oct–Sep,domestic_use,other,2004-05,2004,final,5690.17
+Wheat,Oct–Sep,domestic_use,other,2005-06,2005,final,6362.803
+Wheat,Oct–Sep,domestic_use,other,2006-07,2006,final,7088.843
+Wheat,Oct–Sep,domestic_use,other,2007-08,2007,final,6119.779
+Wheat,Oct–Sep,domestic_use,other,2008-09,2008,final,6858.762
+Wheat,Oct–Sep,domestic_use,other,2009-10,2009,final,4463.0
+Wheat,Oct–Sep,domestic_use,other,2010-11,2010,final,5098.122
+Wheat,Oct–Sep,domestic_use,other,2011-12,2011,final,5753.759
+Wheat,Oct–Sep,domestic_use,other,2012-13,2012,final,5878.492
+Wheat,Oct–Sep,domestic_use,other,2013-14,2013,final,6206.237
+Wheat,Oct–Sep,domestic_use,other,2014-15,2014,final,6621.266
+Wheat,Oct–Sep,domestic_use,other,2015-16,2015,final,6621.244
+Wheat,Oct–Sep,domestic_use,other,2016-17,2016,final,7210.0
+Wheat,Oct–Sep,domestic_use,other,2017-18,2017,final,8170.0
+Wheat,Oct–Sep,domestic_use,other,2018-19,2018,final,8590.0
+Wheat,Oct–Sep,domestic_use,other,2019-20,2019,final,8100.0
+Wheat,Oct–Sep,domestic_use,other,2020-21,2020,final,7100.0
+Wheat,Oct–Sep,domestic_use,other,2021-22,2021,final,7710.0
+Wheat,Oct–Sep,domestic_use,other,2022-23,2022,estimate,7120.0
+Wheat,Oct–Sep,domestic_use,other,2023-24,2023,estimate,7830.0
+Wheat,Oct–Sep,domestic_use,other,2024-25,2024,estimate,8640.0
+Wheat,Oct–Sep,exports,,1989-90,1989,final,10936.685
+Wheat,Oct–Sep,exports,,1990-91,1990,final,11948.953
+Wheat,Oct–Sep,exports,,1991-92,1991,final,7077.106
+Wheat,Oct–Sep,exports,,1992-93,1992,final,10296.286
+Wheat,Oct–Sep,exports,,1993-94,1993,final,13762.605
+Wheat,Oct–Sep,exports,,1994-95,1994,final,6310.692
+Wheat,Oct–Sep,exports,,1995-96,1995,final,13227.187
+Wheat,Oct–Sep,exports,,1996-97,1996,final,19069.231
+Wheat,Oct–Sep,exports,,1997-98,1997,final,15519.315
+Wheat,Oct–Sep,exports,,1998-99,1998,final,16193.879
+Wheat,Oct–Sep,exports,,1999-00,1999,final,17598.81
+Wheat,Oct–Sep,exports,,2000-01,2000,final,15887.732
+Wheat,Oct–Sep,exports,,2001-02,2001,final,16075.104
+Wheat,Oct–Sep,exports,,2002-03,2002,final,8926.48
+Wheat,Oct–Sep,exports,,2003-04,2003,final,17582.065
+Wheat,Oct–Sep,exports,,2004-05,2004,final,14349.445
+Wheat,Oct–Sep,exports,,2005-06,2005,final,15670.256
+Wheat,Oct–Sep,exports,,2006-07,2006,final,8406.414
+Wheat,Oct–Sep,exports,,2007-08,2007,final,7197.15
+Wheat,Oct–Sep,exports,,2008-09,2008,final,14567.696
+Wheat,Oct–Sep,exports,,2009-10,2009,final,14660.661
+Wheat,Oct–Sep,exports,,2010-11,2010,final,18514.888
+Wheat,Oct–Sep,exports,,2011-12,2011,final,24597.887
+Wheat,Oct–Sep,exports,,2012-13,2012,final,18603.854
+Wheat,Oct–Sep,exports,,2013-14,2013,final,18580.527
+Wheat,Oct–Sep,exports,,2014-15,2014,final,16542.971
+Wheat,Oct–Sep,exports,,2015-16,2015,final,16082.755
+Wheat,Oct–Sep,exports,,2016-17,2016,final,22605.442
+Wheat,Oct–Sep,exports,,2017-18,2017,final,13789.692
+Wheat,Oct–Sep,exports,,2018-19,2018,final,8961.099
+Wheat,Oct–Sep,exports,,2019-20,2019,final,9108.13
+Wheat,Oct–Sep,exports,,2020-21,2020,final,23697.109
+Wheat,Oct–Sep,exports,,2021-22,2021,final,27484.674
+Wheat,Oct–Sep,exports,,2022-23,2022,estimate,31800.105
+Wheat,Oct–Sep,exports,,2023-24,2023,estimate,19733.161
+Wheat,Oct–Sep,exports,,2024-25,2024,estimate,23511.241
+Wheat,Oct–Sep,imports,,1989-90,1989,final,0.0
+Wheat,Oct–Sep,imports,,1990-91,1990,final,0.018
+Wheat,Oct–Sep,imports,,1991-92,1991,final,0.147
+Wheat,Oct–Sep,imports,,1992-93,1992,final,0.145
+Wheat,Oct–Sep,imports,,1993-94,1993,final,0.151
+Wheat,Oct–Sep,imports,,1994-95,1994,final,0.077
+Wheat,Oct–Sep,imports,,1995-96,1995,final,0.664
+Wheat,Oct–Sep,imports,,1996-97,1996,final,0.752
+Wheat,Oct–Sep,imports,,1997-98,1997,final,0.894
+Wheat,Oct–Sep,imports,,1998-99,1998,final,0.904
+Wheat,Oct–Sep,imports,,1999-00,1999,final,0.763
+Wheat,Oct–Sep,imports,,2000-01,2000,final,0.025
+Wheat,Oct–Sep,imports,,2001-02,2001,final,0.096
+Wheat,Oct–Sep,imports,,2002-03,2002,final,299.109
+Wheat,Oct–Sep,imports,,2003-04,2003,final,0.079
+Wheat,Oct–Sep,imports,,2004-05,2004,final,0.073
+Wheat,Oct–Sep,imports,,2005-06,2005,final,0.016
+Wheat,Oct–Sep,imports,,2006-07,2006,final,0.033
+Wheat,Oct–Sep,imports,,2007-08,2007,final,0.243
+Wheat,Oct–Sep,imports,,2008-09,2008,final,0.037
+Wheat,Oct–Sep,imports,,2009-10,2009,final,0.079
+Wheat,Oct–Sep,imports,,2010-11,2010,final,0.91
+Wheat,Oct–Sep,imports,,2011-12,2011,final,1.161
+Wheat,Oct–Sep,imports,,2012-13,2012,final,1.683
+Wheat,Oct–Sep,imports,,2013-14,2013,final,1.742
+Wheat,Oct–Sep,imports,,2014-15,2014,final,1.215
+Wheat,Oct–Sep,imports,,2015-16,2015,final,1.372
+Wheat,Oct–Sep,imports,,2016-17,2016,final,0.954
+Wheat,Oct–Sep,imports,,2017-18,2017,final,1.22
+Wheat,Oct–Sep,imports,,2018-19,2018,final,305.15
+Wheat,Oct–Sep,imports,,2019-20,2019,final,665.951
+Wheat,Oct–Sep,imports,,2020-21,2020,final,1.104
+Wheat,Oct–Sep,imports,,2021-22,2021,final,0.843
+Wheat,Oct–Sep,imports,,2022-23,2022,estimate,0.05
+Wheat,Oct–Sep,imports,,2023-24,2023,estimate,0.031
+Wheat,Oct–Sep,imports,,2024-25,2024,estimate,0.076
+Canola,Nov–Oct,production,,1989-90,1989,final,78.157
+Canola,Nov–Oct,production,,1990-91,1990,final,98.4
+Canola,Nov–Oct,production,,1991-92,1991,final,170.448
+Canola,Nov–Oct,production,,1992-93,1992,final,177.902
+Canola,Nov–Oct,production,,1993-94,1993,final,305.02
+Canola,Nov–Oct,production,,1994-95,1994,final,263.892
+Canola,Nov–Oct,production,,1995-96,1995,final,557.054
+Canola,Nov–Oct,production,,1996-97,1996,final,623.239
+Canola,Nov–Oct,production,,1997-98,1997,final,855.36
+Canola,Nov–Oct,production,,1998-99,1998,final,1690.458
+Canola,Nov–Oct,production,,1999-00,1999,final,2458.674
+Canola,Nov–Oct,production,,2000-01,2000,final,1774.119
+Canola,Nov–Oct,production,,2001-02,2001,final,1755.863
+Canola,Nov–Oct,production,,2002-03,2002,final,870.059
+Canola,Nov–Oct,production,,2003-04,2003,final,1702.349
+Canola,Nov–Oct,production,,2004-05,2004,final,1542.318
+Canola,Nov–Oct,production,,2005-06,2005,final,1418.941
+Canola,Nov–Oct,production,,2006-07,2006,final,573.325
+Canola,Nov–Oct,production,,2007-08,2007,final,1214.374
+Canola,Nov–Oct,production,,2008-09,2008,final,1844.157
+Canola,Nov–Oct,production,,2009-10,2009,final,1907.272
+Canola,Nov–Oct,production,,2010-11,2010,final,2358.716
+Canola,Nov–Oct,production,,2011-12,2011,final,3427.293
+Canola,Nov–Oct,production,,2012-13,2012,final,4141.586
+Canola,Nov–Oct,production,,2013-14,2013,final,3831.909
+Canola,Nov–Oct,production,,2014-15,2014,final,3540.021
+Canola,Nov–Oct,production,,2015-16,2015,final,2775.479
+Canola,Nov–Oct,production,,2016-17,2016,final,4313.23
+Canola,Nov–Oct,production,,2017-18,2017,final,3893.069
+Canola,Nov–Oct,production,,2018-19,2018,final,2365.839
+Canola,Nov–Oct,production,,2019-20,2019,final,2298.529
+Canola,Nov–Oct,production,,2020-21,2020,final,4756.388
+Canola,Nov–Oct,production,,2021-22,2021,final,6820.287
+Canola,Nov–Oct,production,,2022-23,2022,estimate,8640.0
+Canola,Nov–Oct,production,,2023-24,2023,estimate,6050.0
+Canola,Nov–Oct,production,,2024-25,2024,estimate,6396.0
+Canola,Nov–Oct,domestic_use,,1989-90,1989,final,75.0
+Canola,Nov–Oct,domestic_use,,1990-91,1990,final,100.0
+Canola,Nov–Oct,domestic_use,,1991-92,1991,final,159.0
+Canola,Nov–Oct,domestic_use,,1992-93,1992,final,126.0
+Canola,Nov–Oct,domestic_use,,1993-94,1993,final,201.0
+Canola,Nov–Oct,domestic_use,,1994-95,1994,final,179.0
+Canola,Nov–Oct,domestic_use,,1995-96,1995,final,172.0
+Canola,Nov–Oct,domestic_use,,1996-97,1996,final,293.0
+Canola,Nov–Oct,domestic_use,,1997-98,1997,final,299.0
+Canola,Nov–Oct,domestic_use,,1998-99,1998,final,307.0
+Canola,Nov–Oct,domestic_use,,1999-00,1999,final,320.0
+Canola,Nov–Oct,domestic_use,,2000-01,2000,final,325.0
+Canola,Nov–Oct,domestic_use,,2001-02,2001,final,330.0
+Canola,Nov–Oct,domestic_use,,2002-03,2002,final,354.0
+Canola,Nov–Oct,domestic_use,,2003-04,2003,final,410.0
+Canola,Nov–Oct,domestic_use,,2004-05,2004,final,420.0
+Canola,Nov–Oct,domestic_use,,2005-06,2005,final,550.0
+Canola,Nov–Oct,domestic_use,,2006-07,2006,final,550.0
+Canola,Nov–Oct,domestic_use,,2007-08,2007,final,650.0
+Canola,Nov–Oct,domestic_use,,2008-09,2008,final,710.0
+Canola,Nov–Oct,domestic_use,,2009-10,2009,final,750.0
+Canola,Nov–Oct,domestic_use,,2010-11,2010,final,780.0
+Canola,Nov–Oct,domestic_use,,2011-12,2011,final,830.0
+Canola,Nov–Oct,domestic_use,,2012-13,2012,final,860.0
+Canola,Nov–Oct,domestic_use,,2013-14,2013,final,880.0
+Canola,Nov–Oct,domestic_use,,2014-15,2014,final,900.0
+Canola,Nov–Oct,domestic_use,,2015-16,2015,final,930.0
+Canola,Nov–Oct,domestic_use,,2016-17,2016,final,940.0
+Canola,Nov–Oct,domestic_use,,2017-18,2017,final,1000.0
+Canola,Nov–Oct,domestic_use,,2018-19,2018,final,1000.0
+Canola,Nov–Oct,domestic_use,,2019-20,2019,final,1050.0
+Canola,Nov–Oct,domestic_use,,2020-21,2020,final,1050.0
+Canola,Nov–Oct,domestic_use,,2021-22,2021,final,1150.0
+Canola,Nov–Oct,domestic_use,,2022-23,2022,estimate,1220.0
+Canola,Nov–Oct,domestic_use,,2023-24,2023,estimate,1225.0
+Canola,Nov–Oct,domestic_use,,2024-25,2024,estimate,1370.755
+Canola,Nov–Oct,exports,,1989-90,1989,final,0.013
+Canola,Nov–Oct,exports,,1990-91,1990,final,0.024
+Canola,Nov–Oct,exports,,1991-92,1991,final,10.571
+Canola,Nov–Oct,exports,,1992-93,1992,final,51.527
+Canola,Nov–Oct,exports,,1993-94,1993,final,103.353
+Canola,Nov–Oct,exports,,1994-95,1994,final,84.624
+Canola,Nov–Oct,exports,,1995-96,1995,final,384.431
+Canola,Nov–Oct,exports,,1996-97,1996,final,329.568
+Canola,Nov–Oct,exports,,1997-98,1997,final,554.753
+Canola,Nov–Oct,exports,,1998-99,1998,final,1355.578
+Canola,Nov–Oct,exports,,1999-00,1999,final,2033.9
+Canola,Nov–Oct,exports,,2000-01,2000,final,1392.227
+Canola,Nov–Oct,exports,,2001-02,2001,final,1380.108
+Canola,Nov–Oct,exports,,2002-03,2002,final,517.241
+Canola,Nov–Oct,exports,,2003-04,2003,final,1202.453
+Canola,Nov–Oct,exports,,2004-05,2004,final,892.415
+Canola,Nov–Oct,exports,,2005-06,2005,final,830.725
+Canola,Nov–Oct,exports,,2006-07,2006,final,228.374
+Canola,Nov–Oct,exports,,2007-08,2007,final,471.884
+Canola,Nov–Oct,exports,,2008-09,2008,final,1066.654
+Canola,Nov–Oct,exports,,2009-10,2009,final,1186.806
+Canola,Nov–Oct,exports,,2010-11,2010,final,1549.109
+Canola,Nov–Oct,exports,,2011-12,2011,final,2557.231
+Canola,Nov–Oct,exports,,2012-13,2012,final,3512.014
+Canola,Nov–Oct,exports,,2013-14,2013,final,2863.406
+Canola,Nov–Oct,exports,,2014-15,2014,final,2625.865
+Canola,Nov–Oct,exports,,2015-16,2015,final,1857.482
+Canola,Nov–Oct,exports,,2016-17,2016,final,3457.521
+Canola,Nov–Oct,exports,,2017-18,2017,final,2405.709
+Canola,Nov–Oct,exports,,2018-19,2018,final,1591.072
+Canola,Nov–Oct,exports,,2019-20,2019,final,1523.832
+Canola,Nov–Oct,exports,,2020-21,2020,final,3496.329
+Canola,Nov–Oct,exports,,2021-22,2021,final,5606.381
+Canola,Nov–Oct,exports,,2022-23,2022,estimate,6383.491
+Canola,Nov–Oct,exports,,2023-24,2023,estimate,5992.529
+Canola,Nov–Oct,exports,,2024-25,2024,estimate,5287.682
+Lupins,Nov–Oct,production,,1989-90,1989,final,772.018
+Lupins,Nov–Oct,production,,1990-91,1990,final,757.67
+Lupins,Nov–Oct,production,,1991-92,1991,final,1047.363
+Lupins,Nov–Oct,production,,1992-93,1992,final,1194.983
+Lupins,Nov–Oct,production,,1993-94,1993,final,1479.652
+Lupins,Nov–Oct,production,,1994-95,1994,final,1076.215
+Lupins,Nov–Oct,production,,1995-96,1995,final,1558.995
+Lupins,Nov–Oct,production,,1996-97,1996,final,1521.861
+Lupins,Nov–Oct,production,,1997-98,1997,final,1560.272
+Lupins,Nov–Oct,production,,1998-99,1998,final,1694.872
+Lupins,Nov–Oct,production,,1999-00,1999,final,1967.842
+Lupins,Nov–Oct,production,,2000-01,2000,final,1055.281
+Lupins,Nov–Oct,production,,2001-02,2001,final,1213.716
+Lupins,Nov–Oct,production,,2002-03,2002,final,725.881
+Lupins,Nov–Oct,production,,2003-04,2003,final,1180.663
+Lupins,Nov–Oct,production,,2004-05,2004,final,936.918
+Lupins,Nov–Oct,production,,2005-06,2005,final,1285.032
+Lupins,Nov–Oct,production,,2006-07,2006,final,470.326
+Lupins,Nov–Oct,production,,2007-08,2007,final,661.862
+Lupins,Nov–Oct,production,,2008-09,2008,final,707.775
+Lupins,Nov–Oct,production,,2009-10,2009,final,822.57
+Lupins,Nov–Oct,production,,2010-11,2010,final,807.672
+Lupins,Nov–Oct,production,,2011-12,2011,final,981.512
+Lupins,Nov–Oct,production,,2012-13,2012,final,458.7
+Lupins,Nov–Oct,production,,2013-14,2013,final,625.6
+Lupins,Nov–Oct,production,,2014-15,2014,final,549.1
+Lupins,Nov–Oct,production,,2015-16,2015,final,651.946
+Lupins,Nov–Oct,production,,2016-17,2016,final,1031.425
+Lupins,Nov–Oct,production,,2017-18,2017,final,714.254
+Lupins,Nov–Oct,production,,2018-19,2018,final,798.629
+Lupins,Nov–Oct,production,,2019-20,2019,final,591.146
+Lupins,Nov–Oct,production,,2020-21,2020,final,865.619
+Lupins,Nov–Oct,production,,2021-22,2021,final,957.52
+Lupins,Nov–Oct,production,,2022-23,2022,estimate,1100.8
+Lupins,Nov–Oct,production,,2023-24,2023,estimate,610.764
+Lupins,Nov–Oct,production,,2024-25,2024,estimate,778.0
+Field peas,Nov–Oct,production,,1989-90,1989,final,388.023
+Field peas,Nov–Oct,production,,1990-91,1990,final,318.068
+Field peas,Nov–Oct,production,,1991-92,1991,final,472.571
+Field peas,Nov–Oct,production,,1992-93,1992,final,456.311
+Field peas,Nov–Oct,production,,1993-94,1993,final,558.453
+Field peas,Nov–Oct,production,,1994-95,1994,final,240.407
+Field peas,Nov–Oct,production,,1995-96,1995,final,529.919
+Field peas,Nov–Oct,production,,1996-97,1996,final,454.615
+Field peas,Nov–Oct,production,,1997-98,1997,final,315.344
+Field peas,Nov–Oct,production,,1998-99,1998,final,370.282
+Field peas,Nov–Oct,production,,1999-00,1999,final,496.506
+Field peas,Nov–Oct,production,,2000-01,2000,final,455.877
+Field peas,Nov–Oct,production,,2001-02,2001,final,512.26
+Field peas,Nov–Oct,production,,2002-03,2002,final,178.425
+Field peas,Nov–Oct,production,,2003-04,2003,final,486.087
+Field peas,Nov–Oct,production,,2004-05,2004,final,289.137
+Field peas,Nov–Oct,production,,2005-06,2005,final,584.619
+Field peas,Nov–Oct,production,,2006-07,2006,final,140.346
+Field peas,Nov–Oct,production,,2007-08,2007,final,267.5
+Field peas,Nov–Oct,production,,2008-09,2008,final,238.139
+Field peas,Nov–Oct,production,,2009-10,2009,final,356.0
+Field peas,Nov–Oct,production,,2010-11,2010,final,394.675
+Field peas,Nov–Oct,production,,2011-12,2011,final,342.49
+Field peas,Nov–Oct,production,,2012-13,2012,final,319.68
+Field peas,Nov–Oct,production,,2013-14,2013,final,342.1
+Field peas,Nov–Oct,production,,2014-15,2014,final,290.4
+Field peas,Nov–Oct,production,,2015-16,2015,final,204.5
+Field peas,Nov–Oct,production,,2016-17,2016,final,415.186
+Field peas,Nov–Oct,production,,2017-18,2017,final,317.209
+Field peas,Nov–Oct,production,,2018-19,2018,final,159.556
+Field peas,Nov–Oct,production,,2019-20,2019,final,210.456
+Field peas,Nov–Oct,production,,2020-21,2020,final,399.28
+Field peas,Nov–Oct,production,,2021-22,2021,final,261.14
+Field peas,Nov–Oct,production,,2022-23,2022,estimate,313.809
+Field peas,Nov–Oct,production,,2023-24,2023,estimate,228.019
+Field peas,Nov–Oct,production,,2024-25,2024,estimate,228.0
+Chickpeas,Nov–Oct,production,,1989-90,1989,final,109.368
+Chickpeas,Nov–Oct,production,,1990-91,1990,final,191.668
+Chickpeas,Nov–Oct,production,,1991-92,1991,final,221.859
+Chickpeas,Nov–Oct,production,,1992-93,1992,final,176.938
+Chickpeas,Nov–Oct,production,,1993-94,1993,final,193.108
+Chickpeas,Nov–Oct,production,,1994-95,1994,final,68.893
+Chickpeas,Nov–Oct,production,,1995-96,1995,final,286.909
+Chickpeas,Nov–Oct,production,,1996-97,1996,final,287.721
+Chickpeas,Nov–Oct,production,,1997-98,1997,final,198.629
+Chickpeas,Nov–Oct,production,,1998-99,1998,final,187.587
+Chickpeas,Nov–Oct,production,,1999-00,1999,final,230.007
+Chickpeas,Nov–Oct,production,,2000-01,2000,final,162.492
+Chickpeas,Nov–Oct,production,,2001-02,2001,final,273.439
+Chickpeas,Nov–Oct,production,,2002-03,2002,final,128.738
+Chickpeas,Nov–Oct,production,,2003-04,2003,final,198.854
+Chickpeas,Nov–Oct,production,,2004-05,2004,final,135.215
+Chickpeas,Nov–Oct,production,,2005-06,2005,final,149.682
+Chickpeas,Nov–Oct,production,,2006-07,2006,final,229.202
+Chickpeas,Nov–Oct,production,,2007-08,2007,final,312.95
+Chickpeas,Nov–Oct,production,,2008-09,2008,final,442.543
+Chickpeas,Nov–Oct,production,,2009-10,2009,final,487.046
+Chickpeas,Nov–Oct,production,,2010-11,2010,final,513.388
+Chickpeas,Nov–Oct,production,,2011-12,2011,final,673.372
+Chickpeas,Nov–Oct,production,,2012-13,2012,final,813.3
+Chickpeas,Nov–Oct,production,,2013-14,2013,final,629.4
+Chickpeas,Nov–Oct,production,,2014-15,2014,final,555.4
+Chickpeas,Nov–Oct,production,,2015-16,2015,final,874.593
+Chickpeas,Nov–Oct,production,,2016-17,2016,final,2004.0
+Chickpeas,Nov–Oct,production,,2017-18,2017,final,998.231
+Chickpeas,Nov–Oct,production,,2018-19,2018,final,205.13
+Chickpeas,Nov–Oct,production,,2019-20,2019,final,235.165
+Chickpeas,Nov–Oct,production,,2020-21,2020,final,876.468
+Chickpeas,Nov–Oct,production,,2021-22,2021,final,1062.25
+Chickpeas,Nov–Oct,production,,2022-23,2022,estimate,541.0
+Chickpeas,Nov–Oct,production,,2023-24,2023,estimate,491.2
+Chickpeas,Nov–Oct,production,,2024-25,2024,estimate,2267.0
+Lupins,Nov–Oct,domestic_use,,1989-90,1989,final,415.367
+Lupins,Nov–Oct,domestic_use,,1990-91,1990,final,357.609
+Lupins,Nov–Oct,domestic_use,,1991-92,1991,final,523.561
+Lupins,Nov–Oct,domestic_use,,1992-93,1992,final,381.435
+Lupins,Nov–Oct,domestic_use,,1993-94,1993,final,542.804
+Lupins,Nov–Oct,domestic_use,,1994-95,1994,final,556.734
+Lupins,Nov–Oct,domestic_use,,1995-96,1995,final,632.453
+Lupins,Nov–Oct,domestic_use,,1996-97,1996,final,617.111
+Lupins,Nov–Oct,domestic_use,,1997-98,1997,final,598.922
+Lupins,Nov–Oct,domestic_use,,1998-99,1998,final,724.677
+Lupins,Nov–Oct,domestic_use,,1999-00,1999,final,464.013
+Lupins,Nov–Oct,domestic_use,,2000-01,2000,final,546.074
+Lupins,Nov–Oct,domestic_use,,2001-02,2001,final,797.633
+Lupins,Nov–Oct,domestic_use,,2002-03,2002,final,550.518
+Lupins,Nov–Oct,domestic_use,,2003-04,2003,final,468.202
+Lupins,Nov–Oct,domestic_use,,2004-05,2004,final,572.137
+Lupins,Nov–Oct,domestic_use,,2005-06,2005,final,791.325
+Lupins,Nov–Oct,domestic_use,,2006-07,2006,final,376.859
+Lupins,Nov–Oct,domestic_use,,2007-08,2007,final,585.12
+Lupins,Nov–Oct,domestic_use,,2008-09,2008,final,403.828
+Lupins,Nov–Oct,domestic_use,,2009-10,2009,final,473.664
+Lupins,Nov–Oct,domestic_use,,2010-11,2010,final,621.271
+Lupins,Nov–Oct,domestic_use,,2011-12,2011,final,416.45
+Lupins,Nov–Oct,domestic_use,,2012-13,2012,final,289.632
+Lupins,Nov–Oct,domestic_use,,2013-14,2013,final,285.563
+Lupins,Nov–Oct,domestic_use,,2014-15,2014,final,306.494
+Lupins,Nov–Oct,domestic_use,,2015-16,2015,final,398.373
+Lupins,Nov–Oct,domestic_use,,2016-17,2016,final,636.727
+Lupins,Nov–Oct,domestic_use,,2017-18,2017,final,258.083
+Lupins,Nov–Oct,domestic_use,,2018-19,2018,final,525.655
+Lupins,Nov–Oct,domestic_use,,2019-20,2019,final,375.967
+Lupins,Nov–Oct,domestic_use,,2020-21,2020,final,406.313
+Lupins,Nov–Oct,domestic_use,,2021-22,2021,final,400.234
+Lupins,Nov–Oct,domestic_use,,2022-23,2022,estimate,268.097
+Lupins,Nov–Oct,domestic_use,,2023-24,2023,estimate,216.075
+Lupins,Nov–Oct,domestic_use,,2024-25,2024,estimate,450.353
+Field peas,Nov–Oct,domestic_use,,1989-90,1989,final,210.152
+Field peas,Nov–Oct,domestic_use,,1990-91,1990,final,127.557
+Field peas,Nov–Oct,domestic_use,,1991-92,1991,final,256.019
+Field peas,Nov–Oct,domestic_use,,1992-93,1992,final,118.858
+Field peas,Nov–Oct,domestic_use,,1993-94,1993,final,221.936
+Field peas,Nov–Oct,domestic_use,,1994-95,1994,final,108.779
+Field peas,Nov–Oct,domestic_use,,1995-96,1995,final,267.588
+Field peas,Nov–Oct,domestic_use,,1996-97,1996,final,163.717
+Field peas,Nov–Oct,domestic_use,,1997-98,1997,final,141.197
+Field peas,Nov–Oct,domestic_use,,1998-99,1998,final,114.933
+Field peas,Nov–Oct,domestic_use,,1999-00,1999,final,220.399
+Field peas,Nov–Oct,domestic_use,,2000-01,2000,final,108.495
+Field peas,Nov–Oct,domestic_use,,2001-02,2001,final,100.592
+Field peas,Nov–Oct,domestic_use,,2002-03,2002,final,90.392
+Field peas,Nov–Oct,domestic_use,,2003-04,2003,final,274.644
+Field peas,Nov–Oct,domestic_use,,2004-05,2004,final,183.872
+Field peas,Nov–Oct,domestic_use,,2005-06,2005,final,345.372
+Field peas,Nov–Oct,domestic_use,,2006-07,2006,final,15.056
+Field peas,Nov–Oct,domestic_use,,2007-08,2007,final,146.977
+Field peas,Nov–Oct,domestic_use,,2008-09,2008,final,112.392
+Field peas,Nov–Oct,domestic_use,,2009-10,2009,final,203.897
+Field peas,Nov–Oct,domestic_use,,2010-11,2010,final,104.509
+Field peas,Nov–Oct,domestic_use,,2011-12,2011,final,140.49
+Field peas,Nov–Oct,domestic_use,,2012-13,2012,final,154.374
+Field peas,Nov–Oct,domestic_use,,2013-14,2013,final,185.96
+Field peas,Nov–Oct,domestic_use,,2014-15,2014,final,132.447
+Field peas,Nov–Oct,domestic_use,,2015-16,2015,final,76.248
+Field peas,Nov–Oct,domestic_use,,2016-17,2016,final,156.021
+Field peas,Nov–Oct,domestic_use,,2017-18,2017,final,189.263
+Field peas,Nov–Oct,domestic_use,,2018-19,2018,final,86.746
+Field peas,Nov–Oct,domestic_use,,2019-20,2019,final,165.182
+Field peas,Nov–Oct,domestic_use,,2020-21,2020,final,274.847
+Field peas,Nov–Oct,domestic_use,,2021-22,2021,final,65.737
+Field peas,Nov–Oct,domestic_use,,2022-23,2022,estimate,185.896
+Field peas,Nov–Oct,domestic_use,,2023-24,2023,estimate,125.063
+Field peas,Nov–Oct,domestic_use,,2024-25,2024,estimate,142.832
+Chickpeas,Nov–Oct,domestic_use,,1989-90,1989,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,1990-91,1990,final,76.556
+Chickpeas,Nov–Oct,domestic_use,,1991-92,1991,final,45.16
+Chickpeas,Nov–Oct,domestic_use,,1992-93,1992,final,9.224
+Chickpeas,Nov–Oct,domestic_use,,1993-94,1993,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,1994-95,1994,final,31.448
+Chickpeas,Nov–Oct,domestic_use,,1995-96,1995,final,127.706
+Chickpeas,Nov–Oct,domestic_use,,1996-97,1996,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,1997-98,1997,final,11.666
+Chickpeas,Nov–Oct,domestic_use,,1998-99,1998,final,55.178
+Chickpeas,Nov–Oct,domestic_use,,1999-00,1999,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2000-01,2000,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2001-02,2001,final,2.554
+Chickpeas,Nov–Oct,domestic_use,,2002-03,2002,final,14.668
+Chickpeas,Nov–Oct,domestic_use,,2003-04,2003,final,22.604
+Chickpeas,Nov–Oct,domestic_use,,2004-05,2004,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2005-06,2005,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2006-07,2006,final,11.01
+Chickpeas,Nov–Oct,domestic_use,,2007-08,2007,final,87.475
+Chickpeas,Nov–Oct,domestic_use,,2008-09,2008,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2009-10,2009,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2010-11,2010,final,39.242
+Chickpeas,Nov–Oct,domestic_use,,2011-12,2011,final,92.894
+Chickpeas,Nov–Oct,domestic_use,,2012-13,2012,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2013-14,2013,final,0.211
+Chickpeas,Nov–Oct,domestic_use,,2014-15,2014,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2015-16,2015,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2016-17,2016,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2017-18,2017,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2018-19,2018,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2019-20,2019,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2020-21,2020,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2021-22,2021,final,1.0
+Chickpeas,Nov–Oct,domestic_use,,2022-23,2022,estimate,1.0
+Chickpeas,Nov–Oct,domestic_use,,2023-24,2023,estimate,1.0
+Chickpeas,Nov–Oct,domestic_use,,2024-25,2024,estimate,0.0
+Lupins,Nov–Oct,exports,,1989-90,1989,final,356.651
+Lupins,Nov–Oct,exports,,1990-91,1990,final,400.061
+Lupins,Nov–Oct,exports,,1991-92,1991,final,523.802
+Lupins,Nov–Oct,exports,,1992-93,1992,final,813.548
+Lupins,Nov–Oct,exports,,1993-94,1993,final,936.848
+Lupins,Nov–Oct,exports,,1994-95,1994,final,519.481
+Lupins,Nov–Oct,exports,,1995-96,1995,final,926.542
+Lupins,Nov–Oct,exports,,1996-97,1996,final,904.75
+Lupins,Nov–Oct,exports,,1997-98,1997,final,961.35
+Lupins,Nov–Oct,exports,,1998-99,1998,final,970.194
+Lupins,Nov–Oct,exports,,1999-00,1999,final,1503.829
+Lupins,Nov–Oct,exports,,2000-01,2000,final,509.207
+Lupins,Nov–Oct,exports,,2001-02,2001,final,416.083
+Lupins,Nov–Oct,exports,,2002-03,2002,final,175.363
+Lupins,Nov–Oct,exports,,2003-04,2003,final,712.461
+Lupins,Nov–Oct,exports,,2004-05,2004,final,364.781
+Lupins,Nov–Oct,exports,,2005-06,2005,final,493.707
+Lupins,Nov–Oct,exports,,2006-07,2006,final,93.467
+Lupins,Nov–Oct,exports,,2007-08,2007,final,76.742
+Lupins,Nov–Oct,exports,,2008-09,2008,final,303.947
+Lupins,Nov–Oct,exports,,2009-10,2009,final,348.906
+Lupins,Nov–Oct,exports,,2010-11,2010,final,186.401
+Lupins,Nov–Oct,exports,,2011-12,2011,final,565.062
+Lupins,Nov–Oct,exports,,2012-13,2012,final,169.068
+Lupins,Nov–Oct,exports,,2013-14,2013,final,340.037
+Lupins,Nov–Oct,exports,,2014-15,2014,final,242.606
+Lupins,Nov–Oct,exports,,2015-16,2015,final,253.573
+Lupins,Nov–Oct,exports,,2016-17,2016,final,394.698
+Lupins,Nov–Oct,exports,,2017-18,2017,final,456.171
+Lupins,Nov–Oct,exports,,2018-19,2018,final,272.974
+Lupins,Nov–Oct,exports,,2019-20,2019,final,215.18
+Lupins,Nov–Oct,exports,,2020-21,2020,final,459.306
+Lupins,Nov–Oct,exports,,2021-22,2021,final,557.286
+Lupins,Nov–Oct,exports,,2022-23,2022,estimate,832.703
+Lupins,Nov–Oct,exports,,2023-24,2023,estimate,394.689
+Lupins,Nov–Oct,exports,,2024-25,2024,estimate,327.647
+Field peas,Nov–Oct,exports,,1989-90,1989,final,181.133
+Field peas,Nov–Oct,exports,,1990-91,1990,final,193.285
+Field peas,Nov–Oct,exports,,1991-92,1991,final,219.236
+Field peas,Nov–Oct,exports,,1992-93,1992,final,339.67
+Field peas,Nov–Oct,exports,,1993-94,1993,final,338.473
+Field peas,Nov–Oct,exports,,1994-95,1994,final,135.619
+Field peas,Nov–Oct,exports,,1995-96,1995,final,266.234
+Field peas,Nov–Oct,exports,,1996-97,1996,final,294.002
+Field peas,Nov–Oct,exports,,1997-98,1997,final,177.849
+Field peas,Nov–Oct,exports,,1998-99,1998,final,259.377
+Field peas,Nov–Oct,exports,,1999-00,1999,final,279.942
+Field peas,Nov–Oct,exports,,2000-01,2000,final,350.697
+Field peas,Nov–Oct,exports,,2001-02,2001,final,413.994
+Field peas,Nov–Oct,exports,,2002-03,2002,final,90.643
+Field peas,Nov–Oct,exports,,2003-04,2003,final,214.259
+Field peas,Nov–Oct,exports,,2004-05,2004,final,108.115
+Field peas,Nov–Oct,exports,,2005-06,2005,final,240.613
+Field peas,Nov–Oct,exports,,2006-07,2006,final,127.638
+Field peas,Nov–Oct,exports,,2007-08,2007,final,123.132
+Field peas,Nov–Oct,exports,,2008-09,2008,final,128.476
+Field peas,Nov–Oct,exports,,2009-10,2009,final,154.295
+Field peas,Nov–Oct,exports,,2010-11,2010,final,292.815
+Field peas,Nov–Oct,exports,,2011-12,2011,final,204.66
+Field peas,Nov–Oct,exports,,2012-13,2012,final,167.389
+Field peas,Nov–Oct,exports,,2013-14,2013,final,157.893
+Field peas,Nov–Oct,exports,,2014-15,2014,final,159.754
+Field peas,Nov–Oct,exports,,2015-16,2015,final,129.821
+Field peas,Nov–Oct,exports,,2016-17,2016,final,260.753
+Field peas,Nov–Oct,exports,,2017-18,2017,final,129.866
+Field peas,Nov–Oct,exports,,2018-19,2018,final,75.366
+Field peas,Nov–Oct,exports,,2019-20,2019,final,48.03
+Field peas,Nov–Oct,exports,,2020-21,2020,final,125.563
+Field peas,Nov–Oct,exports,,2021-22,2021,final,196.308
+Field peas,Nov–Oct,exports,,2022-23,2022,estimate,129.131
+Field peas,Nov–Oct,exports,,2023-24,2023,estimate,103.845
+Field peas,Nov–Oct,exports,,2024-25,2024,estimate,85.704
+Chickpeas,Nov–Oct,exports,,1989-90,1989,final,121.479
+Chickpeas,Nov–Oct,exports,,1990-91,1990,final,115.238
+Chickpeas,Nov–Oct,exports,,1991-92,1991,final,176.811
+Chickpeas,Nov–Oct,exports,,1992-93,1992,final,167.848
+Chickpeas,Nov–Oct,exports,,1993-94,1993,final,194.94
+Chickpeas,Nov–Oct,exports,,1994-95,1994,final,37.552
+Chickpeas,Nov–Oct,exports,,1995-96,1995,final,159.418
+Chickpeas,Nov–Oct,exports,,1996-97,1996,final,382.878
+Chickpeas,Nov–Oct,exports,,1997-98,1997,final,187.054
+Chickpeas,Nov–Oct,exports,,1998-99,1998,final,132.454
+Chickpeas,Nov–Oct,exports,,1999-00,1999,final,245.011
+Chickpeas,Nov–Oct,exports,,2000-01,2000,final,174.576
+Chickpeas,Nov–Oct,exports,,2001-02,2001,final,270.998
+Chickpeas,Nov–Oct,exports,,2002-03,2002,final,114.142
+Chickpeas,Nov–Oct,exports,,2003-04,2003,final,176.323
+Chickpeas,Nov–Oct,exports,,2004-05,2004,final,150.794
+Chickpeas,Nov–Oct,exports,,2005-06,2005,final,183.214
+Chickpeas,Nov–Oct,exports,,2006-07,2006,final,218.409
+Chickpeas,Nov–Oct,exports,,2007-08,2007,final,225.759
+Chickpeas,Nov–Oct,exports,,2008-09,2008,final,508.133
+Chickpeas,Nov–Oct,exports,,2009-10,2009,final,502.826
+Chickpeas,Nov–Oct,exports,,2010-11,2010,final,474.357
+Chickpeas,Nov–Oct,exports,,2011-12,2011,final,580.631
+Chickpeas,Nov–Oct,exports,,2012-13,2012,final,853.121
+Chickpeas,Nov–Oct,exports,,2013-14,2013,final,629.325
+Chickpeas,Nov–Oct,exports,,2014-15,2014,final,662.782
+Chickpeas,Nov–Oct,exports,,2015-16,2015,final,1145.14
+Chickpeas,Nov–Oct,exports,,2016-17,2016,final,2293.365
+Chickpeas,Nov–Oct,exports,,2017-18,2017,final,723.776
+Chickpeas,Nov–Oct,exports,,2018-19,2018,final,371.321
+Chickpeas,Nov–Oct,exports,,2019-20,2019,final,349.325
+Chickpeas,Nov–Oct,exports,,2020-21,2020,final,878.826
+Chickpeas,Nov–Oct,exports,,2021-22,2021,final,593.802
+Chickpeas,Nov–Oct,exports,,2022-23,2022,estimate,725.011
+Chickpeas,Nov–Oct,exports,,2023-24,2023,estimate,517.798
+Chickpeas,Nov–Oct,exports,,2024-25,2024,estimate,2058.666
+Barley,Nov–Oct,production,,1989-90,1989,final,4044.146
+Barley,Nov–Oct,production,,1990-91,1990,final,4107.832
+Barley,Nov–Oct,production,,1991-92,1991,final,4529.678
+Barley,Nov–Oct,production,,1992-93,1992,final,5396.758
+Barley,Nov–Oct,production,,1993-94,1993,final,6668.234
+Barley,Nov–Oct,production,,1994-95,1994,final,2913.189
+Barley,Nov–Oct,production,,1995-96,1995,final,5822.684
+Barley,Nov–Oct,production,,1996-97,1996,final,6694.804
+Barley,Nov–Oct,production,,1997-98,1997,final,6481.669
+Barley,Nov–Oct,production,,1998-99,1998,final,5987.241
+Barley,Nov–Oct,production,,1999-00,1999,final,5032.016
+Barley,Nov–Oct,production,,2000-01,2000,final,6743.463
+Barley,Nov–Oct,production,,2001-02,2001,final,8279.769
+Barley,Nov–Oct,production,,2002-03,2002,final,3864.833
+Barley,Nov–Oct,production,,2003-04,2003,final,10381.828
+Barley,Nov–Oct,production,,2004-05,2004,final,7739.767
+Barley,Nov–Oct,production,,2005-06,2005,final,9481.741
+Barley,Nov–Oct,production,,2006-07,2006,final,4257.032
+Barley,Nov–Oct,production,,2007-08,2007,final,7160.168
+Barley,Nov–Oct,production,,2008-09,2008,final,7996.506
+Barley,Nov–Oct,production,,2009-10,2009,final,7864.551
+Barley,Nov–Oct,production,,2010-11,2010,final,7994.719
+Barley,Nov–Oct,production,,2011-12,2011,final,8220.861
+Barley,Nov–Oct,production,,2012-13,2012,final,7471.382
+Barley,Nov–Oct,production,,2013-14,2013,final,9174.207
+Barley,Nov–Oct,production,,2014-15,2014,final,8646.321
+Barley,Nov–Oct,production,,2015-16,2015,final,8992.274
+Barley,Nov–Oct,production,,2016-17,2016,final,13505.99
+Barley,Nov–Oct,production,,2017-18,2017,final,9253.829
+Barley,Nov–Oct,production,,2018-19,2018,final,8818.946
+Barley,Nov–Oct,production,,2019-20,2019,final,10127.175
+Barley,Nov–Oct,production,,2020-21,2020,final,14648.581
+Barley,Nov–Oct,production,,2021-22,2021,final,14377.284
+Barley,Nov–Oct,production,,2022-23,2022,estimate,14136.803
+Barley,Nov–Oct,production,,2023-24,2023,estimate,10800.0
+Barley,Nov–Oct,production,,2024-25,2024,estimate,13265.0
+Barley,Nov–Oct,domestic_use,,1989-90,1989,final,1496.349
+Barley,Nov–Oct,domestic_use,,1990-91,1990,final,1657.837
+Barley,Nov–Oct,domestic_use,,1991-92,1991,final,2572.516
+Barley,Nov–Oct,domestic_use,,1992-93,1992,final,3353.27
+Barley,Nov–Oct,domestic_use,,1993-94,1993,final,4336.148
+Barley,Nov–Oct,domestic_use,,1994-95,1994,final,1842.378
+Barley,Nov–Oct,domestic_use,,1995-96,1995,final,2215.827
+Barley,Nov–Oct,domestic_use,,1996-97,1996,final,2761.793
+Barley,Nov–Oct,domestic_use,,1997-98,1997,final,3425.151
+Barley,Nov–Oct,domestic_use,,1998-99,1998,final,1695.781
+Barley,Nov–Oct,domestic_use,,1999-00,1999,final,2262.458
+Barley,Nov–Oct,domestic_use,,2000-01,2000,final,2738.266
+Barley,Nov–Oct,domestic_use,,2001-02,2001,final,3601.003
+Barley,Nov–Oct,domestic_use,,2002-03,2002,final,2216.63
+Barley,Nov–Oct,domestic_use,,2003-04,2003,final,3447.649
+Barley,Nov–Oct,domestic_use,,2004-05,2004,final,3741.765
+Barley,Nov–Oct,domestic_use,,2005-06,2005,final,3253.849
+Barley,Nov–Oct,domestic_use,,2006-07,2006,final,3654.331
+Barley,Nov–Oct,domestic_use,,2007-08,2007,final,3163.235
+Barley,Nov–Oct,domestic_use,,2008-09,2008,final,4596.489
+Barley,Nov–Oct,domestic_use,,2009-10,2009,final,4541.352
+Barley,Nov–Oct,domestic_use,,2010-11,2010,final,3567.385
+Barley,Nov–Oct,domestic_use,,2011-12,2011,final,3133.604
+Barley,Nov–Oct,domestic_use,,2012-13,2012,final,2776.759
+Barley,Nov–Oct,domestic_use,,2013-14,2013,final,2923.265
+Barley,Nov–Oct,domestic_use,,2014-15,2014,final,2897.976
+Barley,Nov–Oct,domestic_use,,2015-16,2015,final,3013.999
+Barley,Nov–Oct,domestic_use,,2016-17,2016,final,3524.417
+Barley,Nov–Oct,domestic_use,,2017-18,2017,final,3999.646
+Barley,Nov–Oct,domestic_use,,2018-19,2018,final,5626.841
+Barley,Nov–Oct,domestic_use,,2019-20,2019,final,6747.095
+Barley,Nov–Oct,domestic_use,,2020-21,2020,final,5829.254
+Barley,Nov–Oct,domestic_use,,2021-22,2021,final,5285.715
+Barley,Nov–Oct,domestic_use,,2022-23,2022,estimate,5589.315
+Barley,Nov–Oct,domestic_use,,2023-24,2023,estimate,5207.945
+Barley,Nov–Oct,domestic_use,,2024-25,2024,estimate,5869.24
+Barley,Nov–Oct,domestic_use,seed,1989-90,1989,final,115.004
+Barley,Nov–Oct,domestic_use,seed,1990-91,1990,final,123.491
+Barley,Nov–Oct,domestic_use,seed,1991-92,1991,final,132.623
+Barley,Nov–Oct,domestic_use,seed,1992-93,1992,final,154.101
+Barley,Nov–Oct,domestic_use,seed,1993-94,1993,final,111.172
+Barley,Nov–Oct,domestic_use,seed,1994-95,1994,final,139.976
+Barley,Nov–Oct,domestic_use,seed,1995-96,1995,final,151.461
+Barley,Nov–Oct,domestic_use,seed,1996-97,1996,final,158.441
+Barley,Nov–Oct,domestic_use,seed,1997-98,1997,final,142.529
+Barley,Nov–Oct,domestic_use,seed,1998-99,1998,final,116.803
+Barley,Nov–Oct,domestic_use,seed,1999-00,1999,final,155.432
+Barley,Nov–Oct,domestic_use,seed,2000-01,2000,final,166.832
+Barley,Nov–Oct,domestic_use,seed,2001-02,2001,final,173.87
+Barley,Nov–Oct,domestic_use,seed,2002-03,2002,final,201.466
+Barley,Nov–Oct,domestic_use,seed,2003-04,2003,final,209.055
+Barley,Nov–Oct,domestic_use,seed,2004-05,2004,final,198.258
+Barley,Nov–Oct,domestic_use,seed,2005-06,2005,final,188.046
+Barley,Nov–Oct,domestic_use,seed,2006-07,2006,final,220.583
+Barley,Nov–Oct,domestic_use,seed,2007-08,2007,final,225.675
+Barley,Nov–Oct,domestic_use,seed,2008-09,2008,final,198.972
+Barley,Nov–Oct,domestic_use,seed,2009-10,2009,final,165.645
+Barley,Nov–Oct,domestic_use,seed,2010-11,2010,final,167.314
+Barley,Nov–Oct,domestic_use,seed,2011-12,2011,final,163.992
+Barley,Nov–Oct,domestic_use,seed,2012-13,2012,final,171.631
+Barley,Nov–Oct,domestic_use,seed,2013-14,2013,final,183.512
+Barley,Nov–Oct,domestic_use,seed,2014-15,2014,final,184.844
+Barley,Nov–Oct,domestic_use,seed,2015-16,2015,final,217.535
+Barley,Nov–Oct,domestic_use,seed,2016-17,2016,final,185.587
+Barley,Nov–Oct,domestic_use,seed,2017-18,2017,final,199.646
+Barley,Nov–Oct,domestic_use,seed,2018-19,2018,final,226.841
+Barley,Nov–Oct,domestic_use,seed,2019-20,2019,final,247.095
+Barley,Nov–Oct,domestic_use,seed,2020-21,2020,final,229.254
+Barley,Nov–Oct,domestic_use,seed,2021-22,2021,final,185.715
+Barley,Nov–Oct,domestic_use,seed,2022-23,2022,estimate,189.315
+Barley,Nov–Oct,domestic_use,seed,2023-24,2023,estimate,207.945
+Barley,Nov–Oct,domestic_use,seed,2024-25,2024,estimate,219.24
+Barley,Nov–Oct,domestic_use,other,1989-90,1989,final,1381.345
+Barley,Nov–Oct,domestic_use,other,1990-91,1990,final,1534.346
+Barley,Nov–Oct,domestic_use,other,1991-92,1991,final,2439.893
+Barley,Nov–Oct,domestic_use,other,1992-93,1992,final,3199.169
+Barley,Nov–Oct,domestic_use,other,1993-94,1993,final,4224.976
+Barley,Nov–Oct,domestic_use,other,1994-95,1994,final,1702.402
+Barley,Nov–Oct,domestic_use,other,1995-96,1995,final,2064.366
+Barley,Nov–Oct,domestic_use,other,1996-97,1996,final,2603.352
+Barley,Nov–Oct,domestic_use,other,1997-98,1997,final,3282.622
+Barley,Nov–Oct,domestic_use,other,1998-99,1998,final,1578.978
+Barley,Nov–Oct,domestic_use,other,1999-00,1999,final,2107.026
+Barley,Nov–Oct,domestic_use,other,2000-01,2000,final,2571.434
+Barley,Nov–Oct,domestic_use,other,2001-02,2001,final,3427.133
+Barley,Nov–Oct,domestic_use,other,2002-03,2002,final,2015.164
+Barley,Nov–Oct,domestic_use,other,2003-04,2003,final,3238.594
+Barley,Nov–Oct,domestic_use,other,2004-05,2004,final,3543.508
+Barley,Nov–Oct,domestic_use,other,2005-06,2005,final,3065.803
+Barley,Nov–Oct,domestic_use,other,2006-07,2006,final,3433.748
+Barley,Nov–Oct,domestic_use,other,2007-08,2007,final,2937.559
+Barley,Nov–Oct,domestic_use,other,2008-09,2008,final,4397.517
+Barley,Nov–Oct,domestic_use,other,2009-10,2009,final,4375.707
+Barley,Nov–Oct,domestic_use,other,2010-11,2010,final,3400.071
+Barley,Nov–Oct,domestic_use,other,2011-12,2011,final,2969.612
+Barley,Nov–Oct,domestic_use,other,2012-13,2012,final,2605.129
+Barley,Nov–Oct,domestic_use,other,2013-14,2013,final,2739.753
+Barley,Nov–Oct,domestic_use,other,2014-15,2014,final,2713.132
+Barley,Nov–Oct,domestic_use,other,2015-16,2015,final,2796.464
+Barley,Nov–Oct,domestic_use,other,2016-17,2016,final,3338.83
+Barley,Nov–Oct,domestic_use,other,2017-18,2017,final,3800.0
+Barley,Nov–Oct,domestic_use,other,2018-19,2018,final,5400.0
+Barley,Nov–Oct,domestic_use,other,2019-20,2019,final,6500.0
+Barley,Nov–Oct,domestic_use,other,2020-21,2020,final,5600.0
+Barley,Nov–Oct,domestic_use,other,2021-22,2021,final,5100.0
+Barley,Nov–Oct,domestic_use,other,2022-23,2022,estimate,5400.0
+Barley,Nov–Oct,domestic_use,other,2023-24,2023,estimate,5000.0
+Barley,Nov–Oct,domestic_use,other,2024-25,2024,estimate,5650.0
+Barley,Nov–Oct,exports,,1989-90,1989,final,2579.426
+Barley,Nov–Oct,exports,,1990-91,1990,final,2499.987
+Barley,Nov–Oct,exports,,1991-92,1991,final,2107.326
+Barley,Nov–Oct,exports,,1992-93,1992,final,2033.516
+Barley,Nov–Oct,exports,,1993-94,1993,final,2292.07
+Barley,Nov–Oct,exports,,1994-95,1994,final,1086.798
+Barley,Nov–Oct,exports,,1995-96,1995,final,3574.882
+Barley,Nov–Oct,exports,,1996-97,1996,final,3884.364
+Barley,Nov–Oct,exports,,1997-98,1997,final,3006.645
+Barley,Nov–Oct,exports,,1998-99,1998,final,4241.46
+Barley,Nov–Oct,exports,,1999-00,1999,final,2758.185
+Barley,Nov–Oct,exports,,2000-01,2000,final,3966.67
+Barley,Nov–Oct,exports,,2001-02,2001,final,4675.855
+Barley,Nov–Oct,exports,,2002-03,2002,final,1984.198
+Barley,Nov–Oct,exports,,2003-04,2003,final,6376.238
+Barley,Nov–Oct,exports,,2004-05,2004,final,4261.417
+Barley,Nov–Oct,exports,,2005-06,2005,final,5257.273
+Barley,Nov–Oct,exports,,2006-07,2006,final,1850.844
+Barley,Nov–Oct,exports,,2007-08,2007,final,3385.617
+Barley,Nov–Oct,exports,,2008-09,2008,final,3234.132
+Barley,Nov–Oct,exports,,2009-10,2009,final,3915.219
+Barley,Nov–Oct,exports,,2010-11,2010,final,4663.578
+Barley,Nov–Oct,exports,,2011-12,2011,final,5376.751
+Barley,Nov–Oct,exports,,2012-13,2012,final,4484.345
+Barley,Nov–Oct,exports,,2013-14,2013,final,6216.754
+Barley,Nov–Oct,exports,,2014-15,2014,final,5219.26
+Barley,Nov–Oct,exports,,2015-16,2015,final,5745.225
+Barley,Nov–Oct,exports,,2016-17,2016,final,9189.871
+Barley,Nov–Oct,exports,,2017-18,2017,final,5724.605
+Barley,Nov–Oct,exports,,2018-19,2018,final,3686.723
+Barley,Nov–Oct,exports,,2019-20,2019,final,3324.271
+Barley,Nov–Oct,exports,,2020-21,2020,final,8331.249
+Barley,Nov–Oct,exports,,2021-22,2021,final,8007.181
+Barley,Nov–Oct,exports,,2022-23,2022,estimate,7765.11
+Barley,Nov–Oct,exports,,2023-24,2023,estimate,7101.353
+Barley,Nov–Oct,exports,,2024-25,2024,estimate,8298.353
+Barley,Nov–Oct,exports,feed,1989-90,1989,final,1498.311
+Barley,Nov–Oct,exports,feed,1990-91,1990,final,1589.879
+Barley,Nov–Oct,exports,feed,1991-92,1991,final,1288.949
+Barley,Nov–Oct,exports,feed,1992-93,1992,final,1108.416
+Barley,Nov–Oct,exports,feed,1993-94,1993,final,469.022
+Barley,Nov–Oct,exports,feed,1994-95,1994,final,515.871
+Barley,Nov–Oct,exports,feed,1995-96,1995,final,1684.587
+Barley,Nov–Oct,exports,feed,1996-97,1996,final,1956.738
+Barley,Nov–Oct,exports,feed,1997-98,1997,final,2024.619
+Barley,Nov–Oct,exports,feed,1998-99,1998,final,2606.728
+Barley,Nov–Oct,exports,feed,1999-00,1999,final,1524.343
+Barley,Nov–Oct,exports,feed,2000-01,2000,final,2142.9
+Barley,Nov–Oct,exports,feed,2001-02,2001,final,2970.665
+Barley,Nov–Oct,exports,feed,2002-03,2002,final,885.287
+Barley,Nov–Oct,exports,feed,2003-04,2003,final,4240.967
+Barley,Nov–Oct,exports,feed,2004-05,2004,final,2797.525
+Barley,Nov–Oct,exports,feed,2005-06,2005,final,3190.627
+Barley,Nov–Oct,exports,feed,2006-07,2006,final,1191.755
+Barley,Nov–Oct,exports,feed,2007-08,2007,final,2302.921
+Barley,Nov–Oct,exports,feed,2008-09,2008,final,2254.218
+Barley,Nov–Oct,exports,feed,2009-10,2009,final,2667.687
+Barley,Nov–Oct,exports,feed,2010-11,2010,final,3601.097
+Barley,Nov–Oct,exports,feed,2011-12,2011,final,3757.973
+Barley,Nov–Oct,exports,feed,2012-13,2012,final,2972.404
+Barley,Nov–Oct,exports,feed,2013-14,2013,final,3943.623
+Barley,Nov–Oct,exports,feed,2014-15,2014,final,3070.362
+Barley,Nov–Oct,exports,feed,2015-16,2015,final,4351.123
+Barley,Nov–Oct,exports,feed,2016-17,2016,final,6363.741
+Barley,Nov–Oct,exports,feed,2017-18,2017,final,3640.809
+Barley,Nov–Oct,exports,feed,2018-19,2018,final,1740.391
+Barley,Nov–Oct,exports,feed,2019-20,2019,final,1992.437
+Barley,Nov–Oct,exports,feed,2020-21,2020,final,7797.675
+Barley,Nov–Oct,exports,feed,2021-22,2021,final,7105.026
+Barley,Nov–Oct,exports,feed,2022-23,2022,estimate,6483.81
+Barley,Nov–Oct,exports,feed,2023-24,2023,estimate,4375.567
+Barley,Nov–Oct,exports,feed,2024-25,2024,estimate,6997.992
+Barley,Nov–Oct,exports,malting,1989-90,1989,final,1081.115
+Barley,Nov–Oct,exports,malting,1990-91,1990,final,910.108
+Barley,Nov–Oct,exports,malting,1991-92,1991,final,818.377
+Barley,Nov–Oct,exports,malting,1992-93,1992,final,925.1
+Barley,Nov–Oct,exports,malting,1993-94,1993,final,1823.048
+Barley,Nov–Oct,exports,malting,1994-95,1994,final,570.927
+Barley,Nov–Oct,exports,malting,1995-96,1995,final,1890.295
+Barley,Nov–Oct,exports,malting,1996-97,1996,final,1927.626
+Barley,Nov–Oct,exports,malting,1997-98,1997,final,982.026
+Barley,Nov–Oct,exports,malting,1998-99,1998,final,1634.732
+Barley,Nov–Oct,exports,malting,1999-00,1999,final,1233.842
+Barley,Nov–Oct,exports,malting,2000-01,2000,final,1823.77
+Barley,Nov–Oct,exports,malting,2001-02,2001,final,1705.19
+Barley,Nov–Oct,exports,malting,2002-03,2002,final,1098.911
+Barley,Nov–Oct,exports,malting,2003-04,2003,final,2135.271
+Barley,Nov–Oct,exports,malting,2004-05,2004,final,1463.892
+Barley,Nov–Oct,exports,malting,2005-06,2005,final,2066.646
+Barley,Nov–Oct,exports,malting,2006-07,2006,final,659.089
+Barley,Nov–Oct,exports,malting,2007-08,2007,final,1082.696
+Barley,Nov–Oct,exports,malting,2008-09,2008,final,979.914
+Barley,Nov–Oct,exports,malting,2009-10,2009,final,1247.532
+Barley,Nov–Oct,exports,malting,2010-11,2010,final,1062.481
+Barley,Nov–Oct,exports,malting,2011-12,2011,final,1618.778
+Barley,Nov–Oct,exports,malting,2012-13,2012,final,1511.941
+Barley,Nov–Oct,exports,malting,2013-14,2013,final,2273.131
+Barley,Nov–Oct,exports,malting,2014-15,2014,final,2148.898
+Barley,Nov–Oct,exports,malting,2015-16,2015,final,1394.102
+Barley,Nov–Oct,exports,malting,2016-17,2016,final,2826.13
+Barley,Nov–Oct,exports,malting,2017-18,2017,final,2083.797
+Barley,Nov–Oct,exports,malting,2018-19,2018,final,1946.333
+Barley,Nov–Oct,exports,malting,2019-20,2019,final,1331.834
+Barley,Nov–Oct,exports,malting,2020-21,2020,final,533.574
+Barley,Nov–Oct,exports,malting,2021-22,2021,final,902.156
+Barley,Nov–Oct,exports,malting,2022-23,2022,estimate,1281.3
+Barley,Nov–Oct,exports,malting,2023-24,2023,estimate,2725.786
+Barley,Nov–Oct,exports,malting,2024-25,2024,estimate,1300.361
+Oats,Nov–Oct,production,,1989-90,1989,final,1640.3
+Oats,Nov–Oct,production,,1990-91,1990,final,1529.8
+Oats,Nov–Oct,production,,1991-92,1991,final,1689.8
+Oats,Nov–Oct,production,,1992-93,1992,final,1936.4
+Oats,Nov–Oct,production,,1993-94,1993,final,1646.499
+Oats,Nov–Oct,production,,1994-95,1994,final,924.075
+Oats,Nov–Oct,production,,1995-96,1995,final,1874.808
+Oats,Nov–Oct,production,,1996-97,1996,final,1652.797
+Oats,Nov–Oct,production,,1997-98,1997,final,1634.284
+Oats,Nov–Oct,production,,1998-99,1998,final,1798.226
+Oats,Nov–Oct,production,,1999-00,1999,final,1117.683
+Oats,Nov–Oct,production,,2000-01,2000,final,1049.748
+Oats,Nov–Oct,production,,2001-02,2001,final,1433.531
+Oats,Nov–Oct,production,,2002-03,2002,final,956.984
+Oats,Nov–Oct,production,,2003-04,2003,final,2017.875
+Oats,Nov–Oct,production,,2004-05,2004,final,1282.448
+Oats,Nov–Oct,production,,2005-06,2005,final,1688.016
+Oats,Nov–Oct,production,,2006-07,2006,final,748.292
+Oats,Nov–Oct,production,,2007-08,2007,final,1502.297
+Oats,Nov–Oct,production,,2008-09,2008,final,1160.003
+Oats,Nov–Oct,production,,2009-10,2009,final,1161.522
+Oats,Nov–Oct,production,,2010-11,2010,final,1127.683
+Oats,Nov–Oct,production,,2011-12,2011,final,1262.031
+Oats,Nov–Oct,production,,2012-13,2012,final,1121.135
+Oats,Nov–Oct,production,,2013-14,2013,final,1254.659
+Oats,Nov–Oct,production,,2014-15,2014,final,1198.006
+Oats,Nov–Oct,production,,2015-16,2015,final,1299.68
+Oats,Nov–Oct,production,,2016-17,2016,final,2265.503
+Oats,Nov–Oct,production,,2017-18,2017,final,1227.386
+Oats,Nov–Oct,production,,2018-19,2018,final,1134.619
+Oats,Nov–Oct,production,,2019-20,2019,final,1142.934
+Oats,Nov–Oct,production,,2020-21,2020,final,1897.99
+Oats,Nov–Oct,production,,2021-22,2021,final,1734.874
+Oats,Nov–Oct,production,,2022-23,2022,estimate,1587.439
+Oats,Nov–Oct,production,,2023-24,2023,estimate,1021.132
+Oats,Nov–Oct,production,,2024-25,2024,estimate,1315.0
+Oats,Nov–Oct,domestic_use,,1989-90,1989,final,1372.093
+Oats,Nov–Oct,domestic_use,,1990-91,1990,final,1386.315
+Oats,Nov–Oct,domestic_use,,1991-92,1991,final,1514.564
+Oats,Nov–Oct,domestic_use,,1992-93,1992,final,1672.352
+Oats,Nov–Oct,domestic_use,,1993-94,1993,final,1448.741
+Oats,Nov–Oct,domestic_use,,1994-95,1994,final,856.403
+Oats,Nov–Oct,domestic_use,,1995-96,1995,final,1619.459
+Oats,Nov–Oct,domestic_use,,1996-97,1996,final,1503.34
+Oats,Nov–Oct,domestic_use,,1997-98,1997,final,1480.619
+Oats,Nov–Oct,domestic_use,,1998-99,1998,final,1550.041
+Oats,Nov–Oct,domestic_use,,1999-00,1999,final,982.481
+Oats,Nov–Oct,domestic_use,,2000-01,2000,final,964.073
+Oats,Nov–Oct,domestic_use,,2001-02,2001,final,1243.737
+Oats,Nov–Oct,domestic_use,,2002-03,2002,final,710.933
+Oats,Nov–Oct,domestic_use,,2003-04,2003,final,1807.978
+Oats,Nov–Oct,domestic_use,,2004-05,2004,final,1144.832
+Oats,Nov–Oct,domestic_use,,2005-06,2005,final,1396.456
+Oats,Nov–Oct,domestic_use,,2006-07,2006,final,713.004
+Oats,Nov–Oct,domestic_use,,2007-08,2007,final,1221.124
+Oats,Nov–Oct,domestic_use,,2008-09,2008,final,999.238
+Oats,Nov–Oct,domestic_use,,2009-10,2009,final,853.765
+Oats,Nov–Oct,domestic_use,,2010-11,2010,final,960.095
+Oats,Nov–Oct,domestic_use,,2011-12,2011,final,949.027
+Oats,Nov–Oct,domestic_use,,2012-13,2012,final,984.013
+Oats,Nov–Oct,domestic_use,,2013-14,2013,final,1001.302
+Oats,Nov–Oct,domestic_use,,2014-15,2014,final,960.064
+Oats,Nov–Oct,domestic_use,,2015-16,2015,final,1026.046
+Oats,Nov–Oct,domestic_use,,2016-17,2016,final,1707.804
+Oats,Nov–Oct,domestic_use,,2017-18,2017,final,1538.77
+Oats,Nov–Oct,domestic_use,,2018-19,2018,final,1291.41
+Oats,Nov–Oct,domestic_use,,2019-20,2019,final,814.742
+Oats,Nov–Oct,domestic_use,,2020-21,2020,final,1290.435
+Oats,Nov–Oct,domestic_use,,2021-22,2021,final,1285.76
+Oats,Nov–Oct,domestic_use,,2022-23,2022,estimate,885.76
+Oats,Nov–Oct,domestic_use,,2023-24,2023,estimate,932.529
+Oats,Nov–Oct,domestic_use,,2024-25,2024,estimate,1005.616
+Oats,Nov–Oct,domestic_use,seed,1989-90,1989,final,50.093
+Oats,Nov–Oct,domestic_use,seed,1990-91,1990,final,55.685
+Oats,Nov–Oct,domestic_use,seed,1991-92,1991,final,55.157
+Oats,Nov–Oct,domestic_use,seed,1992-93,1992,final,45.472
+Oats,Nov–Oct,domestic_use,seed,1993-94,1993,final,43.035
+Oats,Nov–Oct,domestic_use,seed,1994-95,1994,final,54.539
+Oats,Nov–Oct,domestic_use,seed,1995-96,1995,final,50.481
+Oats,Nov–Oct,domestic_use,seed,1996-97,1996,final,44.958
+Oats,Nov–Oct,domestic_use,seed,1997-98,1997,final,43.625
+Oats,Nov–Oct,domestic_use,seed,1998-99,1998,final,28.011
+Oats,Nov–Oct,domestic_use,seed,1999-00,1999,final,31.22
+Oats,Nov–Oct,domestic_use,seed,2000-01,2000,final,37.632
+Oats,Nov–Oct,domestic_use,seed,2001-02,2001,final,43.746
+Oats,Nov–Oct,domestic_use,seed,2002-03,2002,final,52.283
+Oats,Nov–Oct,domestic_use,seed,2003-04,2003,final,42.89
+Oats,Nov–Oct,domestic_use,seed,2004-05,2004,final,44.655
+Oats,Nov–Oct,domestic_use,seed,2005-06,2005,final,47.975
+Oats,Nov–Oct,domestic_use,seed,2006-07,2006,final,59.414
+Oats,Nov–Oct,domestic_use,seed,2007-08,2007,final,41.772
+Oats,Nov–Oct,domestic_use,seed,2008-09,2008,final,40.801
+Oats,Nov–Oct,domestic_use,seed,2009-10,2009,final,39.649
+Oats,Nov–Oct,domestic_use,seed,2010-11,2010,final,35.095
+Oats,Nov–Oct,domestic_use,seed,2011-12,2011,final,34.972
+Oats,Nov–Oct,domestic_use,seed,2012-13,2012,final,34.306
+Oats,Nov–Oct,domestic_use,seed,2013-14,2013,final,41.012
+Oats,Nov–Oct,domestic_use,seed,2014-15,2014,final,39.432
+Oats,Nov–Oct,domestic_use,seed,2015-16,2015,final,49.338
+Oats,Nov–Oct,domestic_use,seed,2016-17,2016,final,41.959
+Oats,Nov–Oct,domestic_use,seed,2017-18,2017,final,45.03
+Oats,Nov–Oct,domestic_use,seed,2018-19,2018,final,33.744
+Oats,Nov–Oct,domestic_use,seed,2019-20,2019,final,51.355
+Oats,Nov–Oct,domestic_use,seed,2020-21,2020,final,40.435
+Oats,Nov–Oct,domestic_use,seed,2021-22,2021,final,35.76
+Oats,Nov–Oct,domestic_use,seed,2022-23,2022,estimate,35.76
+Oats,Nov–Oct,domestic_use,seed,2023-24,2023,estimate,32.529
+Oats,Nov–Oct,domestic_use,seed,2024-25,2024,estimate,35.616
+Oats,Nov–Oct,domestic_use,other,1989-90,1989,final,1322.0
+Oats,Nov–Oct,domestic_use,other,1990-91,1990,final,1330.63
+Oats,Nov–Oct,domestic_use,other,1991-92,1991,final,1459.407
+Oats,Nov–Oct,domestic_use,other,1992-93,1992,final,1626.88
+Oats,Nov–Oct,domestic_use,other,1993-94,1993,final,1405.705
+Oats,Nov–Oct,domestic_use,other,1994-95,1994,final,801.864
+Oats,Nov–Oct,domestic_use,other,1995-96,1995,final,1568.979
+Oats,Nov–Oct,domestic_use,other,1996-97,1996,final,1458.382
+Oats,Nov–Oct,domestic_use,other,1997-98,1997,final,1436.994
+Oats,Nov–Oct,domestic_use,other,1998-99,1998,final,1522.03
+Oats,Nov–Oct,domestic_use,other,1999-00,1999,final,951.261
+Oats,Nov–Oct,domestic_use,other,2000-01,2000,final,926.441
+Oats,Nov–Oct,domestic_use,other,2001-02,2001,final,1199.991
+Oats,Nov–Oct,domestic_use,other,2002-03,2002,final,658.65
+Oats,Nov–Oct,domestic_use,other,2003-04,2003,final,1765.087
+Oats,Nov–Oct,domestic_use,other,2004-05,2004,final,1100.178
+Oats,Nov–Oct,domestic_use,other,2005-06,2005,final,1348.48
+Oats,Nov–Oct,domestic_use,other,2006-07,2006,final,653.591
+Oats,Nov–Oct,domestic_use,other,2007-08,2007,final,1179.353
+Oats,Nov–Oct,domestic_use,other,2008-09,2008,final,958.436
+Oats,Nov–Oct,domestic_use,other,2009-10,2009,final,814.116
+Oats,Nov–Oct,domestic_use,other,2010-11,2010,final,925.0
+Oats,Nov–Oct,domestic_use,other,2011-12,2011,final,914.055
+Oats,Nov–Oct,domestic_use,other,2012-13,2012,final,949.707
+Oats,Nov–Oct,domestic_use,other,2013-14,2013,final,960.29
+Oats,Nov–Oct,domestic_use,other,2014-15,2014,final,920.632
+Oats,Nov–Oct,domestic_use,other,2015-16,2015,final,976.709
+Oats,Nov–Oct,domestic_use,other,2016-17,2016,final,1665.845
+Oats,Nov–Oct,domestic_use,other,2017-18,2017,final,1493.739
+Oats,Nov–Oct,domestic_use,other,2018-19,2018,final,1257.666
+Oats,Nov–Oct,domestic_use,other,2019-20,2019,final,763.387
+Oats,Nov–Oct,domestic_use,other,2020-21,2020,final,1250.0
+Oats,Nov–Oct,domestic_use,other,2021-22,2021,final,1250.0
+Oats,Nov–Oct,domestic_use,other,2022-23,2022,estimate,850.0
+Oats,Nov–Oct,domestic_use,other,2023-24,2023,estimate,900.0
+Oats,Nov–Oct,domestic_use,other,2024-25,2024,estimate,970.0
+Oats,Nov–Oct,exports,,1989-90,1989,final,280.905
+Oats,Nov–Oct,exports,,1990-91,1990,final,143.485
+Oats,Nov–Oct,exports,,1991-92,1991,final,175.236
+Oats,Nov–Oct,exports,,1992-93,1992,final,264.045
+Oats,Nov–Oct,exports,,1993-94,1993,final,197.758
+Oats,Nov–Oct,exports,,1994-95,1994,final,67.694
+Oats,Nov–Oct,exports,,1995-96,1995,final,255.435
+Oats,Nov–Oct,exports,,1996-97,1996,final,149.556
+Oats,Nov–Oct,exports,,1997-98,1997,final,153.779
+Oats,Nov–Oct,exports,,1998-99,1998,final,248.257
+Oats,Nov–Oct,exports,,1999-00,1999,final,135.315
+Oats,Nov–Oct,exports,,2000-01,2000,final,85.722
+Oats,Nov–Oct,exports,,2001-02,2001,final,189.957
+Oats,Nov–Oct,exports,,2002-03,2002,final,121.164
+Oats,Nov–Oct,exports,,2003-04,2003,final,210.12
+Oats,Nov–Oct,exports,,2004-05,2004,final,137.668
+Oats,Nov–Oct,exports,,2005-06,2005,final,191.39
+Oats,Nov–Oct,exports,,2006-07,2006,final,35.295
+Oats,Nov–Oct,exports,,2007-08,2007,final,181.173
+Oats,Nov–Oct,exports,,2008-09,2008,final,160.758
+Oats,Nov–Oct,exports,,2009-10,2009,final,207.833
+Oats,Nov–Oct,exports,,2010-11,2010,final,208.174
+Oats,Nov–Oct,exports,,2011-12,2011,final,182.518
+Oats,Nov–Oct,exports,,2012-13,2012,final,118.928
+Oats,Nov–Oct,exports,,2013-14,2013,final,116.468
+Oats,Nov–Oct,exports,,2014-15,2014,final,110.779
+Oats,Nov–Oct,exports,,2015-16,2015,final,109.336
+Oats,Nov–Oct,exports,,2016-17,2016,final,105.837
+Oats,Nov–Oct,exports,,2017-18,2017,final,120.773
+Oats,Nov–Oct,exports,,2018-19,2018,final,127.194
+Oats,Nov–Oct,exports,,2019-20,2019,final,188.998
+Oats,Nov–Oct,exports,,2020-21,2020,final,395.451
+Oats,Nov–Oct,exports,,2021-22,2021,final,558.955
+Oats,Nov–Oct,exports,,2022-23,2022,estimate,533.802
+Oats,Nov–Oct,exports,,2023-24,2023,estimate,292.616
+Oats,Nov–Oct,exports,,2024-25,2024,estimate,556.607
+Triticale,Nov–Oct,production,,1989-90,1989,final,164.372
+Triticale,Nov–Oct,production,,1990-91,1990,final,188.577
+Triticale,Nov–Oct,production,,1991-92,1991,final,177.342
+Triticale,Nov–Oct,production,,1992-93,1992,final,282.477
+Triticale,Nov–Oct,production,,1993-94,1993,final,262.815
+Triticale,Nov–Oct,production,,1994-95,1994,final,181.581
+Triticale,Nov–Oct,production,,1995-96,1995,final,468.513
+Triticale,Nov–Oct,production,,1996-97,1996,final,673.774
+Triticale,Nov–Oct,production,,1997-98,1997,final,632.485
+Triticale,Nov–Oct,production,,1998-99,1998,final,706.852
+Triticale,Nov–Oct,production,,1999-00,1999,final,764.08
+Triticale,Nov–Oct,production,,2000-01,2000,final,841.049
+Triticale,Nov–Oct,production,,2001-02,2001,final,859.651
+Triticale,Nov–Oct,production,,2002-03,2002,final,326.959
+Triticale,Nov–Oct,production,,2003-04,2003,final,825.861
+Triticale,Nov–Oct,production,,2004-05,2004,final,610.056
+Triticale,Nov–Oct,production,,2005-06,2005,final,829.757
+Triticale,Nov–Oct,production,,2006-07,2006,final,199.254
+Triticale,Nov–Oct,production,,2007-08,2007,final,450.0
+Triticale,Nov–Oct,production,,2008-09,2008,final,362.817
+Triticale,Nov–Oct,production,,2009-10,2009,final,545.0
+Triticale,Nov–Oct,production,,2010-11,2010,final,355.078
+Triticale,Nov–Oct,production,,2011-12,2011,final,284.614
+Triticale,Nov–Oct,production,,2012-13,2012,final,171.211
+Triticale,Nov–Oct,production,,2013-14,2013,final,125.641
+Triticale,Nov–Oct,production,,2014-15,2014,final,143.043
+Triticale,Nov–Oct,production,,2015-16,2015,final,127.393
+Triticale,Nov–Oct,production,,2016-17,2016,final,149.949
+Triticale,Nov–Oct,production,,2017-18,2017,final,86.958
+Triticale,Nov–Oct,production,,2018-19,2018,final,59.461
+Triticale,Nov–Oct,production,,2019-20,2019,final,76.857
+Triticale,Nov–Oct,production,,2020-21,2020,final,170.812
+Triticale,Nov–Oct,production,,2021-22,2021,final,117.167
+Triticale,Nov–Oct,production,,2022-23,2022,estimate,113.707
+Triticale,Nov–Oct,production,,2023-24,2023,estimate,82.696
+Triticale,Nov–Oct,production,,2024-25,2024,estimate,83.69
+Triticale,Nov–Oct,domestic_use,,1989-90,1989,final,164.372
+Triticale,Nov–Oct,domestic_use,,1990-91,1990,final,188.577
+Triticale,Nov–Oct,domestic_use,,1991-92,1991,final,177.342
+Triticale,Nov–Oct,domestic_use,,1992-93,1992,final,282.477
+Triticale,Nov–Oct,domestic_use,,1993-94,1993,final,262.815
+Triticale,Nov–Oct,domestic_use,,1994-95,1994,final,181.581
+Triticale,Nov–Oct,domestic_use,,1995-96,1995,final,468.513
+Triticale,Nov–Oct,domestic_use,,1996-97,1996,final,673.774
+Triticale,Nov–Oct,domestic_use,,1997-98,1997,final,632.485
+Triticale,Nov–Oct,domestic_use,,1998-99,1998,final,706.852
+Triticale,Nov–Oct,domestic_use,,1999-00,1999,final,764.08
+Triticale,Nov–Oct,domestic_use,,2000-01,2000,final,841.049
+Triticale,Nov–Oct,domestic_use,,2001-02,2001,final,859.651
+Triticale,Nov–Oct,domestic_use,,2002-03,2002,final,326.959
+Triticale,Nov–Oct,domestic_use,,2003-04,2003,final,825.861
+Triticale,Nov–Oct,domestic_use,,2004-05,2004,final,610.056
+Triticale,Nov–Oct,domestic_use,,2005-06,2005,final,829.757
+Triticale,Nov–Oct,domestic_use,,2006-07,2006,final,199.254
+Triticale,Nov–Oct,domestic_use,,2007-08,2007,final,450.0
+Triticale,Nov–Oct,domestic_use,,2008-09,2008,final,362.817
+Triticale,Nov–Oct,domestic_use,,2009-10,2009,final,545.0
+Triticale,Nov–Oct,domestic_use,,2010-11,2010,final,355.078
+Triticale,Nov–Oct,domestic_use,,2011-12,2011,final,284.604
+Triticale,Nov–Oct,domestic_use,,2012-13,2012,final,171.181
+Triticale,Nov–Oct,domestic_use,,2013-14,2013,final,125.593
+Triticale,Nov–Oct,domestic_use,,2014-15,2014,final,143.038
+Triticale,Nov–Oct,domestic_use,,2015-16,2015,final,126.249
+Triticale,Nov–Oct,domestic_use,,2016-17,2016,final,149.643
+Triticale,Nov–Oct,domestic_use,,2017-18,2017,final,86.886
+Triticale,Nov–Oct,domestic_use,,2018-19,2018,final,59.461
+Triticale,Nov–Oct,domestic_use,,2019-20,2019,final,76.503
+Triticale,Nov–Oct,domestic_use,,2020-21,2020,final,126.297
+Triticale,Nov–Oct,domestic_use,,2021-22,2021,final,117.07
+Triticale,Nov–Oct,domestic_use,,2022-23,2022,estimate,113.772
+Triticale,Nov–Oct,domestic_use,,2023-24,2023,estimate,87.848
+Triticale,Nov–Oct,domestic_use,,2024-25,2024,estimate,79.6
+Triticale,Nov–Oct,domestic_use,seed,1989-90,1989,final,4.45
+Triticale,Nov–Oct,domestic_use,seed,1990-91,1990,final,5.051
+Triticale,Nov–Oct,domestic_use,seed,1991-92,1991,final,6.1
+Triticale,Nov–Oct,domestic_use,seed,1992-93,1992,final,6.462
+Triticale,Nov–Oct,domestic_use,seed,1993-94,1993,final,7.671
+Triticale,Nov–Oct,domestic_use,seed,1994-95,1994,final,11.055
+Triticale,Nov–Oct,domestic_use,seed,1995-96,1995,final,17.314
+Triticale,Nov–Oct,domestic_use,seed,1996-97,1996,final,18.318
+Triticale,Nov–Oct,domestic_use,seed,1997-98,1997,final,19.292
+Triticale,Nov–Oct,domestic_use,seed,1998-99,1998,final,17.902
+Triticale,Nov–Oct,domestic_use,seed,1999-00,1999,final,19.471
+Triticale,Nov–Oct,domestic_use,seed,2000-01,2000,final,20.443
+Triticale,Nov–Oct,domestic_use,seed,2001-02,2001,final,20.378
+Triticale,Nov–Oct,domestic_use,seed,2002-03,2002,final,22.274
+Triticale,Nov–Oct,domestic_use,seed,2003-04,2003,final,19.465
+Triticale,Nov–Oct,domestic_use,seed,2004-05,2004,final,19.589
+Triticale,Nov–Oct,domestic_use,seed,2005-06,2005,final,18.426
+Triticale,Nov–Oct,domestic_use,seed,2006-07,2006,final,17.986
+Triticale,Nov–Oct,domestic_use,seed,2007-08,2007,final,16.138
+Triticale,Nov–Oct,domestic_use,seed,2008-09,2008,final,17.486
+Triticale,Nov–Oct,domestic_use,seed,2009-10,2009,final,9.36
+Triticale,Nov–Oct,domestic_use,seed,2010-11,2010,final,7.228
+Triticale,Nov–Oct,domestic_use,seed,2011-12,2011,final,4.959
+Triticale,Nov–Oct,domestic_use,seed,2012-13,2012,final,3.994
+Triticale,Nov–Oct,domestic_use,seed,2013-14,2013,final,4.076
+Triticale,Nov–Oct,domestic_use,seed,2014-15,2014,final,3.92
+Triticale,Nov–Oct,domestic_use,seed,2015-16,2015,final,3.079
+Triticale,Nov–Oct,domestic_use,seed,2016-17,2016,final,2.774
+Triticale,Nov–Oct,domestic_use,seed,2017-18,2017,final,2.42
+Triticale,Nov–Oct,domestic_use,seed,2018-19,2018,final,3.553
+Triticale,Nov–Oct,domestic_use,seed,2019-20,2019,final,3.606
+Triticale,Nov–Oct,domestic_use,seed,2020-21,2020,final,3.096
+Triticale,Nov–Oct,domestic_use,seed,2021-22,2021,final,2.85
+Triticale,Nov–Oct,domestic_use,seed,2022-23,2022,estimate,2.85
+Triticale,Nov–Oct,domestic_use,seed,2023-24,2023,estimate,2.695
+Triticale,Nov–Oct,domestic_use,seed,2024-25,2024,estimate,2.6
+Triticale,Nov–Oct,domestic_use,other,1989-90,1989,final,159.922
+Triticale,Nov–Oct,domestic_use,other,1990-91,1990,final,183.526
+Triticale,Nov–Oct,domestic_use,other,1991-92,1991,final,171.242
+Triticale,Nov–Oct,domestic_use,other,1992-93,1992,final,276.015
+Triticale,Nov–Oct,domestic_use,other,1993-94,1993,final,255.143
+Triticale,Nov–Oct,domestic_use,other,1994-95,1994,final,170.526
+Triticale,Nov–Oct,domestic_use,other,1995-96,1995,final,451.199
+Triticale,Nov–Oct,domestic_use,other,1996-97,1996,final,655.456
+Triticale,Nov–Oct,domestic_use,other,1997-98,1997,final,613.193
+Triticale,Nov–Oct,domestic_use,other,1998-99,1998,final,688.95
+Triticale,Nov–Oct,domestic_use,other,1999-00,1999,final,744.609
+Triticale,Nov–Oct,domestic_use,other,2000-01,2000,final,820.606
+Triticale,Nov–Oct,domestic_use,other,2001-02,2001,final,839.272
+Triticale,Nov–Oct,domestic_use,other,2002-03,2002,final,304.685
+Triticale,Nov–Oct,domestic_use,other,2003-04,2003,final,806.396
+Triticale,Nov–Oct,domestic_use,other,2004-05,2004,final,590.467
+Triticale,Nov–Oct,domestic_use,other,2005-06,2005,final,811.331
+Triticale,Nov–Oct,domestic_use,other,2006-07,2006,final,181.268
+Triticale,Nov–Oct,domestic_use,other,2007-08,2007,final,433.862
+Triticale,Nov–Oct,domestic_use,other,2008-09,2008,final,345.331
+Triticale,Nov–Oct,domestic_use,other,2009-10,2009,final,535.64
+Triticale,Nov–Oct,domestic_use,other,2010-11,2010,final,347.85
+Triticale,Nov–Oct,domestic_use,other,2011-12,2011,final,279.645
+Triticale,Nov–Oct,domestic_use,other,2012-13,2012,final,167.187
+Triticale,Nov–Oct,domestic_use,other,2013-14,2013,final,121.518
+Triticale,Nov–Oct,domestic_use,other,2014-15,2014,final,139.118
+Triticale,Nov–Oct,domestic_use,other,2015-16,2015,final,123.17
+Triticale,Nov–Oct,domestic_use,other,2016-17,2016,final,146.869
+Triticale,Nov–Oct,domestic_use,other,2017-18,2017,final,84.466
+Triticale,Nov–Oct,domestic_use,other,2018-19,2018,final,55.908
+Triticale,Nov–Oct,domestic_use,other,2019-20,2019,final,72.897
+Triticale,Nov–Oct,domestic_use,other,2020-21,2020,final,123.202
+Triticale,Nov–Oct,domestic_use,other,2021-22,2021,final,114.22
+Triticale,Nov–Oct,domestic_use,other,2022-23,2022,estimate,110.922
+Triticale,Nov–Oct,domestic_use,other,2023-24,2023,estimate,85.153
+Triticale,Nov–Oct,domestic_use,other,2024-25,2024,estimate,77.0
+Triticale,Nov–Oct,exports,,1989-90,1989,final,0.0
+Triticale,Nov–Oct,exports,,1990-91,1990,final,0.0
+Triticale,Nov–Oct,exports,,1991-92,1991,final,0.0
+Triticale,Nov–Oct,exports,,1992-93,1992,final,0.0
+Triticale,Nov–Oct,exports,,1993-94,1993,final,0.0
+Triticale,Nov–Oct,exports,,1994-95,1994,final,0.0
+Triticale,Nov–Oct,exports,,1995-96,1995,final,0.0
+Triticale,Nov–Oct,exports,,1996-97,1996,final,0.0
+Triticale,Nov–Oct,exports,,1997-98,1997,final,0.0
+Triticale,Nov–Oct,exports,,1998-99,1998,final,0.0
+Triticale,Nov–Oct,exports,,1999-00,1999,final,0.0
+Triticale,Nov–Oct,exports,,2000-01,2000,final,0.0
+Triticale,Nov–Oct,exports,,2001-02,2001,final,0.0
+Triticale,Nov–Oct,exports,,2002-03,2002,final,0.0
+Triticale,Nov–Oct,exports,,2003-04,2003,final,0.0
+Triticale,Nov–Oct,exports,,2004-05,2004,final,0.0
+Triticale,Nov–Oct,exports,,2005-06,2005,final,0.0
+Triticale,Nov–Oct,exports,,2006-07,2006,final,0.0
+Triticale,Nov–Oct,exports,,2007-08,2007,final,0.0
+Triticale,Nov–Oct,exports,,2008-09,2008,final,0.0
+Triticale,Nov–Oct,exports,,2009-10,2009,final,0.0
+Triticale,Nov–Oct,exports,,2010-11,2010,final,0.0
+Triticale,Nov–Oct,exports,,2011-12,2011,final,0.01
+Triticale,Nov–Oct,exports,,2012-13,2012,final,0.03
+Triticale,Nov–Oct,exports,,2013-14,2013,final,0.048
+Triticale,Nov–Oct,exports,,2014-15,2014,final,0.005
+Triticale,Nov–Oct,exports,,2015-16,2015,final,1.144
+Triticale,Nov–Oct,exports,,2016-17,2016,final,0.305
+Triticale,Nov–Oct,exports,,2017-18,2017,final,0.057
+Triticale,Nov–Oct,exports,,2018-19,2018,final,0.005
+Triticale,Nov–Oct,exports,,2019-20,2019,final,0.354
+Triticale,Nov–Oct,exports,,2020-21,2020,final,0.02
+Triticale,Nov–Oct,exports,,2021-22,2021,final,0.097
+Triticale,Nov–Oct,exports,,2022-23,2022,estimate,0.059
+Triticale,Nov–Oct,exports,,2023-24,2023,estimate,0.055
+Triticale,Nov–Oct,exports,,2024-25,2024,estimate,0.0
+Grain sorghum,Mar–Feb,production,,1989-90,1989,final,1235.935
+Grain sorghum,Mar–Feb,production,,1990-91,1990,final,938.505
+Grain sorghum,Mar–Feb,production,,1991-92,1991,final,746.761
+Grain sorghum,Mar–Feb,production,,1992-93,1992,final,1443.341
+Grain sorghum,Mar–Feb,production,,1993-94,1993,final,546.063
+Grain sorghum,Mar–Feb,production,,1994-95,1994,final,1081.509
+Grain sorghum,Mar–Feb,production,,1995-96,1995,final,1272.207
+Grain sorghum,Mar–Feb,production,,1996-97,1996,final,1592.175
+Grain sorghum,Mar–Feb,production,,1997-98,1997,final,1424.776
+Grain sorghum,Mar–Feb,production,,1998-99,1998,final,1080.766
+Grain sorghum,Mar–Feb,production,,1999-00,1999,final,1886.894
+Grain sorghum,Mar–Feb,production,,2000-01,2000,final,2113.855
+Grain sorghum,Mar–Feb,production,,2001-02,2001,final,1934.271
+Grain sorghum,Mar–Feb,production,,2002-03,2002,final,2018.556
+Grain sorghum,Mar–Feb,production,,2003-04,2003,final,1464.23
+Grain sorghum,Mar–Feb,production,,2004-05,2004,final,2008.703
+Grain sorghum,Mar–Feb,production,,2005-06,2005,final,2010.274
+Grain sorghum,Mar–Feb,production,,2006-07,2006,final,1931.053
+Grain sorghum,Mar–Feb,production,,2007-08,2007,final,1282.092
+Grain sorghum,Mar–Feb,production,,2008-09,2008,final,3789.931
+Grain sorghum,Mar–Feb,production,,2009-10,2009,final,2691.39
+Grain sorghum,Mar–Feb,production,,2010-11,2010,final,1507.635
+Grain sorghum,Mar–Feb,production,,2011-12,2011,final,1934.51
+Grain sorghum,Mar–Feb,production,,2012-13,2012,final,2234.912
+Grain sorghum,Mar–Feb,production,,2013-14,2013,final,2229.0
+Grain sorghum,Mar–Feb,production,,2014-15,2014,final,1282.326
+Grain sorghum,Mar–Feb,production,,2015-16,2015,final,2210.235
+Grain sorghum,Mar–Feb,production,,2016-17,2016,final,1790.828
+Grain sorghum,Mar–Feb,production,,2017-18,2017,final,994.338
+Grain sorghum,Mar–Feb,production,,2018-19,2018,final,1257.219
+Grain sorghum,Mar–Feb,production,,2019-20,2019,final,1160.71
+Grain sorghum,Mar–Feb,production,,2020-21,2020,final,397.993
+Grain sorghum,Mar–Feb,production,,2021-22,2021,final,1638.962
+Grain sorghum,Mar–Feb,production,,2022-23,2022,estimate,2648.069
+Grain sorghum,Mar–Feb,production,,2023-24,2023,estimate,2637.778
+Grain sorghum,Mar–Feb,production,,2024-25,2024,estimate,2215.035
+Grain sorghum,Mar–Feb,domestic_use,,1989-90,1989,final,899.981
+Grain sorghum,Mar–Feb,domestic_use,,1990-91,1990,final,918.988
+Grain sorghum,Mar–Feb,domestic_use,,1991-92,1991,final,678.062
+Grain sorghum,Mar–Feb,domestic_use,,1992-93,1992,final,1168.464
+Grain sorghum,Mar–Feb,domestic_use,,1993-94,1993,final,256.98
+Grain sorghum,Mar–Feb,domestic_use,,1994-95,1994,final,1036.316
+Grain sorghum,Mar–Feb,domestic_use,,1995-96,1995,final,1222.471
+Grain sorghum,Mar–Feb,domestic_use,,1996-97,1996,final,1274.355
+Grain sorghum,Mar–Feb,domestic_use,,1997-98,1997,final,927.399
+Grain sorghum,Mar–Feb,domestic_use,,1998-99,1998,final,958.161
+Grain sorghum,Mar–Feb,domestic_use,,1999-00,1999,final,1705.809
+Grain sorghum,Mar–Feb,domestic_use,,2000-01,2000,final,2003.787
+Grain sorghum,Mar–Feb,domestic_use,,2001-02,2001,final,1637.2
+Grain sorghum,Mar–Feb,domestic_use,,2002-03,2002,final,1803.333
+Grain sorghum,Mar–Feb,domestic_use,,2003-04,2003,final,1403.669
+Grain sorghum,Mar–Feb,domestic_use,,2004-05,2004,final,1303.774
+Grain sorghum,Mar–Feb,domestic_use,,2005-06,2005,final,1603.83
+Grain sorghum,Mar–Feb,domestic_use,,2006-07,2006,final,1764.807
+Grain sorghum,Mar–Feb,domestic_use,,2007-08,2007,final,1304.706
+Grain sorghum,Mar–Feb,domestic_use,,2008-09,2008,final,2803.834
+Grain sorghum,Mar–Feb,domestic_use,,2009-10,2009,final,1702.49
+Grain sorghum,Mar–Feb,domestic_use,,2010-11,2010,final,1203.165
+Grain sorghum,Mar–Feb,domestic_use,,2011-12,2011,final,1003.291
+Grain sorghum,Mar–Feb,domestic_use,,2012-13,2012,final,1103.233
+Grain sorghum,Mar–Feb,domestic_use,,2013-14,2013,final,1052.66
+Grain sorghum,Mar–Feb,domestic_use,,2014-15,2014,final,853.663
+Grain sorghum,Mar–Feb,domestic_use,,2015-16,2015,final,602.603
+Grain sorghum,Mar–Feb,domestic_use,,2016-17,2016,final,901.839
+Grain sorghum,Mar–Feb,domestic_use,,2017-18,2017,final,702.311
+Grain sorghum,Mar–Feb,domestic_use,,2018-19,2018,final,702.751
+Grain sorghum,Mar–Feb,domestic_use,,2019-20,2019,final,1001.021
+Grain sorghum,Mar–Feb,domestic_use,,2020-21,2020,final,102.863
+Grain sorghum,Mar–Feb,domestic_use,,2021-22,2021,final,103.108
+Grain sorghum,Mar–Feb,domestic_use,,2022-23,2022,estimate,248.361
+Grain sorghum,Mar–Feb,domestic_use,,2023-24,2023,estimate,117.961
+Grain sorghum,Mar–Feb,domestic_use,,2024-25,2024,estimate,203.11
+Grain sorghum,Mar–Feb,domestic_use,seed,1989-90,1989,final,1.881
+Grain sorghum,Mar–Feb,domestic_use,seed,1990-91,1990,final,1.878
+Grain sorghum,Mar–Feb,domestic_use,seed,1991-92,1991,final,2.836
+Grain sorghum,Mar–Feb,domestic_use,seed,1992-93,1992,final,2.131
+Grain sorghum,Mar–Feb,domestic_use,seed,1993-94,1993,final,2.492
+Grain sorghum,Mar–Feb,domestic_use,seed,1994-95,1994,final,3.43
+Grain sorghum,Mar–Feb,domestic_use,seed,1995-96,1995,final,3.847
+Grain sorghum,Mar–Feb,domestic_use,seed,1996-97,1996,final,2.719
+Grain sorghum,Mar–Feb,domestic_use,seed,1997-98,1997,final,2.532
+Grain sorghum,Mar–Feb,domestic_use,seed,1998-99,1998,final,2.924
+Grain sorghum,Mar–Feb,domestic_use,seed,1999-00,1999,final,3.109
+Grain sorghum,Mar–Feb,domestic_use,seed,2000-01,2000,final,3.787
+Grain sorghum,Mar–Feb,domestic_use,seed,2001-02,2001,final,4.101
+Grain sorghum,Mar–Feb,domestic_use,seed,2002-03,2002,final,3.333
+Grain sorghum,Mar–Feb,domestic_use,seed,2003-04,2003,final,3.669
+Grain sorghum,Mar–Feb,domestic_use,seed,2004-05,2004,final,3.774
+Grain sorghum,Mar–Feb,domestic_use,seed,2005-06,2005,final,3.83
+Grain sorghum,Mar–Feb,domestic_use,seed,2006-07,2006,final,3.065
+Grain sorghum,Mar–Feb,domestic_use,seed,2007-08,2007,final,4.706
+Grain sorghum,Mar–Feb,domestic_use,seed,2008-09,2008,final,3.834
+Grain sorghum,Mar–Feb,domestic_use,seed,2009-10,2009,final,2.49
+Grain sorghum,Mar–Feb,domestic_use,seed,2010-11,2010,final,3.165
+Grain sorghum,Mar–Feb,domestic_use,seed,2011-12,2011,final,3.291
+Grain sorghum,Mar–Feb,domestic_use,seed,2012-13,2012,final,3.233
+Grain sorghum,Mar–Feb,domestic_use,seed,2013-14,2013,final,2.66
+Grain sorghum,Mar–Feb,domestic_use,seed,2014-15,2014,final,3.663
+Grain sorghum,Mar–Feb,domestic_use,seed,2015-16,2015,final,2.603
+Grain sorghum,Mar–Feb,domestic_use,seed,2016-17,2016,final,1.839
+Grain sorghum,Mar–Feb,domestic_use,seed,2017-18,2017,final,2.311
+Grain sorghum,Mar–Feb,domestic_use,seed,2018-19,2018,final,2.751
+Grain sorghum,Mar–Feb,domestic_use,seed,2019-20,2019,final,1.021
+Grain sorghum,Mar–Feb,domestic_use,seed,2020-21,2020,final,2.863
+Grain sorghum,Mar–Feb,domestic_use,seed,2021-22,2021,final,3.108
+Grain sorghum,Mar–Feb,domestic_use,seed,2022-23,2022,estimate,3.361
+Grain sorghum,Mar–Feb,domestic_use,seed,2023-24,2023,estimate,2.961
+Grain sorghum,Mar–Feb,domestic_use,seed,2024-25,2024,estimate,3.11
+Grain sorghum,Mar–Feb,domestic_use,other,1989-90,1989,final,898.1
+Grain sorghum,Mar–Feb,domestic_use,other,1990-91,1990,final,917.11
+Grain sorghum,Mar–Feb,domestic_use,other,1991-92,1991,final,675.226
+Grain sorghum,Mar–Feb,domestic_use,other,1992-93,1992,final,1166.333
+Grain sorghum,Mar–Feb,domestic_use,other,1993-94,1993,final,254.487
+Grain sorghum,Mar–Feb,domestic_use,other,1994-95,1994,final,1032.886
+Grain sorghum,Mar–Feb,domestic_use,other,1995-96,1995,final,1218.624
+Grain sorghum,Mar–Feb,domestic_use,other,1996-97,1996,final,1271.636
+Grain sorghum,Mar–Feb,domestic_use,other,1997-98,1997,final,924.867
+Grain sorghum,Mar–Feb,domestic_use,other,1998-99,1998,final,955.236
+Grain sorghum,Mar–Feb,domestic_use,other,1999-00,1999,final,1702.7
+Grain sorghum,Mar–Feb,domestic_use,other,2000-01,2000,final,2000.0
+Grain sorghum,Mar–Feb,domestic_use,other,2001-02,2001,final,1633.099
+Grain sorghum,Mar–Feb,domestic_use,other,2002-03,2002,final,1800.0
+Grain sorghum,Mar–Feb,domestic_use,other,2003-04,2003,final,1400.0
+Grain sorghum,Mar–Feb,domestic_use,other,2004-05,2004,final,1300.0
+Grain sorghum,Mar–Feb,domestic_use,other,2005-06,2005,final,1600.0
+Grain sorghum,Mar–Feb,domestic_use,other,2006-07,2006,final,1761.742
+Grain sorghum,Mar–Feb,domestic_use,other,2007-08,2007,final,1300.0
+Grain sorghum,Mar–Feb,domestic_use,other,2008-09,2008,final,2800.0
+Grain sorghum,Mar–Feb,domestic_use,other,2009-10,2009,final,1700.0
+Grain sorghum,Mar–Feb,domestic_use,other,2010-11,2010,final,1200.0
+Grain sorghum,Mar–Feb,domestic_use,other,2011-12,2011,final,1000.0
+Grain sorghum,Mar–Feb,domestic_use,other,2012-13,2012,final,1100.0
+Grain sorghum,Mar–Feb,domestic_use,other,2013-14,2013,final,1050.0
+Grain sorghum,Mar–Feb,domestic_use,other,2014-15,2014,final,850.0
+Grain sorghum,Mar–Feb,domestic_use,other,2015-16,2015,final,600.0
+Grain sorghum,Mar–Feb,domestic_use,other,2016-17,2016,final,900.0
+Grain sorghum,Mar–Feb,domestic_use,other,2017-18,2017,final,700.0
+Grain sorghum,Mar–Feb,domestic_use,other,2018-19,2018,final,700.0
+Grain sorghum,Mar–Feb,domestic_use,other,2019-20,2019,final,1000.0
+Grain sorghum,Mar–Feb,domestic_use,other,2020-21,2020,final,100.0
+Grain sorghum,Mar–Feb,domestic_use,other,2021-22,2021,final,100.0
+Grain sorghum,Mar–Feb,domestic_use,other,2022-23,2022,estimate,245.0
+Grain sorghum,Mar–Feb,domestic_use,other,2023-24,2023,estimate,115.0
+Grain sorghum,Mar–Feb,domestic_use,other,2024-25,2024,estimate,200.0
+Grain sorghum,Mar–Feb,exports,,1989-90,1989,final,322.75
+Grain sorghum,Mar–Feb,exports,,1990-91,1990,final,27.699
+Grain sorghum,Mar–Feb,exports,,1991-92,1991,final,225.877
+Grain sorghum,Mar–Feb,exports,,1992-93,1992,final,289.078
+Grain sorghum,Mar–Feb,exports,,1993-94,1993,final,37.385
+Grain sorghum,Mar–Feb,exports,,1994-95,1994,final,267.333
+Grain sorghum,Mar–Feb,exports,,1995-96,1995,final,61.122
+Grain sorghum,Mar–Feb,exports,,1996-97,1996,final,598.594
+Grain sorghum,Mar–Feb,exports,,1997-98,1997,final,230.668
+Grain sorghum,Mar–Feb,exports,,1998-99,1998,final,149.5
+Grain sorghum,Mar–Feb,exports,,1999-00,1999,final,28.913
+Grain sorghum,Mar–Feb,exports,,2000-01,2000,final,97.927
+Grain sorghum,Mar–Feb,exports,,2001-02,2001,final,501.453
+Grain sorghum,Mar–Feb,exports,,2002-03,2002,final,374.855
+Grain sorghum,Mar–Feb,exports,,2003-04,2003,final,64.383
+Grain sorghum,Mar–Feb,exports,,2004-05,2004,final,623.472
+Grain sorghum,Mar–Feb,exports,,2005-06,2005,final,258.638
+Grain sorghum,Mar–Feb,exports,,2006-07,2006,final,83.282
+Grain sorghum,Mar–Feb,exports,,2007-08,2007,final,110.187
+Grain sorghum,Mar–Feb,exports,,2008-09,2008,final,957.279
+Grain sorghum,Mar–Feb,exports,,2009-10,2009,final,997.879
+Grain sorghum,Mar–Feb,exports,,2010-11,2010,final,340.932
+Grain sorghum,Mar–Feb,exports,,2011-12,2011,final,950.384
+Grain sorghum,Mar–Feb,exports,,2012-13,2012,final,1179.225
+Grain sorghum,Mar–Feb,exports,,2013-14,2013,final,1145.984
+Grain sorghum,Mar–Feb,exports,,2014-15,2014,final,397.132
+Grain sorghum,Mar–Feb,exports,,2015-16,2015,final,1638.012
+Grain sorghum,Mar–Feb,exports,,2016-17,2016,final,912.804
+Grain sorghum,Mar–Feb,exports,,2017-18,2017,final,277.269
+Grain sorghum,Mar–Feb,exports,,2018-19,2018,final,440.926
+Grain sorghum,Mar–Feb,exports,,2019-20,2019,final,101.166
+Grain sorghum,Mar–Feb,exports,,2020-21,2020,final,256.033
+Grain sorghum,Mar–Feb,exports,,2021-22,2021,final,1702.373
+Grain sorghum,Mar–Feb,exports,,2022-23,2022,estimate,2196.276
+Grain sorghum,Mar–Feb,exports,,2023-24,2023,estimate,2529.589
+Grain sorghum,Mar–Feb,exports,,2024-25,2024,estimate,2175.379
+Corn (maize),Mar–Feb,production,,1989-90,1989,final,215.8
+Corn (maize),Mar–Feb,production,,1990-91,1990,final,218.0
+Corn (maize),Mar–Feb,production,,1991-92,1991,final,192.9
+Corn (maize),Mar–Feb,production,,1992-93,1992,final,268.2
+Corn (maize),Mar–Feb,production,,1993-94,1993,final,198.2
+Corn (maize),Mar–Feb,production,,1994-95,1994,final,203.421
+Corn (maize),Mar–Feb,production,,1995-96,1995,final,241.741
+Corn (maize),Mar–Feb,production,,1996-97,1996,final,310.923
+Corn (maize),Mar–Feb,production,,1997-98,1997,final,397.539
+Corn (maize),Mar–Feb,production,,1998-99,1998,final,271.373
+Corn (maize),Mar–Feb,production,,1999-00,1999,final,337.302
+Corn (maize),Mar–Feb,production,,2000-01,2000,final,405.824
+Corn (maize),Mar–Feb,production,,2001-02,2001,final,344.556
+Corn (maize),Mar–Feb,production,,2002-03,2002,final,453.303
+Corn (maize),Mar–Feb,production,,2003-04,2003,final,309.999
+Corn (maize),Mar–Feb,production,,2004-05,2004,final,394.952
+Corn (maize),Mar–Feb,production,,2005-06,2005,final,419.672
+Corn (maize),Mar–Feb,production,,2006-07,2006,final,361.916
+Corn (maize),Mar–Feb,production,,2007-08,2007,final,239.446
+Corn (maize),Mar–Feb,production,,2008-09,2008,final,387.0
+Corn (maize),Mar–Feb,production,,2009-10,2009,final,375.671
+Corn (maize),Mar–Feb,production,,2010-11,2010,final,328.029
+Corn (maize),Mar–Feb,production,,2011-12,2011,final,356.902
+Corn (maize),Mar–Feb,production,,2012-13,2012,final,448.935
+Corn (maize),Mar–Feb,production,,2013-14,2013,final,505.897
+Corn (maize),Mar–Feb,production,,2014-15,2014,final,389.532
+Corn (maize),Mar–Feb,production,,2015-16,2015,final,494.589
+Corn (maize),Mar–Feb,production,,2016-17,2016,final,400.032
+Corn (maize),Mar–Feb,production,,2017-18,2017,final,436.194
+Corn (maize),Mar–Feb,production,,2018-19,2018,final,387.237
+Corn (maize),Mar–Feb,production,,2019-20,2019,final,327.206
+Corn (maize),Mar–Feb,production,,2020-21,2020,final,267.552
+Corn (maize),Mar–Feb,production,,2021-22,2021,final,305.656
+Corn (maize),Mar–Feb,production,,2022-23,2022,estimate,430.024
+Corn (maize),Mar–Feb,production,,2023-24,2023,estimate,410.971
+Corn (maize),Mar–Feb,production,,2024-25,2024,estimate,378.683
+Corn (maize),Mar–Feb,domestic_use,,1989-90,1989,final,189.779
+Corn (maize),Mar–Feb,domestic_use,,1990-91,1990,final,209.725
+Corn (maize),Mar–Feb,domestic_use,,1991-92,1991,final,185.064
+Corn (maize),Mar–Feb,domestic_use,,1992-93,1992,final,249.447
+Corn (maize),Mar–Feb,domestic_use,,1993-94,1993,final,181.873
+Corn (maize),Mar–Feb,domestic_use,,1994-95,1994,final,168.829
+Corn (maize),Mar–Feb,domestic_use,,1995-96,1995,final,274.272
+Corn (maize),Mar–Feb,domestic_use,,1996-97,1996,final,361.351
+Corn (maize),Mar–Feb,domestic_use,,1997-98,1997,final,380.324
+Corn (maize),Mar–Feb,domestic_use,,1998-99,1998,final,271.939
+Corn (maize),Mar–Feb,domestic_use,,1999-00,1999,final,319.27
+Corn (maize),Mar–Feb,domestic_use,,2000-01,2000,final,368.479
+Corn (maize),Mar–Feb,domestic_use,,2001-02,2001,final,292.526
+Corn (maize),Mar–Feb,domestic_use,,2002-03,2002,final,412.25
+Corn (maize),Mar–Feb,domestic_use,,2003-04,2003,final,288.586
+Corn (maize),Mar–Feb,domestic_use,,2004-05,2004,final,376.807
+Corn (maize),Mar–Feb,domestic_use,,2005-06,2005,final,414.663
+Corn (maize),Mar–Feb,domestic_use,,2006-07,2006,final,350.361
+Corn (maize),Mar–Feb,domestic_use,,2007-08,2007,final,239.107
+Corn (maize),Mar–Feb,domestic_use,,2008-09,2008,final,360.49
+Corn (maize),Mar–Feb,domestic_use,,2009-10,2009,final,296.87
+Corn (maize),Mar–Feb,domestic_use,,2010-11,2010,final,322.693
+Corn (maize),Mar–Feb,domestic_use,,2011-12,2011,final,362.198
+Corn (maize),Mar–Feb,domestic_use,,2012-13,2012,final,409.527
+Corn (maize),Mar–Feb,domestic_use,,2013-14,2013,final,375.077
+Corn (maize),Mar–Feb,domestic_use,,2014-15,2014,final,276.588
+Corn (maize),Mar–Feb,domestic_use,,2015-16,2015,final,429.593
+Corn (maize),Mar–Feb,domestic_use,,2016-17,2016,final,349.205
+Corn (maize),Mar–Feb,domestic_use,,2017-18,2017,final,358.599
+Corn (maize),Mar–Feb,domestic_use,,2018-19,2018,final,344.317
+Corn (maize),Mar–Feb,domestic_use,,2019-20,2019,final,162.566
+Corn (maize),Mar–Feb,domestic_use,,2020-21,2020,final,222.758
+Corn (maize),Mar–Feb,domestic_use,,2021-22,2021,final,220.789
+Corn (maize),Mar–Feb,domestic_use,,2022-23,2022,estimate,280.783
+Corn (maize),Mar–Feb,domestic_use,,2023-24,2023,estimate,290.746
+Corn (maize),Mar–Feb,domestic_use,,2024-25,2024,estimate,300.702
+Corn (maize),Mar–Feb,domestic_use,seed,1989-90,1989,final,0.779
+Corn (maize),Mar–Feb,domestic_use,seed,1990-91,1990,final,0.725
+Corn (maize),Mar–Feb,domestic_use,seed,1991-92,1991,final,0.776
+Corn (maize),Mar–Feb,domestic_use,seed,1992-93,1992,final,0.674
+Corn (maize),Mar–Feb,domestic_use,seed,1993-94,1993,final,0.655
+Corn (maize),Mar–Feb,domestic_use,seed,1994-95,1994,final,0.751
+Corn (maize),Mar–Feb,domestic_use,seed,1995-96,1995,final,0.843
+Corn (maize),Mar–Feb,domestic_use,seed,1996-97,1996,final,0.998
+Corn (maize),Mar–Feb,domestic_use,seed,1997-98,1997,final,0.859
+Corn (maize),Mar–Feb,domestic_use,seed,1998-99,1998,final,0.963
+Corn (maize),Mar–Feb,domestic_use,seed,1999-00,1999,final,1.232
+Corn (maize),Mar–Feb,domestic_use,seed,2000-01,2000,final,1.112
+Corn (maize),Mar–Feb,domestic_use,seed,2001-02,2001,final,1.238
+Corn (maize),Mar–Feb,domestic_use,seed,2002-03,2002,final,0.743
+Corn (maize),Mar–Feb,domestic_use,seed,2003-04,2003,final,1.052
+Corn (maize),Mar–Feb,domestic_use,seed,2004-05,2004,final,1.086
+Corn (maize),Mar–Feb,domestic_use,seed,2005-06,2005,final,1.008
+Corn (maize),Mar–Feb,domestic_use,seed,2006-07,2006,final,0.73
+Corn (maize),Mar–Feb,domestic_use,seed,2007-08,2007,final,1.02
+Corn (maize),Mar–Feb,domestic_use,seed,2008-09,2008,final,0.968
+Corn (maize),Mar–Feb,domestic_use,seed,2009-10,2009,final,0.884
+Corn (maize),Mar–Feb,domestic_use,seed,2010-11,2010,final,0.933
+Corn (maize),Mar–Feb,domestic_use,seed,2011-12,2011,final,1.039
+Corn (maize),Mar–Feb,domestic_use,seed,2012-13,2012,final,1.17
+Corn (maize),Mar–Feb,domestic_use,seed,2013-14,2013,final,0.784
+Corn (maize),Mar–Feb,domestic_use,seed,2014-15,2014,final,0.893
+Corn (maize),Mar–Feb,domestic_use,seed,2015-16,2015,final,0.799
+Corn (maize),Mar–Feb,domestic_use,seed,2016-17,2016,final,1.017
+Corn (maize),Mar–Feb,domestic_use,seed,2017-18,2017,final,0.791
+Corn (maize),Mar–Feb,domestic_use,seed,2018-19,2018,final,0.884
+Corn (maize),Mar–Feb,domestic_use,seed,2019-20,2019,final,0.566
+Corn (maize),Mar–Feb,domestic_use,seed,2020-21,2020,final,0.758
+Corn (maize),Mar–Feb,domestic_use,seed,2021-22,2021,final,0.789
+Corn (maize),Mar–Feb,domestic_use,seed,2022-23,2022,estimate,0.783
+Corn (maize),Mar–Feb,domestic_use,seed,2023-24,2023,estimate,0.746
+Corn (maize),Mar–Feb,domestic_use,seed,2024-25,2024,estimate,0.702
+Corn (maize),Mar–Feb,domestic_use,other,1989-90,1989,final,189.0
+Corn (maize),Mar–Feb,domestic_use,other,1990-91,1990,final,209.0
+Corn (maize),Mar–Feb,domestic_use,other,1991-92,1991,final,184.289
+Corn (maize),Mar–Feb,domestic_use,other,1992-93,1992,final,248.773
+Corn (maize),Mar–Feb,domestic_use,other,1993-94,1993,final,181.218
+Corn (maize),Mar–Feb,domestic_use,other,1994-95,1994,final,168.079
+Corn (maize),Mar–Feb,domestic_use,other,1995-96,1995,final,273.429
+Corn (maize),Mar–Feb,domestic_use,other,1996-97,1996,final,360.352
+Corn (maize),Mar–Feb,domestic_use,other,1997-98,1997,final,379.465
+Corn (maize),Mar–Feb,domestic_use,other,1998-99,1998,final,270.976
+Corn (maize),Mar–Feb,domestic_use,other,1999-00,1999,final,318.037
+Corn (maize),Mar–Feb,domestic_use,other,2000-01,2000,final,367.367
+Corn (maize),Mar–Feb,domestic_use,other,2001-02,2001,final,291.289
+Corn (maize),Mar–Feb,domestic_use,other,2002-03,2002,final,411.507
+Corn (maize),Mar–Feb,domestic_use,other,2003-04,2003,final,287.535
+Corn (maize),Mar–Feb,domestic_use,other,2004-05,2004,final,375.722
+Corn (maize),Mar–Feb,domestic_use,other,2005-06,2005,final,413.655
+Corn (maize),Mar–Feb,domestic_use,other,2006-07,2006,final,349.631
+Corn (maize),Mar–Feb,domestic_use,other,2007-08,2007,final,238.087
+Corn (maize),Mar–Feb,domestic_use,other,2008-09,2008,final,359.521
+Corn (maize),Mar–Feb,domestic_use,other,2009-10,2009,final,295.985
+Corn (maize),Mar–Feb,domestic_use,other,2010-11,2010,final,321.76
+Corn (maize),Mar–Feb,domestic_use,other,2011-12,2011,final,361.159
+Corn (maize),Mar–Feb,domestic_use,other,2012-13,2012,final,408.357
+Corn (maize),Mar–Feb,domestic_use,other,2013-14,2013,final,374.293
+Corn (maize),Mar–Feb,domestic_use,other,2014-15,2014,final,275.694
+Corn (maize),Mar–Feb,domestic_use,other,2015-16,2015,final,428.794
+Corn (maize),Mar–Feb,domestic_use,other,2016-17,2016,final,348.188
+Corn (maize),Mar–Feb,domestic_use,other,2017-18,2017,final,357.808
+Corn (maize),Mar–Feb,domestic_use,other,2018-19,2018,final,343.433
+Corn (maize),Mar–Feb,domestic_use,other,2019-20,2019,final,162.0
+Corn (maize),Mar–Feb,domestic_use,other,2020-21,2020,final,222.0
+Corn (maize),Mar–Feb,domestic_use,other,2021-22,2021,final,220.0
+Corn (maize),Mar–Feb,domestic_use,other,2022-23,2022,estimate,280.0
+Corn (maize),Mar–Feb,domestic_use,other,2023-24,2023,estimate,290.0
+Corn (maize),Mar–Feb,domestic_use,other,2024-25,2024,estimate,300.0
+Corn (maize),Mar–Feb,exports,,1989-90,1989,final,32.514
+Corn (maize),Mar–Feb,exports,,1990-91,1990,final,9.012
+Corn (maize),Mar–Feb,exports,,1991-92,1991,final,18.501
+Corn (maize),Mar–Feb,exports,,1992-93,1992,final,16.969
+Corn (maize),Mar–Feb,exports,,1993-94,1993,final,26.578
+Corn (maize),Mar–Feb,exports,,1994-95,1994,final,6.14
+Corn (maize),Mar–Feb,exports,,1995-96,1995,final,3.477
+Corn (maize),Mar–Feb,exports,,1996-97,1996,final,17.803
+Corn (maize),Mar–Feb,exports,,1997-98,1997,final,10.269
+Corn (maize),Mar–Feb,exports,,1998-99,1998,final,19.034
+Corn (maize),Mar–Feb,exports,,1999-00,1999,final,36.57
+Corn (maize),Mar–Feb,exports,,2000-01,2000,final,51.413
+Corn (maize),Mar–Feb,exports,,2001-02,2001,final,44.772
+Corn (maize),Mar–Feb,exports,,2002-03,2002,final,62.558
+Corn (maize),Mar–Feb,exports,,2003-04,2003,final,15.433
+Corn (maize),Mar–Feb,exports,,2004-05,2004,final,10.239
+Corn (maize),Mar–Feb,exports,,2005-06,2005,final,4.986
+Corn (maize),Mar–Feb,exports,,2006-07,2006,final,3.256
+Corn (maize),Mar–Feb,exports,,2007-08,2007,final,1.043
+Corn (maize),Mar–Feb,exports,,2008-09,2008,final,67.209
+Corn (maize),Mar–Feb,exports,,2009-10,2009,final,13.138
+Corn (maize),Mar–Feb,exports,,2010-11,2010,final,8.743
+Corn (maize),Mar–Feb,exports,,2011-12,2011,final,46.003
+Corn (maize),Mar–Feb,exports,,2012-13,2012,final,105.755
+Corn (maize),Mar–Feb,exports,,2013-14,2013,final,105.688
+Corn (maize),Mar–Feb,exports,,2014-15,2014,final,60.084
+Corn (maize),Mar–Feb,exports,,2015-16,2015,final,63.863
+Corn (maize),Mar–Feb,exports,,2016-17,2016,final,63.234
+Corn (maize),Mar–Feb,exports,,2017-18,2017,final,68.144
+Corn (maize),Mar–Feb,exports,,2018-19,2018,final,72.657
+Corn (maize),Mar–Feb,exports,,2019-20,2019,final,52.613
+Corn (maize),Mar–Feb,exports,,2020-21,2020,final,49.953
+Corn (maize),Mar–Feb,exports,,2021-22,2021,final,87.63
+Corn (maize),Mar–Feb,exports,,2022-23,2022,estimate,87.659
+Corn (maize),Mar–Feb,exports,,2023-24,2023,estimate,78.566
+Corn (maize),Mar–Feb,exports,,2024-25,2024,estimate,90.952

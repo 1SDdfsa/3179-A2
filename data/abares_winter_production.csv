@@ -1,0 +1,229 @@
+year,year_start,status,region,production_kt
+1989-90,1989,final,New South Wales,4841.223
+1989-90,1989,final,Victoria,3343.008
+1989-90,1989,final,Queensland,1829.027
+1989-90,1989,final,South Australia,4832.81
+1989-90,1989,final,Western Australia,6606.416
+1989-90,1989,final,Australia,21491.804
+1990-91,1990,final,New South Wales,5826.706
+1990-91,1990,final,Victoria,2712.227
+1990-91,1990,final,Queensland,2486.538
+1990-91,1990,final,South Australia,3901.414
+1990-91,1990,final,Western Australia,7346.772
+1990-91,1990,final,Australia,22325.977
+1991-92,1991,final,New South Wales,3909.599
+1991-92,1991,final,Victoria,2814.517
+1991-92,1991,final,Queensland,461.502
+1991-92,1991,final,South Australia,4534.015
+1991-92,1991,final,Western Australia,7183.333
+1991-92,1991,final,Australia,18962.288
+1992-93,1992,final,New South Wales,5950.707
+1992-93,1992,final,Victoria,4120.684
+1992-93,1992,final,Queensland,1053.865
+1992-93,1992,final,South Australia,4797.718
+1992-93,1992,final,Western Australia,8499.538
+1992-93,1992,final,Australia,24487.185
+1993-94,1993,final,New South Wales,7619.149
+1993-94,1993,final,Victoria,4479.907
+1993-94,1993,final,Queensland,834.394
+1993-94,1993,final,South Australia,4923.156
+1993-94,1993,final,Western Australia,9872.962
+1993-94,1993,final,Australia,27796.784
+1994-95,1994,final,New South Wales,1528.143
+1994-95,1994,final,Victoria,1863.646
+1994-95,1994,final,Queensland,311.546
+1994-95,1994,final,South Australia,3044.445
+1994-95,1994,final,Western Australia,7924.331
+1994-95,1994,final,Australia,14719.274
+1995-96,1995,final,New South Wales,6961.863
+1995-96,1995,final,Victoria,4500.51
+1995-96,1995,final,Queensland,745.907
+1995-96,1995,final,South Australia,5263.461
+1995-96,1995,final,Western Australia,10244.394
+1995-96,1995,final,Australia,27785.136
+1996-97,1996,final,New South Wales,11286.144
+1996-97,1996,final,Victoria,4590.51
+1996-97,1996,final,Queensland,2468.14
+1996-97,1996,final,South Australia,5456.971
+1996-97,1996,final,Western Australia,11192.607
+1996-97,1996,final,Australia,35060.019
+1997-98,1997,final,New South Wales,8557.372
+1997-98,1997,final,Victoria,3397.664
+1997-98,1997,final,Queensland,1639.374
+1997-98,1997,final,South Australia,5457.808
+1997-98,1997,final,Western Australia,11994.754
+1997-98,1997,final,Australia,31112.569
+1998-99,1998,final,New South Wales,9717.859
+1998-99,1998,final,Victoria,3507.415
+1998-99,1998,final,Queensland,2323.341
+1998-99,1998,final,South Australia,6303.985
+1998-99,1998,final,Western Australia,12232.647
+1998-99,1998,final,Australia,34159.264
+1999-00,1999,final,New South Wales,11525.912
+1999-00,1999,final,Victoria,5252.253
+1999-00,1999,final,Queensland,2221.165
+1999-00,1999,final,South Australia,4769.642
+1999-00,1999,final,Western Australia,13312.051
+1999-00,1999,final,Australia,37141.718
+2000-01,2000,final,New South Wales,10829.162
+2000-01,2000,final,Victoria,6265.925
+2000-01,2000,final,Queensland,1338.758
+2000-01,2000,final,South Australia,7428.511
+2000-01,2000,final,Western Australia,8724.138
+2000-01,2000,final,Australia,34662.351
+2001-02,2001,final,New South Wales,11169.933
+2001-02,2001,final,Victoria,5892.555
+2001-02,2001,final,Queensland,1156.408
+2001-02,2001,final,South Australia,8796.13
+2001-02,2001,final,Western Australia,12042.351
+2001-02,2001,final,Australia,39132.959
+2002-03,2002,final,New South Wales,3484.555
+2002-03,2002,final,Victoria,1943.314
+2002-03,2002,final,Queensland,829.138
+2002-03,2002,final,South Australia,4222.664
+2002-03,2002,final,Western Australia,6811.822
+2002-03,2002,final,Australia,17359.461
+2003-04,2003,final,New South Wales,10795.045
+2003-04,2003,final,Victoria,6961.477
+2003-04,2003,final,Queensland,1450.064
+2003-04,2003,final,South Australia,7359.142
+2003-04,2003,final,Western Australia,16676.2
+2003-04,2003,final,Australia,43313.331
+2004-05,2004,final,New South Wales,10712.18
+2004-05,2004,final,Victoria,4214.428
+2004-05,2004,final,Queensland,1391.211
+2004-05,2004,final,South Australia,5297.508
+2004-05,2004,final,Western Australia,12977.798
+2004-05,2004,final,Australia,34670.877
+2005-06,2005,final,New South Wales,11981.269
+2005-06,2005,final,Victoria,6266.823
+2005-06,2005,final,Queensland,1433.413
+2005-06,2005,final,South Australia,7517.847
+2005-06,2005,final,Western Australia,13944.647
+2005-06,2005,final,Australia,41226.046
+2006-07,2006,final,New South Wales,3794.097
+2006-07,2006,final,Victoria,1747.9
+2006-07,2006,final,Queensland,924.215
+2006-07,2006,final,South Australia,2793.121
+2006-07,2006,final,Western Australia,8278.145
+2006-07,2006,final,Australia,17580.385
+2007-08,2007,final,New South Wales,3999.205
+2007-08,2007,final,Victoria,4691.657
+2007-08,2007,final,Queensland,1194.122
+2007-08,2007,final,South Australia,4705.722
+2007-08,2007,final,Western Australia,10760.504
+2007-08,2007,final,Australia,25415.201
+2008-09,2008,final,New South Wales,9438.381
+2008-09,2008,final,Victoria,3887.356
+2008-09,2008,final,Queensland,2325.569
+2008-09,2008,final,South Australia,4863.38
+2008-09,2008,final,Western Australia,13784.557
+2008-09,2008,final,Australia,34377.266
+2009-10,2009,final,New South Wales,7786.963
+2009-10,2009,final,Victoria,5889.084
+2009-10,2009,final,Queensland,1616.867
+2009-10,2009,final,South Australia,7035.461
+2009-10,2009,final,Western Australia,12943.035
+2009-10,2009,final,Australia,35343.283
+2010-11,2010,final,New South Wales,14783.65
+2010-11,2010,final,Victoria,7625.202
+2010-11,2010,final,Queensland,1820.613
+2010-11,2010,final,South Australia,9316.126
+2010-11,2010,final,Western Australia,8044.142
+2010-11,2010,final,Australia,41672.012
+2011-12,2011,final,New South Wales,11952.068
+2011-12,2011,final,Victoria,7351.99
+2011-12,2011,final,Queensland,2328.7
+2011-12,2011,final,South Australia,7371.481
+2011-12,2011,final,Western Australia,16600.456
+2011-12,2011,final,Australia,45672.773
+2012-13,2012,final,New South Wales,11123.416
+2012-13,2012,final,Victoria,6885.595
+2012-13,2012,final,Queensland,2156.003
+2012-13,2012,final,South Australia,6469.726
+2012-13,2012,final,Western Australia,11243.76
+2012-13,2012,final,Australia,37936.026
+2013-14,2013,final,New South Wales,9772.994
+2013-14,2013,final,Victoria,6774.044
+2013-14,2013,final,Queensland,1516.17
+2013-14,2013,final,South Australia,7221.299
+2013-14,2013,final,Western Australia,16510.983
+2013-14,2013,final,Australia,41880.733
+2014-15,2014,final,New South Wales,10444.88
+2014-15,2014,final,Victoria,5116.605
+2014-15,2014,final,Queensland,1463.68
+2014-15,2014,final,South Australia,7438.603
+2014-15,2014,final,Western Australia,14662.329
+2014-15,2014,final,Australia,39197.548
+2015-16,2015,final,New South Wales,11623.645
+2015-16,2015,final,Victoria,3567.704
+2015-16,2015,final,Queensland,2103.724
+2015-16,2015,final,South Australia,6103.567
+2015-16,2015,final,Western Australia,14206.024
+2015-16,2015,final,Australia,37686.737
+2016-17,2016,final,New South Wales,15510.259
+2016-17,2016,final,Victoria,9511.384
+2016-17,2016,final,Queensland,3159.24
+2016-17,2016,final,South Australia,10655.762
+2016-17,2016,final,Western Australia,17737.342
+2016-17,2016,final,Australia,56675.335
+2017-18,2017,final,New South Wales,7743.001
+2017-18,2017,final,Victoria,7612.277
+2017-18,2017,final,Queensland,1437.898
+2017-18,2017,final,South Australia,7022.001
+2017-18,2017,final,Western Australia,14510.294
+2017-18,2017,final,Australia,38395.55
+2018-19,2018,final,New South Wales,3243.472
+2018-19,2018,final,Victoria,4603.224
+2018-19,2018,final,Queensland,685.581
+2018-19,2018,final,South Australia,5486.945
+2018-19,2018,final,Western Australia,17632.799
+2018-19,2018,final,Australia,31736.71
+2019-20,2019,final,New South Wales,3194.948
+2019-20,2019,final,Victoria,8334.363
+2019-20,2019,final,Queensland,694.754
+2019-20,2019,final,South Australia,5533.155
+2019-20,2019,final,Western Australia,12172.222
+2019-20,2019,final,Australia,30002.894
+2020-21,2020,final,New South Wales,20332.159
+2020-21,2020,final,Victoria,9911.828
+2020-21,2020,final,Queensland,2392.115
+2020-21,2020,final,South Australia,7837.139
+2020-21,2020,final,Western Australia,16500.136
+2020-21,2020,final,Australia,57075.422
+2021-22,2021,final,New South Wales,18896.966
+2021-22,2021,final,Victoria,8879.372
+2021-22,2021,final,Queensland,3486.0
+2021-22,2021,final,South Australia,8408.374
+2021-22,2021,final,Western Australia,23440.231
+2021-22,2021,final,Australia,63221.504
+2022-23,2022,estimate,New South Wales,15515.16
+2022-23,2022,estimate,Victoria,11269.404
+2022-23,2022,estimate,Queensland,3364.012
+2022-23,2022,estimate,South Australia,12637.0
+2022-23,2022,estimate,Western Australia,26461.7
+2022-23,2022,estimate,Australia,69406.067
+2023-24,2023,estimate,New South Wales,11360.4
+2023-24,2023,estimate,Victoria,10767.298
+2023-24,2023,estimate,Queensland,1709.42
+2023-24,2023,estimate,South Australia,8723.0
+2023-24,2023,estimate,Western Australia,14825.0
+2023-24,2023,estimate,Australia,47533.725
+2024-25,2024,estimate,New South Wales,20464.2
+2024-25,2024,estimate,Victoria,7794.2
+2024-25,2024,estimate,Queensland,3803.44
+2024-25,2024,estimate,South Australia,5324.5
+2024-25,2024,estimate,Western Australia,22974.65
+2024-25,2024,estimate,Australia,60463.79
+2025-26,2025,estimate,New South Wales,18679.0
+2025-26,2025,estimate,Victoria,10108.4
+2025-26,2025,estimate,Queensland,3883.38
+2025-26,2025,estimate,South Australia,9082.62
+2025-26,2025,estimate,Western Australia,27159.0
+2025-26,2025,estimate,Australia,69115.4
+2026-27,2026,forecast,New South Wales,13096.0
+2026-27,2026,forecast,Victoria,11323.278
+2026-27,2026,forecast,Queensland,2188.4
+2026-27,2026,forecast,South Australia,11290.301
+2026-27,2026,forecast,Western Australia,22800.51
+2026-27,2026,forecast,Australia,60856.989

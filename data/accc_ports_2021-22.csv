@@ -1,0 +1,21 @@
+state,port,facilities,wheat_mt,barley_mt,canola_mt,other_mt,total_mt,lat,lon,coord_source,active_2021_22
+WA,Kwinana,1,3.67,1.33,1.02,0.18,6.2,-32.2394,115.7702,Natural Earth 10m populated places,True
+WA,Albany,1,1.34,1.5,0.72,0.14,3.69,-35.0317,117.8867,"Natural Earth 10m ports (""Albany"")",True
+WA,Geraldton,1,2.89,0.11,0.42,0.28,3.69,-28.7728,114.6007,"Natural Earth 10m ports (""Geraldton"")",True
+WA,Esperance,1,1.72,1.0,0.73,0.0,3.46,-33.8719,121.8934,"Natural Earth 10m ports (""Esperance"")",True
+SA,Port Adelaide,3,1.79,0.75,0.3,0.59,3.43,-34.7992,138.5079,"Natural Earth 10m ports (""Adelaide"")",True
+Vic,Geelong,2,1.45,1.03,0.66,0.13,3.28,-38.1267,144.3874,"Natural Earth 10m ports (""Geelong"")",True
+NSW,Port Kembla,2,2.18,0.2,0.84,0.0,3.22,-34.4625,150.8936,"Natural Earth 10m ports (""Port Kembla"")",True
+NSW,Newcastle,2,2.48,0.06,0.05,0.41,3.0,-32.9075,151.7691,"Natural Earth 10m ports (""Newcastle"")",True
+Qld,Brisbane,4,1.83,0.0,0.0,0.06,2.35,-27.3825,153.1684,"Natural Earth 10m ports (""Brisbane"")",True
+SA,Port Lincoln,1,1.02,0.36,0.17,0.06,1.61,-34.7183,135.8695,"Natural Earth 10m ports (""Port Lincoln"")",True
+Vic,Portland,3,0.79,0.18,0.37,0.23,1.56,-38.3492,141.6094,"Natural Earth 10m ports (""Portland"")",True
+Vic,Melbourne,1,1.02,0.12,0.08,0.0,1.21,-37.8328,144.9172,"Natural Earth 10m ports (""Melbourne"")",True
+WA,Bunbury,1,0.3,0.54,0.1,0.21,1.14,-33.3153,115.6512,"Natural Earth 10m ports (""Bunbury"")",True
+SA,Port Giles,1,0.41,0.22,0.02,0.16,0.81,-35.0231,137.7593,"Wikipedia, Port Giles, South Australia",True
+SA,Lucky Bay,1,0.48,0.08,0.0,0.0,0.56,-33.703,137.035,"Wikipedia, Lucky Bay, South Australia",True
+SA,Wallaroo,1,0.34,0.15,0.0,0.05,0.54,-33.9329,137.6333,Natural Earth 10m populated places,True
+Qld,Mackay,1,0.04,0.0,0.0,0.0,0.29,-21.1083,149.2237,"Natural Earth 10m ports (""Mackay"")",True
+Qld,Gladstone,1,0.07,0.0,0.0,0.0,0.27,-23.83,151.2518,"Natural Earth 10m ports (""Gladstone"")",True
+SA,Thevenard,1,0.24,0.02,0.0,0.0,0.26,-32.15,133.65,"Flinders Port Holdings, Port of Thevenard (32°09′S 133°39′E)",True
+SA,Port Pirie,1,0.0,0.0,0.0,0.0,0.0,-33.1769,138.0072,"Natural Earth 10m ports (""Port Pirie"")",False
