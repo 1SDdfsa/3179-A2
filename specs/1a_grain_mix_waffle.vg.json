@@ -1,0 +1,197 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "1a. Waffle chart: share of Australia's forecast 2026-27 grain harvest by crop. 100 squares, 1 square = 1% of total production. Squares are grouped into cereals, oilseeds and pulses. Source: ABARES Australian Crop Report, September 2026.",
+
+  "width": 540,
+  "height": 330,
+
+  "data": {
+    "url": "data/abares_state_crops.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"area_kha": "number", "production_kt": "number", "year_start": "number"}
+    }
+  },
+
+  "transform": [
+    {
+      "filter": "datum.state === 'Australia' && datum.year === '2026-27' && datum.crop !== 'Cotton lint'"
+    },
+    {
+      "calculate": "indexof(['Chickpeas', 'Faba beans', 'Field peas', 'Lentils', 'Lupins'], datum.crop) >= 0 ? 'Pulses' : indexof(['Canola', 'Cottonseed', 'Soybeans', 'Sunflower'], datum.crop) >= 0 ? 'Oilseeds' : 'Cereals'",
+      "as": "family"
+    },
+    {
+      "calculate": "indexof(['Wheat', 'Barley', 'Canola'], datum.crop) >= 0 ? datum.crop : datum.family === 'Pulses' ? 'Pulses' : 'Other ' + lower(datum.family)",
+      "as": "group"
+    },
+    {
+      "calculate": "indexof(['Wheat', 'Barley', 'Canola', 'Pulses'], datum.group) >= 0 ? datum.group : 'Other grains'",
+      "as": "crop_type"
+    },
+    {
+      "aggregate": [{"op": "sum", "field": "production_kt", "as": "production_kt"}],
+      "groupby": ["group", "crop_type", "family"]
+    },
+    {
+      "calculate": "indexof(['Wheat', 'Barley', 'Other cereals', 'Canola', 'Other oilseeds', 'Pulses'], datum.group)",
+      "as": "order"
+    },
+    {"joinaggregate": [{"op": "sum", "field": "production_kt", "as": "total_kt"}]},
+    {"calculate": "100 * datum.production_kt / datum.total_kt", "as": "share"},
+    {
+      "window": [{"op": "sum", "field": "share", "as": "cum_end"}],
+      "sort": [{"field": "order", "order": "ascending"}],
+      "frame": [null, 0]
+    },
+    {"calculate": "round(datum.cum_end - datum.share)", "as": "first_cell"},
+    {"calculate": "round(datum.cum_end)", "as": "end_cell"},
+    {"calculate": "datum.end_cell - datum.first_cell", "as": "squares"}
+  ],
+
+  "encoding": {
+    "x": {"type": "quantitative", "scale": {"domain": [0, 18], "nice": false, "zero": false}, "axis": null},
+    "y": {"type": "quantitative", "scale": {"domain": [0, 11], "nice": false, "zero": false, "reverse": true}, "axis": null}
+  },
+
+  "layer": [
+    {
+      "description": "THE SQUARES. One row of data per square, filled left to right, top to bottom.",
+      "transform": [
+        {"calculate": "sequence(datum.first_cell, datum.end_cell)", "as": "cell"},
+        {"flatten": ["cell"]},
+        {"calculate": "datum.cell % 10", "as": "col"},
+        {"calculate": "floor(datum.cell / 10)", "as": "row"},
+        {"calculate": "datum.col + 0.07", "as": "x0"},
+        {"calculate": "datum.col + 0.93", "as": "x1"},
+        {"calculate": "datum.row + 0.07", "as": "y0"},
+        {"calculate": "datum.row + 0.93", "as": "y1"},
+        {"calculate": "datum.production_kt / 1000", "as": "production_mt"},
+        {
+          "calculate": "datum.group === 'Other cereals' ? 'sorghum, oats, maize, rice, triticale' : datum.group === 'Other oilseeds' ? 'cottonseed, soybeans, sunflower' : datum.group === 'Pulses' ? 'lentils, lupins, chickpeas, faba beans, field peas' : lower(datum.group)",
+          "as": "includes"
+        }
+      ],
+      "params": [
+        {
+          "name": "pick",
+          "select": {"type": "point", "fields": ["crop_type"], "on": "pointerover", "clear": "pointerout"},
+          "bind": {"legend": "pointerover"}
+        }
+      ],
+      "mark": {"type": "rect", "cornerRadius": 2, "cursor": "pointer"},
+      "encoding": {
+        "x": {"field": "x0"},
+        "x2": {"field": "x1"},
+        "y": {"field": "y0"},
+        "y2": {"field": "y1"},
+        "color": {
+          "field": "crop_type",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": ["Wheat", "Barley", "Canola", "Pulses", "Other grains"],
+            "range": ["#E69F00", "#009E73", "#CC79A7", "#D55E00", "#A39E93"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "symbolType": "square",
+            "symbolSize": 160,
+            "symbolStrokeWidth": 0,
+            "columnPadding": 18,
+            "labelFontSize": 13,
+            "offset": 6
+          }
+        },
+        "stroke": {
+          "condition": {"param": "pick", "empty": false, "value": "#000"},
+          "field": "crop_type",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Wheat", "Barley", "Canola", "Pulses", "Other grains"],
+            "range": ["#9A6A00", "#00664A", "#9A4A7B", "#9A3F00", "#77736B"]
+          }
+        },
+        "strokeWidth": {"condition": {"param": "pick", "empty": false, "value": 2}, "value": 0.75},
+        "opacity": {"condition": {"param": "pick", "value": 1}, "value": 0.3},
+        "tooltip": [
+          {"field": "group", "type": "nominal", "title": "Crop"},
+          {"field": "includes", "type": "nominal", "title": "Includes"},
+          {"field": "production_mt", "type": "quantitative", "format": ".1f", "title": "Forecast harvest (million tonnes)"},
+          {"field": "share", "type": "quantitative", "format": ".1f", "title": "Share of all grain (%)"},
+          {"field": "squares", "type": "quantitative", "title": "Squares"}
+        ]
+      }
+    },
+
+    {
+      "description": "FAMILY BRACKETS AND LABELS on the right (cereals / oilseeds / pulses), as in the sketch.",
+      "transform": [
+        {
+          "aggregate": [
+            {"op": "min", "field": "first_cell", "as": "first_cell"},
+            {"op": "max", "field": "end_cell", "as": "end_cell"}
+          ],
+          "groupby": ["family"]
+        },
+        {"calculate": "datum.end_cell - datum.first_cell", "as": "squares"},
+        {"calculate": "datum.first_cell / 10 + 0.12", "as": "y_top"},
+        {"calculate": "datum.end_cell / 10 - 0.12", "as": "y_bottom"},
+        {"calculate": "(datum.first_cell + datum.end_cell) / 20", "as": "y_mid"},
+        {
+          "calculate": "datum.family === 'Oilseeds' ? datum.y_mid - 0.3 : datum.family === 'Pulses' ? datum.y_mid + 0.25 : datum.y_mid",
+          "as": "y_label"
+        },
+        {"calculate": "datum.family + '  ' + datum.squares + '%'", "as": "label"},
+        {
+          "calculate": "datum.family === 'Cereals' ? 'wheat, barley, sorghum, oats ...' : datum.family === 'Oilseeds' ? 'mostly canola' : 'lentils, lupins, chickpeas ...'",
+          "as": "note"
+        }
+      ],
+      "layer": [
+        {
+          "mark": {"type": "rule", "strokeWidth": 1.5, "color": "#555"},
+          "encoding": {
+            "x": {"datum": 10.3},
+            "y": {"field": "y_top"},
+            "y2": {"field": "y_bottom"}
+          }
+        },
+        {
+          "mark": {"type": "text", "align": "left", "baseline": "middle", "dy": -8, "fontSize": 14, "fontWeight": 600, "color": "#222"},
+          "encoding": {
+            "x": {"datum": 10.6},
+            "y": {"field": "y_label"},
+            "text": {"field": "label"}
+          }
+        },
+        {
+          "mark": {"type": "text", "align": "left", "baseline": "middle", "dy": 8, "fontSize": 12, "color": "#555"},
+          "encoding": {
+            "x": {"datum": 10.6},
+            "y": {"field": "y_label"},
+            "text": {"field": "note"}
+          }
+        }
+      ]
+    },
+
+    {
+      "description": "SCALE NOTE under the grid: what one square is worth.",
+      "transform": [
+        {"aggregate": [{"op": "max", "field": "total_kt", "as": "total_kt"}]},
+        {
+          "calculate": "'1 square = 1% of the harvest (about ' + format(round(datum.total_kt / 100 / 10) * 10 * 1000, ',') + ' tonnes)'",
+          "as": "note"
+        }
+      ],
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#555"},
+      "encoding": {
+        "x": {"datum": 0.07},
+        "y": {"datum": 10.45},
+        "text": {"field": "note"}
+      }
+    }
+  ]
+}

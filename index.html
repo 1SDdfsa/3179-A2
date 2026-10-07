@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paddock to Port: Where Australia's Grain Grows, and Where It Goes</title>
+  <meta name="description" content="A data story about Australian grain: what is grown, where, why there, and where it goes. FIT3179 Data Visualisation 2.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Vega, Vega-Lite and vega-embed, pinned to exact versions -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.33.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.23.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.29.0"></script>
+</head>
+
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <p class="kicker">Australian grain, 2026</p>
+      <h1>Paddock to Port</h1>
+      <p class="dek">Where Australia's grain grows, and where it goes</p>
+      <p class="byline">By [YOUR NAME] · [APPLIED CLASS] · [DATE]</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INTRODUCTION -->
+    <section class="intro wrap" id="intro">
+      <p class="lede">Follow one grain on its journey: from the paddock, through the rain that grows it and the harvest, to a port, and on to a kitchen overseas.</p>
+      <p>"Grain" here means three families of crops: <strong>cereals</strong> such as wheat and barley, <strong>oilseeds</strong> such as canola, and <strong>pulses</strong>, the dried seeds of peas and beans such as lentils and chickpeas.</p>
+    </section>
+
+    <!-- 1 · WHAT COUNTS AS A GRAIN -->
+    <section class="story wrap" id="s1">
+      <h2><span class="num">1</span>What counts as a grain</h2>
+
+      <div class="row">
+        <figure class="chart-figure">
+          <div id="chart-1a" class="chart" role="img" aria-label="Waffle chart of Australia's forecast 2026-27 grain harvest: about 79 per cent cereals, 13 per cent oilseeds and 8 per cent pulses. Wheat alone is 47 squares out of 100."></div>
+          <figcaption>
+            <span class="chart-id">1a</span>
+            Forecast production, 2026–27 season, winter and summer crops combined. Cotton lint is left out; cottonseed is counted as an oilseed.
+            Squares are rounded so they add up to exactly 100.
+            <span class="source">Source: ABARES, <cite>Australian Crop Report</cite>, September 2026 (CC BY 4.0).</span>
+          </figcaption>
+        </figure>
+
+        <aside class="note">
+          <p>Australia is forecast to harvest about <strong>64 million tonnes</strong> of grain in 2026–27.</p>
+          <p>It is <strong>mostly cereals</strong>, and wheat alone is nearly half of everything. Then comes canola, then pulses like lentils.</p>
+          <p class="hint">Hover over a square to see the crop and its tonnes. Hover over a colour in the key to pick out one crop.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 2 · WHERE IT GROWS -->
+    <section class="story wrap" id="s2">
+      <h2><span class="num">2</span>Where it grows</h2>
+      <div class="chart chart--todo" id="chart-2a" data-label="2a · Map 1 · wheat by SA2, 2024–25 (choropleth)"></div>
+      <div class="chart chart--todo" id="chart-2b" data-label="2b · winter crop by state, 2026–27 forecast (bars)"></div>
+    </section>
+
+    <!-- 3 · WHY THERE: THE RAIN -->
+    <section class="story wrap" id="s3">
+      <h2><span class="num">3</span>Why there: the rain</h2>
+      <div class="chart chart--todo" id="chart-3a" data-label="3a · average rain by month, four towns (radial bars)"></div>
+      <div class="chart chart--todo" id="chart-3b" data-label="3b · April–October rain vs wheat yield (scatterplots) + How to read it"></div>
+    </section>
+
+    <!-- 4 · THE GRAIN YEAR -->
+    <section class="story wrap" id="s4">
+      <h2><span class="num">4</span>The grain year</h2>
+      <div class="chart chart--todo" id="chart-4a" data-label="4a · wheat exports by month, 1996–2025 (heatmap)"></div>
+    </section>
+
+    <!-- 5 · BOOM AND BUST -->
+    <section class="story wrap" id="s5">
+      <h2><span class="num">5</span>Boom and bust</h2>
+      <div class="chart chart--todo" id="chart-5a" data-label="5a · national winter crop, 1989–90 to 2026–27 (annotated bars)"></div>
+      <div class="chart chart--todo" id="chart-5b" data-label="5b · winter crop by state (streamgraph)"></div>
+    </section>
+
+    <!-- 6 · WHAT WE GROW IS CHANGING -->
+    <section class="story wrap" id="s6">
+      <h2><span class="num">6</span>What we grow is changing</h2>
+      <div class="chart chart--todo" id="chart-6a" data-label="6a · crop rank by production (bump chart)"></div>
+      <div class="chart chart--todo" id="chart-6b" data-label="6b · area sown, 1989–90 vs 2026–27 (slope chart)"></div>
+    </section>
+
+    <!-- 7 · GETTING IT OUT -->
+    <section class="story wrap" id="s7">
+      <h2><span class="num">7</span>Getting it out</h2>
+      <div class="chart chart--todo" id="chart-7a" data-label="7a · Map 2 · bulk exports by port, 2021–22 (proportional symbols)"></div>
+      <div class="chart chart--todo" id="chart-7b" data-label="7b · wheat used at home vs exported (stacked bars)"></div>
+    </section>
+
+    <!-- 8 · WHO EATS IT -->
+    <section class="story wrap" id="s8">
+      <h2><span class="num">8</span>Who eats it</h2>
+      <div class="chart chart--todo" id="chart-8a" data-label="8a · Map 3 · export flows, 2024–25 (flow map)"></div>
+      <div class="chart chart--todo" id="chart-8b" data-label="8b · top buyers of Australian wheat, 2024–25 (bars)"></div>
+    </section>
+
+  </main>
+
+  <!-- 9 · WRAP-UP, CREDITS, SOURCES, AI DECLARATION -->
+  <footer class="wrap" id="s9">
+    <h2><span class="num">9</span>Three things to take away</h2>
+    <p class="todo-text">[Three takeaways go here.]</p>
+
+    <h3>Sources</h3>
+    <ul class="sources">
+      <li>ABARES 2026, <cite>Australian Crop Report: September quarter 2026</cite>, ABARES, Canberra. <a href="https://doi.org/10.25814/5s62-8a44">doi.org/10.25814/5s62-8a44</a>. CC BY 4.0.</li>
+      <li>[Remaining sources: see data/README.md.]</li>
+    </ul>
+
+    <h3>About this page</h3>
+    <p>Made by [YOUR NAME] for FIT3179 Data Visualisation, Monash University, [DATE]. Built with <a href="https://vega.github.io/vega-lite/">Vega-Lite</a>.</p>
+    <p class="todo-text">[AI declaration goes here.]</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
