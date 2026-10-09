@@ -53,9 +53,9 @@ const EMBED_OPTIONS = {
 // One line per chart: which <div> it goes in, and which spec file.
 // Add each new chart here as it is built.
 const CHARTS = [
-  { el: "#chart-1a", spec: "specs/1a_grain_mix_waffle.vg.json" }
-  // { el: "#chart-2a", spec: "specs/2a_map1_wheat_choropleth.vg.json" },
-  // { el: "#chart-2b", spec: "specs/2b_state_winter_bars.vg.json" },
+  { el: "#chart-1a", spec: "specs/1a_grain_mix_waffle.vg.json" },
+  { el: "#chart-2a", spec: "specs/2a_map1_wheat_choropleth.vg.json" },
+  { el: "#chart-2b", spec: "specs/2b_state_winter_bars.vg.json" }
   // { el: "#chart-3a", spec: "specs/3a_rain_radial.vg.json" },
   // { el: "#chart-3b", spec: "specs/3b_rain_yield_scatter.vg.json" },
   // { el: "#chart-4a", spec: "specs/4a_export_month_heatmap.vg.json" },
@@ -82,9 +82,30 @@ function embedChart({ el, spec }) {
     .then((result) => { views[el] = result.view; })
     .catch((err) => {
       console.error(`Chart ${el} (${spec}) failed:`, err);
-      target.innerHTML = `<p class="chart-error">This chart could not load (${spec}).</p>`;
+      const hint = location.protocol === "file:"
+        ? " The page was opened as a file. Run a local server (e.g. <code>python -m http.server</code>) and open <code>http://localhost:8000</code> instead."
+        : "";
+      target.innerHTML = `<p class="chart-error">This chart could not load (${spec}).${hint}</p>`;
     });
 }
 
+// ---------- Links between charts ----------
+
+// 2b -> 2a: clicking a state's bar highlights that state on Map 1.
+// 2b's click selection "pick_state" holds e.g. {region: ["Western Australia"]},
+// or nothing when cleared; Map 1 has a plain parameter "focus_state".
+function linkStateBarsToMap() {
+  const bars = views["#chart-2b"];
+  const map = views["#chart-2a"];
+  if (!bars || !map) return;
+
+  bars.addSignalListener("pick_state", (_name, value) => {
+    const picked = value && value.region && value.region.length ? value.region[0] : null;
+    map.signal("focus_state", picked).runAsync();
+  });
+}
+
 // Wait for the web fonts first, so Vega measures text with the right font.
-document.fonts.ready.then(() => Promise.all(CHARTS.map(embedChart)));
+document.fonts.ready
+  .then(() => Promise.all(CHARTS.map(embedChart)))
+  .then(linkStateBarsToMap);

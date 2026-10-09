@@ -1,0 +1,208 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "2a. MAP 1. Choropleth: tonnes of wheat grown per square kilometre in each SA2 (Statistical Area Level 2), 2024-25. Grey = no wheat recorded. Projection: Australian Albers (conic equal-area, centred on 132 degrees E). Source: ABS Broadacre Crops 2024-25 (levied production); ABS ASGS 2021 SA2 boundaries.",
+
+  "width": "container",
+  "height": 540,
+
+  "params": [
+    {
+      "name": "focus_state",
+      "value": null
+    }
+  ],
+
+  "projection": {
+    "type": "conicEqualArea",
+    "rotate": [-132, 0],
+    "parallels": [-18, -36],
+    "fit": {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [112.8, -25.5], [113.1, -26.3], [142.2, -9.0], [153.8, -28.6],
+          [146.8, -43.8], [115.0, -35.2], [129.0, -14.8], [150.0, -37.6]
+        ]
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "description": "BASE: every SA2 in light grey, so areas with no wheat read as 'no wheat recorded' rather than vanishing.",
+      "data": {
+        "url": "data/aus_sa2_states_2021.topojson",
+        "format": {"type": "topojson", "feature": "sa2"}
+      },
+      "transform": [{"calculate": "'none recorded'", "as": "wheat_note"}],
+      "mark": {"type": "geoshape", "fill": "#EEEEEE", "stroke": "#EEEEEE", "strokeWidth": 0.3, "clip": true},
+      "encoding": {
+        "opacity": {
+          "condition": {"test": "focus_state == null || datum.properties.state === focus_state", "value": 1},
+          "value": 0.3
+        },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "Area"},
+          {"field": "properties.state", "type": "nominal", "title": "State"},
+          {"field": "wheat_note", "type": "nominal", "title": "Wheat"}
+        ]
+      }
+    },
+
+    {
+      "description": "WHEAT: one shape per SA2 that grew wheat, coloured by tonnes per square kilometre.",
+      "data": {
+        "url": "data/abs_sa2_crops_2024-25.csv",
+        "format": {
+          "type": "csv",
+          "parse": {"sa2_code": "string", "area_ha": "number", "production_t": "number"}
+        }
+      },
+      "transform": [
+        {"filter": "datum.crop === 'Wheat' && datum.production_t > 0"},
+        {
+          "lookup": "sa2_code",
+          "from": {
+            "data": {
+              "url": "data/aus_sa2_states_2021.topojson",
+              "format": {"type": "topojson", "feature": "sa2"}
+            },
+            "key": "properties.code"
+          },
+          "as": "geo"
+        },
+        {"filter": "datum.geo != null"},
+        {"calculate": "datum.geo.properties.state", "as": "state_name"},
+        {"calculate": "datum.geo.properties.area_km2", "as": "land_km2"},
+        {"calculate": "datum.production_t / datum.land_km2", "as": "t_per_km2"},
+        {"calculate": "datum.area_ha > 0 ? datum.production_t / datum.area_ha : null", "as": "yield_t_ha"},
+        {
+          "calculate": "datum.t_per_km2 < 5 ? 'Under 5' : datum.t_per_km2 < 20 ? '5 to 20' : datum.t_per_km2 < 50 ? '20 to 50' : datum.t_per_km2 < 100 ? '50 to 100' : '100 or more'",
+          "as": "wheat_class"
+        }
+      ],
+      "params": [
+        {
+          "name": "hover_sa2",
+          "select": {"type": "point", "fields": ["sa2_code"], "on": "pointerover", "clear": "pointerout"}
+        }
+      ],
+      "mark": {"type": "geoshape", "clip": true},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "wheat_class",
+          "type": "ordinal",
+          "title": "Tonnes of wheat per km²",
+          "scale": {
+            "domain": ["Under 5", "5 to 20", "20 to 50", "50 to 100", "100 or more", "No wheat recorded"],
+            "range": ["#FFF1D6", "#F7C77B", "#E69F00", "#AE7500", "#7A4E00", "#EEEEEE"]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 0,
+            "legendY": 458,
+            "direction": "horizontal",
+            "columns": 3,
+            "symbolType": "square",
+            "symbolSize": 180,
+            "symbolStrokeColor": "#9A9A9A",
+            "symbolStrokeWidth": 0.5,
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "titlePadding": 6,
+            "columnPadding": 14,
+            "rowPadding": 6
+          }
+        },
+        "stroke": {
+          "condition": {"param": "hover_sa2", "empty": false, "value": "#000"},
+          "value": "#FFFFFF"
+        },
+        "strokeWidth": {
+          "condition": {"param": "hover_sa2", "empty": false, "value": 1.5},
+          "value": 0.3
+        },
+        "opacity": {
+          "condition": {"test": "focus_state == null || datum.state_name === focus_state", "value": 1},
+          "value": 0.3
+        },
+        "tooltip": [
+          {"field": "sa2_name", "type": "nominal", "title": "Area"},
+          {"field": "state_name", "type": "nominal", "title": "State"},
+          {"field": "production_t", "type": "quantitative", "format": ",", "title": "Wheat grown (tonnes)"},
+          {"field": "area_ha", "type": "quantitative", "format": ",", "title": "Wheat sown (hectares)"},
+          {"field": "t_per_km2", "type": "quantitative", "format": ",.1f", "title": "Tonnes per km² of land"},
+          {"field": "yield_t_ha", "type": "quantitative", "format": ".1f", "title": "Tonnes per hectare sown"}
+        ]
+      }
+    },
+
+    {
+      "description": "STATE OUTLINES on top, for orientation.",
+      "data": {
+        "url": "data/aus_sa2_states_2021.topojson",
+        "format": {"type": "topojson", "feature": "states"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "#8A857B", "strokeWidth": 0.7, "clip": true}
+    },
+
+    {
+      "description": "FOCUS OUTLINE: the state picked in chart 2b gets a black outline.",
+      "data": {
+        "url": "data/aus_sa2_states_2021.topojson",
+        "format": {"type": "topojson", "feature": "states"}
+      },
+      "transform": [{"filter": "focus_state != null && datum.properties.state === focus_state"}],
+      "mark": {"type": "geoshape", "fill": null, "stroke": "#000", "strokeWidth": 1.8, "clip": true}
+    },
+
+    {
+      "description": "ANNOTATIONS from the sketch. Each label sits on empty (grey) land, with a short leader line to the place it names.",
+      "data": {
+        "values": [
+          {"label": "the wheatbelt", "lon": 121.6, "lat": -27.3, "lon_to": 118.3, "lat_to": -30.6},
+          {"label": "Moree & the north-west", "lon": 145.0, "lat": -25.0, "lon_to": 149.3, "lat_to": -28.9}
+        ]
+      },
+      "layer": [
+        {
+          "mark": {"type": "rule", "color": "#555", "strokeWidth": 1},
+          "encoding": {
+            "longitude": {"field": "lon", "type": "quantitative"},
+            "latitude": {"field": "lat", "type": "quantitative"},
+            "longitude2": {"field": "lon_to"},
+            "latitude2": {"field": "lat_to"}
+          }
+        },
+        {
+          "mark": {"type": "circle", "size": 14, "color": "#222", "opacity": 1},
+          "encoding": {
+            "longitude": {"field": "lon_to", "type": "quantitative"},
+            "latitude": {"field": "lat_to", "type": "quantitative"}
+          }
+        },
+        {
+          "transform": [{"filter": "datum.label === 'the wheatbelt'"}],
+          "mark": {"type": "text", "align": "left", "baseline": "bottom", "dx": 2, "dy": -2, "fontSize": 14, "fontStyle": "italic", "color": "#222"},
+          "encoding": {
+            "longitude": {"field": "lon", "type": "quantitative"},
+            "latitude": {"field": "lat", "type": "quantitative"},
+            "text": {"field": "label"}
+          }
+        },
+        {
+          "transform": [{"filter": "datum.label !== 'the wheatbelt'"}],
+          "mark": {"type": "text", "align": "center", "baseline": "bottom", "dy": -3, "fontSize": 14, "fontStyle": "italic", "color": "#222"},
+          "encoding": {
+            "longitude": {"field": "lon", "type": "quantitative"},
+            "latitude": {"field": "lat", "type": "quantitative"},
+            "text": {"field": "label"}
+          }
+        }
+      ]
+    }
+  ]
+}
