@@ -190,6 +190,29 @@ cite { font-style: italic; }
   color: var(--ink-2);
 }
 
+/* Section 3: wide note, full-width figures, "How to read it" box */
+.note--wide { max-width: 760px; margin-bottom: 28px; }
+.chart-figure--full { width: 100%; margin-bottom: 36px; }
+.chart-figure--full figcaption { max-width: 760px; }
+
+.how-to-read {
+  max-width: 760px;
+  margin-top: 12px;
+  padding: 14px 18px;
+  border: 1.5px solid var(--ink);
+  border-radius: 6px;
+  font-size: 15.5px;
+}
+.how-to-read h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+.how-to-read p { margin: 0 0 8px; }
+.how-to-read p:last-child { margin-bottom: 0; }
+
 /* ---------- Placeholders for charts not built yet ---------- */
 /* Delete these once every chart is in. */
 

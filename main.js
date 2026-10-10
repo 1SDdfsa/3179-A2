@@ -8,7 +8,9 @@
 // Matches style.css so the charts and the page read as one.
 const VEGA_CONFIG = {
   background: null,                 // let the page colour show through
-  font: "Source Sans 3, Helvetica Neue, Arial, sans-serif",
+  // Font names are quoted: "Source Sans 3" ends in a number, and the canvas Vega
+  // uses to measure text rejects it unquoted (labels would then overlap).
+  font: "'Source Sans 3', 'Helvetica Neue', Arial, sans-serif",
   padding: 4,
   view: { stroke: null },           // no box around each chart
   text: { color: "#222", fontSize: 13 },
@@ -55,9 +57,9 @@ const EMBED_OPTIONS = {
 const CHARTS = [
   { el: "#chart-1a", spec: "specs/1a_grain_mix_waffle.vg.json" },
   { el: "#chart-2a", spec: "specs/2a_map1_wheat_choropleth.vg.json" },
-  { el: "#chart-2b", spec: "specs/2b_state_winter_bars.vg.json" }
-  // { el: "#chart-3a", spec: "specs/3a_rain_radial.vg.json" },
-  // { el: "#chart-3b", spec: "specs/3b_rain_yield_scatter.vg.json" },
+  { el: "#chart-2b", spec: "specs/2b_state_winter_bars.vg.json" },
+  { el: "#chart-3a", spec: "specs/3a_rain_radial.vg.json" },
+  { el: "#chart-3b", spec: "specs/3b_rain_yield_scatter.vg.json" }
   // { el: "#chart-4a", spec: "specs/4a_export_month_heatmap.vg.json" },
   // { el: "#chart-5a", spec: "specs/5a_winter_crop_bars.vg.json" },
   // { el: "#chart-5b", spec: "specs/5b_state_streamgraph.vg.json" },

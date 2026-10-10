@@ -1,0 +1,160 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "3a. Radial bar charts (small multiples): average rainfall in each month, 1991-2020, at four grain-belt towns. January is at the top and months run clockwise. Dark blue bars and the shaded wedge = April to October, the wheat growing season. Bar length uses a square-root scale so each wedge's area matches its rainfall. Source: Bureau of Meteorology, Climate Data Online.",
+
+  "data": {
+    "url": "data/bom_monthly_rainfall_4_stations.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"station": "string", "year": "number", "month": "number", "rain_mm": "number"}
+    }
+  },
+
+  "transform": [
+    {"filter": "datum.year >= 1991 && datum.year <= 2020"},
+    {
+      "aggregate": [
+        {"op": "mean", "field": "rain_mm", "as": "avg_mm"},
+        {"op": "count", "as": "n_years"}
+      ],
+      "groupby": ["town", "state", "month"]
+    },
+    {"calculate": "datum.month >= 4 && datum.month <= 10", "as": "in_season"},
+    {"calculate": "datum.in_season ? 'April to October (growing season)' : 'November to March'", "as": "season"},
+    {"calculate": "datum.in_season ? datum.avg_mm : 0", "as": "season_mm"},
+    {
+      "joinaggregate": [
+        {"op": "sum", "field": "avg_mm", "as": "annual_mm"},
+        {"op": "sum", "field": "season_mm", "as": "season_total_mm"}
+      ],
+      "groupby": ["town"]
+    },
+    {"calculate": "datum.season_total_mm / datum.annual_mm", "as": "season_share"},
+    {"calculate": "indexof(['Merredin', 'Minnipa', 'Horsham', 'Moree'], datum.town)", "as": "town_order"},
+    {
+      "calculate": "datum.town + ' ' + datum.state + '|' + format(datum.season_share, '.0%') + ' of rain in April–October'",
+      "as": "panel"
+    },
+    {
+      "calculate": "['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][datum.month - 1]",
+      "as": "month_name"
+    },
+    {"calculate": "datum.month - 1", "as": "slice_start"},
+    {"calculate": "datum.month", "as": "slice_end"}
+  ],
+
+  "facet": {
+    "field": "panel",
+    "type": "nominal",
+    "sort": {"field": "town_order", "op": "min", "order": "ascending"},
+    "title": null,
+    "header": {
+      "labelExpr": "split(datum.value, '|')",
+      "labelFontSize": 13,
+      "labelColor": "#222",
+      "labelPadding": 4
+    }
+  },
+  "columns": 4,
+  "spacing": 18,
+
+  "spec": {
+    "width": 190,
+    "height": 200,
+
+    "layer": [
+      {
+        "description": "SHADED WEDGE behind April to October (the growing season).",
+        "mark": {"type": "arc", "innerRadius": 16, "radius": 86},
+        "encoding": {
+          "theta": {"field": "slice_start", "type": "quantitative", "scale": {"domain": [0, 12], "range": [-0.2618, 6.0214]}},
+          "theta2": {"field": "slice_end"},
+          "fill": {
+            "condition": {"test": "datum.in_season", "value": "#EEEAE0"},
+            "value": "transparent"
+          }
+        }
+      },
+
+      {
+        "description": "REFERENCE RING at 50 mm, so bar lengths can be read.",
+        "transform": [
+          {"filter": "datum.month === 1"},
+          {"calculate": "50", "as": "ring_mm"}
+        ],
+        "mark": {"type": "arc", "theta": 0, "theta2": 6.2832, "fill": null, "stroke": "#B5B0A5", "strokeWidth": 0.8, "strokeDash": [2, 2]},
+        "encoding": {
+          "radius": {"field": "ring_mm", "type": "quantitative", "scale": {"type": "sqrt", "zero": true, "range": [16, 86]}}
+        }
+      },
+
+      {
+        "description": "THE BARS: one wedge per month, length = average rain.",
+        "params": [
+          {
+            "name": "hover_month",
+            "select": {"type": "point", "fields": ["month"], "on": "pointerover", "clear": "pointerout"}
+          }
+        ],
+        "mark": {"type": "arc", "innerRadius": 16, "padAngle": 0.03, "cursor": "pointer"},
+        "encoding": {
+          "theta": {"field": "slice_start", "type": "quantitative", "scale": {"domain": [0, 12], "range": [-0.2618, 6.0214]}},
+          "theta2": {"field": "slice_end"},
+          "radius": {
+            "field": "avg_mm",
+            "type": "quantitative",
+            "scale": {"type": "sqrt", "zero": true, "range": [16, 86]}
+          },
+          "fill": {
+            "field": "season",
+            "type": "nominal",
+            "title": null,
+            "scale": {
+              "domain": ["April to October (growing season)", "November to March"],
+              "range": ["#0072B2", "#A9CCE8"]
+            },
+            "legend": {"orient": "top", "direction": "horizontal", "symbolType": "square", "symbolSize": 160, "labelFontSize": 13, "labelLimit": 300, "columnPadding": 20, "offset": 8}
+          },
+          "stroke": {
+            "condition": {"param": "hover_month", "empty": false, "value": "#000"},
+            "value": null
+          },
+          "strokeWidth": {"value": 1.5},
+          "opacity": {
+            "condition": {"param": "hover_month", "value": 1},
+            "value": 0.3
+          },
+          "tooltip": [
+            {"field": "town", "type": "nominal", "title": "Town"},
+            {"field": "month_name", "type": "nominal", "title": "Month"},
+            {"field": "avg_mm", "type": "quantitative", "format": ".0f", "title": "Average rain (mm), 1991-2020"},
+            {"field": "n_years", "type": "quantitative", "title": "Years with a record"}
+          ]
+        }
+      },
+
+      {
+        "description": "LABELS: '50 mm' on the ring, and four month names around the outside.",
+        "transform": [
+          {"filter": "datum.month === 1 || datum.month === 4 || datum.month === 7 || datum.month === 10"},
+          {"calculate": "(datum.month - 1) * PI / 6", "as": "angle"},
+          {"calculate": "slice(datum.month_name, 0, 3)", "as": "label"}
+        ],
+        "mark": {"type": "text", "fontSize": 11, "color": "#555", "radius": 96},
+        "encoding": {
+          "theta": {"field": "angle", "type": "quantitative", "scale": null},
+          "text": {"field": "label"}
+        }
+      },
+
+      {
+        "transform": [{"filter": "datum.month === 1 && datum.town === 'Merredin'"}],
+        "mark": {"type": "text", "text": "50 mm", "fontSize": 10, "color": "#8A857B", "align": "left", "dx": 3, "dy": -4},
+        "encoding": {
+          "theta": {"value": 0.62},
+          "radius": {"datum": 50, "scale": {"type": "sqrt", "zero": true, "range": [16, 86]}}
+        }
+      }
+    ]
+  }
+}

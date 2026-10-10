@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "3b. Scatterplots (small multiples), one per state: each dot is one season. Across = April-October rain at one grain-belt town in that state (BoM); up = that state's wheat yield, tonnes per hectare sown (ABARES). Rain in year Y is matched to the crop sown that year (ABARES season Y-(Y+1)). Only years with all seven months of rain recorded are shown; the 2026-27 forecast is left out.",
+
+  "data": {
+    "url": "data/bom_monthly_rainfall_4_stations.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"station": "string", "year": "number", "month": "number", "rain_mm": "number"}
+    }
+  },
+
+  "transform": [
+    {"filter": "datum.month >= 4 && datum.month <= 10"},
+    {
+      "aggregate": [
+        {"op": "sum", "field": "rain_mm", "as": "season_rain_mm"},
+        {"op": "count", "as": "months_recorded"}
+      ],
+      "groupby": ["town", "state", "year"]
+    },
+    {"filter": "datum.months_recorded === 7"},
+    {"calculate": "datum.state + '-' + datum.year", "as": "key"},
+    {
+      "lookup": "key",
+      "from": {
+        "data": {
+          "url": "data/abares_wheat_by_state.csv",
+          "format": {
+            "type": "csv",
+            "parse": {"year_start": "number", "area_kha": "number", "production_kt": "number"}
+          }
+        },
+        "key": "key",
+        "fields": ["state", "year", "status", "area_kha", "production_kt"]
+      },
+      "as": ["state_name", "crop_year", "status", "area_kha", "production_kt"]
+    },
+    {"filter": "datum.production_kt != null && datum.area_kha > 0 && datum.status !== 'forecast'"},
+    {"calculate": "datum.production_kt / datum.area_kha", "as": "yield_t_ha"},
+    {"calculate": "indexof(['WA', 'SA', 'Vic', 'NSW'], datum.state)", "as": "panel_order"},
+    {"calculate": "datum.state_name + '|rain at ' + datum.town", "as": "panel"},
+    {"calculate": "datum.status === 'estimate' ? datum.crop_year + ' (estimate)' : datum.crop_year", "as": "season_label"}
+  ],
+
+  "facet": {
+    "field": "panel",
+    "type": "nominal",
+    "sort": {"field": "panel_order", "op": "min", "order": "ascending"},
+    "title": null,
+    "header": {
+      "labelExpr": "split(datum.value, '|')",
+      "labelFontSize": 13,
+      "labelColor": "#222",
+      "labelPadding": 6
+    }
+  },
+  "columns": 4,
+  "spacing": 22,
+  "resolve": {"scale": {"x": "independent"}, "axis": {"x": "independent"}},
+
+  "spec": {
+    "width": 180,
+    "height": 180,
+
+    "params": [
+      {
+        "name": "hover_year",
+        "select": {"type": "point", "fields": ["year"], "on": "pointerover", "clear": "pointerout"}
+      }
+    ],
+
+    "mark": {"type": "circle", "size": 46, "cursor": "pointer"},
+
+    "encoding": {
+      "x": {
+        "field": "season_rain_mm",
+        "type": "quantitative",
+        "title": "April–October rain (mm) →",
+        "scale": {"zero": true, "nice": true},
+        "axis": {"tickCount": 4, "grid": false, "titleFontWeight": 400, "titleColor": "#555"}
+      },
+      "y": {
+        "field": "yield_t_ha",
+        "type": "quantitative",
+        "title": "↑ Wheat (tonnes per hectare)",
+        "scale": {"domain": [0, 4]},
+        "axis": {"tickCount": 4, "titleFontWeight": 400, "titleColor": "#555"}
+      },
+      "color": {"value": "#0072B2"},
+      "stroke": {
+        "condition": {"param": "hover_year", "empty": false, "value": "#000"},
+        "value": "#FFFFFF"
+      },
+      "strokeWidth": {
+        "condition": {"param": "hover_year", "empty": false, "value": 2},
+        "value": 0.6
+      },
+      "size": {
+        "condition": {"param": "hover_year", "empty": false, "value": 110},
+        "value": 46
+      },
+      "opacity": {
+        "condition": {"param": "hover_year", "value": 0.85},
+        "value": 0.2
+      },
+      "tooltip": [
+        {"field": "season_label", "type": "nominal", "title": "Season"},
+        {"field": "town", "type": "nominal", "title": "Town"},
+        {"field": "season_rain_mm", "type": "quantitative", "format": ".0f", "title": "April–October rain (mm)"},
+        {"field": "state_name", "type": "nominal", "title": "State"},
+        {"field": "yield_t_ha", "type": "quantitative", "format": ".2f", "title": "Wheat yield (t per hectare)"}
+      ]
+    }
+  }
+}
