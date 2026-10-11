@@ -59,10 +59,10 @@ const CHARTS = [
   { el: "#chart-2a", spec: "specs/2a_map1_wheat_choropleth.vg.json" },
   { el: "#chart-2b", spec: "specs/2b_state_winter_bars.vg.json" },
   { el: "#chart-3a", spec: "specs/3a_rain_radial.vg.json" },
-  { el: "#chart-3b", spec: "specs/3b_rain_yield_scatter.vg.json" }
-  // { el: "#chart-4a", spec: "specs/4a_export_month_heatmap.vg.json" },
-  // { el: "#chart-5a", spec: "specs/5a_winter_crop_bars.vg.json" },
-  // { el: "#chart-5b", spec: "specs/5b_state_streamgraph.vg.json" },
+  { el: "#chart-3b", spec: "specs/3b_rain_yield_scatter.vg.json" },
+  { el: "#chart-4a", spec: "specs/4a_export_month_heatmap.vg.json" },
+  { el: "#chart-5a", spec: "specs/5a_winter_crop_bars.vg.json" },
+  { el: "#chart-5b", spec: "specs/5b_state_streamgraph.vg.json" }
   // { el: "#chart-6a", spec: "specs/6a_crop_rank_bump.vg.json" },
   // { el: "#chart-6b", spec: "specs/6b_crop_area_slope.vg.json" },
   // { el: "#chart-7a", spec: "specs/7a_map2_port_symbols.vg.json" },

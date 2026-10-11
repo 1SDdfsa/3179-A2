@@ -213,6 +213,12 @@ cite { font-style: italic; }
 .how-to-read p { margin: 0 0 8px; }
 .how-to-read p:last-child { margin-bottom: 0; }
 
+/* Section 4: heatmap beside its note */
+.chart-figure--heatmap { flex: 1 1 520px; max-width: 640px; }
+.chart-figure--heatmap .chart { width: 100%; }
+.chart-figure--full .chart { width: 100%; }
+figcaption .hint { display: block; margin-top: 4px; font-style: italic; }
+
 /* ---------- Placeholders for charts not built yet ---------- */
 /* Delete these once every chart is in. */
 

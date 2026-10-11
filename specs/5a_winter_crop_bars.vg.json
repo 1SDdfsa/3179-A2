@@ -1,0 +1,134 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "5a. Bar chart: Australia's total winter crop production each season, 1989-90 to 2026-27, in million tonnes. The 2026-27 bar is a forecast (lighter fill, dashed outline). Labels mark the record and lowest seasons. Source: ABARES Australian Crop Report, September 2026, Table 1.",
+
+  "width": "container",
+  "height": 280,
+
+  "data": {
+    "url": "data/abares_winter_production.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"year_start": "number", "production_kt": "number"}
+    }
+  },
+
+  "transform": [
+    {"filter": "datum.region === 'Australia'"},
+    {"calculate": "datum.production_kt / 1000", "as": "production_mt"},
+    {"calculate": "replace(datum.year, '-', '–')", "as": "season"},
+    {
+      "calculate": "datum.status === 'forecast' ? 'ABARES forecast' : datum.status === 'estimate' ? 'ABARES estimate' : 'Final'",
+      "as": "status_label"
+    },
+    {"joinaggregate": [
+      {"op": "max", "field": "production_mt", "as": "max_mt"},
+      {"op": "min", "field": "production_mt", "as": "min_mt"}
+    ]},
+    {
+      "calculate": "datum.production_mt === datum.max_mt ? 'record ' + datum.season : datum.production_mt === datum.min_mt ? 'lowest ' + datum.season : datum.status === 'forecast' ? datum.season + ' forecast' : ''",
+      "as": "note"
+    }
+  ],
+
+  "encoding": {
+    "x": {
+      "field": "year_start",
+      "type": "ordinal",
+      "title": null,
+      "scale": {"paddingInner": 0.18},
+      "axis": {
+        "labelExpr": "datum.value % 5 === 0 ? datum.value + '–' + slice(toString(datum.value + 1), 2) : ''",
+        "labelAngle": 0,
+        "ticks": false,
+        "domainColor": "#999",
+        "labelFontSize": 12
+      }
+    },
+    "y": {
+      "field": "production_mt",
+      "type": "quantitative",
+      "title": "Million tonnes",
+      "scale": {"domain": [0, 80]},
+      "axis": {"tickCount": 4, "titleFontWeight": 400, "titleColor": "#555", "domain": false, "ticks": false}
+    }
+  },
+
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "hover_season",
+          "select": {"type": "point", "fields": ["year_start"], "on": "pointerover", "clear": "pointerout"}
+        }
+      ],
+      "mark": {"type": "bar", "cornerRadiusEnd": 1.5, "cursor": "pointer"},
+      "encoding": {
+        "fill": {
+          "condition": {"test": "datum.status === 'forecast'", "value": "#C9C9C9"},
+          "value": "#4D4D4D"
+        },
+        "stroke": {
+          "condition": [
+            {"param": "hover_season", "empty": false, "value": "#000"},
+            {"test": "datum.status === 'forecast'", "value": "#4D4D4D"}
+          ],
+          "value": null
+        },
+        "strokeWidth": {
+          "condition": {"param": "hover_season", "empty": false, "value": 2},
+          "value": 1.2
+        },
+        "strokeDash": {
+          "condition": {"test": "datum.status === 'forecast'", "value": [3, 2]},
+          "value": [1, 0]
+        },
+        "opacity": {
+          "condition": {"param": "hover_season", "value": 1},
+          "value": 0.3
+        },
+        "tooltip": [
+          {"field": "season", "type": "nominal", "title": "Season"},
+          {"field": "production_mt", "type": "quantitative", "format": ".1f", "title": "Winter crop (million tonnes)"},
+          {"field": "status_label", "type": "nominal", "title": "Figure"}
+        ]
+      }
+    },
+    {
+      "description": "ANNOTATION from the sketch: the record season, just above its bar.",
+      "transform": [{"filter": "datum.production_mt === datum.max_mt"}],
+      "mark": {"type": "text", "align": "center", "baseline": "bottom", "dy": -5, "fontSize": 12.5, "color": "#222"},
+      "encoding": {"text": {"field": "note"}}
+    },
+    {
+      "description": "ANNOTATION from the sketch: the lowest season. Its neighbours are taller, so the label sits above them with a short line down to the bar.",
+      "transform": [
+        {"filter": "datum.production_mt === datum.min_mt"},
+        {"calculate": "datum.min_mt + 15", "as": "label_mt"},
+        {"calculate": "datum.min_mt + 1", "as": "line_bottom_mt"}
+      ],
+      "layer": [
+        {
+          "mark": {"type": "rule", "stroke": "#555", "strokeWidth": 1},
+          "encoding": {"y": {"field": "line_bottom_mt", "type": "quantitative"}, "y2": {"field": "label_mt"}}
+        },
+        {
+          "mark": {"type": "text", "align": "center", "baseline": "bottom", "dy": -3, "fontSize": 12.5, "color": "#222"},
+          "encoding": {"y": {"field": "label_mt", "type": "quantitative"}, "text": {"field": "note"}}
+        }
+      ]
+    },
+    {
+      "description": "ANNOTATION: the forecast, in the top corner above the last bar (the bar before it is taller).",
+      "transform": [
+        {"filter": "datum.status === 'forecast'"},
+        {"calculate": "[datum.season, 'forecast']", "as": "note_lines"}
+      ],
+      "mark": {"type": "text", "align": "right", "baseline": "top", "dx": 8, "fontSize": 12.5, "color": "#555", "lineHeight": 15},
+      "encoding": {
+        "y": {"datum": 80},
+        "text": {"field": "note_lines"}
+      }
+    }
+  ]
+}

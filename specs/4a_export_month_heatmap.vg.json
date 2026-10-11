@@ -1,0 +1,96 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "4a. Heatmap: for each calendar year 1996-2025 (rows), the share of that year's wheat exports shipped in each month (columns). Darker = a bigger share of the year's exports, by value. Source: ABS International Trade in Goods, SITC 041 wheat, A$ (not adjusted for inflation).",
+
+  "width": "container",
+  "height": 450,
+
+  "data": {
+    "url": "data/abs_exports_monthly_1995-2026.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"month": "string", "sitc": "string", "value_aud_thousands": "number"}
+    }
+  },
+
+  "transform": [
+    {"filter": "datum.sitc === '041'"},
+    {"calculate": "toNumber(slice(datum.month, 0, 4))", "as": "year"},
+    {"calculate": "toNumber(slice(datum.month, 5, 7))", "as": "month_num"},
+    {"filter": "datum.year >= 1996 && datum.year <= 2025"},
+    {"joinaggregate": [{"op": "sum", "field": "value_aud_thousands", "as": "year_total"}], "groupby": ["year"]},
+    {"calculate": "datum.value_aud_thousands / datum.year_total", "as": "share"},
+    {"calculate": "datum.value_aud_thousands / 1000", "as": "value_aud_m"},
+    {
+      "calculate": "['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][datum.month_num - 1] + ' ' + datum.year",
+      "as": "month_label"
+    }
+  ],
+
+  "params": [
+    {
+      "name": "hover_cell",
+      "select": {"type": "point", "fields": ["year", "month_num"], "on": "pointerover", "clear": "pointerout"}
+    }
+  ],
+
+  "mark": {"type": "rect", "cursor": "pointer"},
+
+  "encoding": {
+    "x": {
+      "field": "month_num",
+      "type": "ordinal",
+      "title": null,
+      "scale": {"paddingInner": 0.06},
+      "axis": {
+        "orient": "top",
+        "labelExpr": "['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][datum.value - 1]",
+        "labelAngle": 0,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12
+      }
+    },
+    "y": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "scale": {"paddingInner": 0.08},
+      "axis": {
+        "labelExpr": "datum.value % 5 === 0 || datum.value === 1996 || datum.value === 2025 ? datum.value : ''",
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12
+      }
+    },
+    "color": {
+      "field": "share",
+      "type": "quantitative",
+      "title": ["Share of that year's", "wheat shipped"],
+      "scale": {
+        "domain": [0, 0.2],
+        "range": ["#FFF1D6", "#E69F00", "#7A4E00"],
+        "clamp": true
+      },
+      "legend": {
+        "format": ".0%",
+        "orient": "right",
+        "gradientLength": 180,
+        "gradientThickness": 12,
+        "values": [0, 0.05, 0.1, 0.15, 0.2],
+        "titleFontSize": 12,
+        "labelFontSize": 12
+      }
+    },
+    "stroke": {
+      "condition": {"param": "hover_cell", "empty": false, "value": "#000"},
+      "value": null
+    },
+    "strokeWidth": {"value": 1.5},
+    "tooltip": [
+      {"field": "month_label", "type": "nominal", "title": "Month"},
+      {"field": "share", "type": "quantitative", "format": ".1%", "title": "Share of that year's wheat exports"},
+      {"field": "value_aud_m", "type": "quantitative", "format": ",.0f", "title": "Wheat exported (A$ million)"}
+    ]
+  }
+}
