@@ -1,0 +1,154 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "5b. Streamgraph: the winter crop from 5a split by state, 1989-90 to 2026-27. Each band's thickness is that state's production in million tonnes; bands are stacked around a centre line. The last season (2026-27) is a forecast and is shown lighter. Hover a season to see every state's tonnes. Source: ABARES Australian Crop Report, September 2026, Table 1.",
+
+  "width": "container",
+  "height": 280,
+
+  "data": {
+    "url": "data/abares_winter_production.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"year_start": "number", "production_kt": "number"}
+    }
+  },
+
+  "transform": [
+    {"filter": "datum.region !== 'Australia'"},
+    {"calculate": "datum.production_kt / 1000", "as": "production_mt"},
+    {
+      "calculate": "{'Western Australia': 'WA', 'New South Wales': 'NSW', 'South Australia': 'SA', 'Victoria': 'Vic', 'Queensland': 'Qld'}[datum.region]",
+      "as": "state"
+    },
+    {"calculate": "indexof(['Queensland', 'Victoria', 'South Australia', 'New South Wales', 'Western Australia'], datum.region)", "as": "stack_order"},
+    {
+      "stack": "production_mt",
+      "groupby": ["year_start"],
+      "sort": [{"field": "stack_order", "order": "ascending"}],
+      "offset": "center",
+      "as": ["y_low", "y_high"]
+    }
+  ],
+
+  "encoding": {
+    "x": {
+      "field": "year_start",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": [1989, 2029.5], "nice": false, "zero": false},
+      "axis": {
+        "values": [1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025],
+        "labelExpr": "datum.value + '–' + slice(toString(datum.value + 1), 2)",
+        "grid": false,
+        "ticks": false,
+        "domainColor": "#999",
+        "labelFontSize": 12
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "description": "THE STREAMS: one band per state.",
+      "mark": {"type": "area", "interpolate": "monotone", "stroke": "#FFFFFF", "strokeWidth": 0.6},
+      "encoding": {
+        "y": {"field": "y_low", "type": "quantitative", "axis": null, "scale": {"domain": [-4, 72]}},
+        "y2": {"field": "y_high"},
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": ["Western Australia", "New South Wales", "South Australia", "Victoria", "Queensland", "Tasmania"],
+            "range": ["#525252", "#6B6B6B", "#848484", "#9D9D9D", "#BDBDBD", "#D4D4D4"]
+          }
+        }
+      }
+    },
+
+    {
+      "description": "FORECAST: the 2025-26 to 2026-27 stretch is washed out with the page colour and marked with a dashed line.",
+      "data": {"values": [{"from": 2025, "to": 2026, "label": "forecast"}]},
+      "layer": [
+        {
+          "mark": {"type": "rect", "fill": "#FBFAF6", "opacity": 0.55},
+          "encoding": {"x": {"field": "from", "type": "quantitative"}, "x2": {"field": "to"}}
+        },
+        {
+          "mark": {"type": "rule", "stroke": "#555", "strokeDash": [3, 2], "strokeWidth": 1},
+          "encoding": {"x": {"field": "to", "type": "quantitative"}}
+        },
+        {
+          "mark": {"type": "text", "align": "right", "baseline": "top", "dx": -3, "dy": 2, "fontSize": 11.5, "color": "#555"},
+          "encoding": {"x": {"field": "to", "type": "quantitative"}, "y": {"value": 0}, "text": {"field": "label"}}
+        }
+      ]
+    },
+
+    {
+      "description": "STATE LABELS at the right-hand end of each band, as in the sketch.",
+      "transform": [
+        {"filter": "datum.year_start === 2026"},
+        {"calculate": "(datum.y_low + datum.y_high) / 2", "as": "y_mid"}
+      ],
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 8, "fontSize": 13, "fontWeight": 600, "color": "#222"},
+      "encoding": {
+        "y": {"field": "y_mid", "type": "quantitative"},
+        "text": {"field": "state"}
+      }
+    },
+
+    {
+      "description": "SCALE BAR: how thick 10 million tonnes is.",
+      "data": {"values": [{"x": 1989.6, "y0": 2, "y1": 12, "label": "10 Mt"}]},
+      "layer": [
+        {
+          "mark": {"type": "rule", "stroke": "#222", "strokeWidth": 2},
+          "encoding": {
+            "x": {"field": "x", "type": "quantitative"},
+            "y": {"field": "y0", "type": "quantitative"},
+            "y2": {"field": "y1"}
+          }
+        },
+        {
+          "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 5, "fontSize": 11.5, "color": "#555"},
+          "encoding": {
+            "x": {"field": "x", "type": "quantitative"},
+            "y": {"datum": 7},
+            "text": {"field": "label"}
+          }
+        }
+      ]
+    },
+
+    {
+      "description": "HOVER: one invisible rule per season; the nearest one shows, with every state's tonnes in the tooltip.",
+      "transform": [
+        {"pivot": "state", "value": "production_mt", "groupby": ["year_start", "year", "status"]},
+        {"calculate": "datum.WA + datum.NSW + datum.SA + datum.Vic + datum.Qld", "as": "five_states"},
+        {"calculate": "replace(datum.year, '-', '–') + (datum.status === 'forecast' ? ' (forecast)' : datum.status === 'estimate' ? ' (estimate)' : '')", "as": "season"}
+      ],
+      "params": [
+        {
+          "name": "hover_year",
+          "select": {"type": "point", "fields": ["year_start"], "nearest": true, "on": "pointerover", "clear": "pointerout"}
+        }
+      ],
+      "mark": {"type": "rule", "stroke": "#000", "strokeWidth": 1.2},
+      "encoding": {
+        "y": {"datum": -4, "type": "quantitative"},
+        "y2": {"datum": 72},
+        "opacity": {"condition": {"param": "hover_year", "empty": false, "value": 1}, "value": 0},
+        "tooltip": [
+          {"field": "season", "type": "nominal", "title": "Season"},
+          {"field": "WA", "type": "quantitative", "format": ".1f", "title": "Western Australia (Mt)"},
+          {"field": "NSW", "type": "quantitative", "format": ".1f", "title": "New South Wales (Mt)"},
+          {"field": "SA", "type": "quantitative", "format": ".1f", "title": "South Australia (Mt)"},
+          {"field": "Vic", "type": "quantitative", "format": ".1f", "title": "Victoria (Mt)"},
+          {"field": "Qld", "type": "quantitative", "format": ".1f", "title": "Queensland (Mt)"},
+          {"field": "five_states", "type": "quantitative", "format": ".1f", "title": "Five states (Mt)"}
+        ]
+      }
+    }
+  ]
+}
