@@ -1,0 +1,447 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "6b. Slope chart: area sown to five smaller crops in Australia, 1989-90 versus 2026-27, in thousand hectares. Canola, lentils and chickpeas grew from almost nothing; oats and lupins shrank. The 2026-27 end is a forecast (open circles). Source: ABARES Australian Crop Report, September 2026.",
+  "width": "container",
+  "height": 320,
+  "data": {
+    "url": "data/abares_state_crops.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year_start": "number",
+        "area_kha": "number",
+        "production_kt": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.state === 'Australia' && (datum.year_start === 1989 || datum.year_start === 2026) && indexof(['Canola', 'Lentils', 'Chickpeas', 'Oats', 'Lupins'], datum.crop) >= 0"
+    },
+    {
+      "calculate": "datum.crop === 'Canola' ? 'Canola' : datum.crop === 'Oats' ? 'Other grains' : 'Pulses'",
+      "as": "crop_type"
+    },
+    {
+      "calculate": "replace(datum.year, '-', '–')",
+      "as": "season"
+    },
+    {
+      "calculate": "datum.year_start === 1989 ? datum.area_kha : null",
+      "as": "a_start"
+    },
+    {
+      "calculate": "datum.year_start === 2026 ? datum.area_kha : null",
+      "as": "a_end"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "a_start",
+          "as": "area_1989"
+        },
+        {
+          "op": "max",
+          "field": "a_end",
+          "as": "area_2026"
+        }
+      ],
+      "groupby": [
+        "crop"
+      ]
+    },
+    {
+      "calculate": "datum.area_2026 - datum.area_1989",
+      "as": "change_kha"
+    },
+    {
+      "calculate": "datum.area_2026 >= datum.area_1989 ? 'grew' : 'shrank'",
+      "as": "direction"
+    },
+    {
+      "calculate": "format(datum.area_kha, datum.area_kha < 10 ? ',.1f' : ',.0f')",
+      "as": "area_label"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "season",
+      "type": "ordinal",
+      "title": null,
+      "sort": [
+        "1989–90",
+        "2026–27"
+      ],
+      "scale": {
+        "padding": 1.1
+      },
+      "axis": {
+        "orient": "top",
+        "labelAngle": 0,
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 13,
+        "labelFontWeight": 600,
+        "labelColor": "#222"
+      }
+    },
+    "y": {
+      "field": "area_kha",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          4000
+        ]
+      },
+      "axis": {
+        "values": [
+          0,
+          1000,
+          2000,
+          3000,
+          4000
+        ],
+        "labels": false,
+        "title": null,
+        "domain": false,
+        "ticks": false,
+        "gridDash": [
+          2,
+          3
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "description": "SLOPES: one line per crop from 1989-90 to 2026-27.",
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "color": {
+          "field": "crop_type",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Wheat",
+              "Barley",
+              "Canola",
+              "Pulses",
+              "Other grains"
+            ],
+            "range": [
+              "#E69F00",
+              "#009E73",
+              "#CC79A7",
+              "#D55E00",
+              "#A39E93"
+            ]
+          }
+        },
+        "detail": {
+          "field": "crop"
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hover_slope",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "length(data('hover_slope_store')) > 0",
+              "value": 0.15
+            }
+          ],
+          "value": 0.9
+        }
+      }
+    },
+    {
+      "description": "END POINTS. 2026-27 is a forecast, so those points are open circles.",
+      "params": [
+        {
+          "name": "hover_slope",
+          "select": {
+            "type": "point",
+            "fields": [
+              "crop"
+            ],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "shape": {
+          "value": "circle"
+        },
+        "fill": {
+          "condition": {
+            "test": "datum.status === 'forecast'",
+            "value": "#FBFAF6"
+          },
+          "field": "crop_type",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Wheat",
+              "Barley",
+              "Canola",
+              "Pulses",
+              "Other grains"
+            ],
+            "range": [
+              "#E69F00",
+              "#009E73",
+              "#CC79A7",
+              "#D55E00",
+              "#A39E93"
+            ]
+          }
+        },
+        "stroke": {
+          "condition": {
+            "param": "hover_slope",
+            "empty": false,
+            "value": "#000"
+          },
+          "field": "crop_type",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Wheat",
+              "Barley",
+              "Canola",
+              "Pulses",
+              "Other grains"
+            ],
+            "range": [
+              "#E69F00",
+              "#009E73",
+              "#CC79A7",
+              "#D55E00",
+              "#A39E93"
+            ]
+          },
+          "legend": null
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hover_slope",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "length(data('hover_slope_store')) > 0",
+              "value": 0.15
+            }
+          ],
+          "value": 1
+        },
+        "tooltip": [
+          {
+            "field": "crop",
+            "type": "nominal",
+            "title": "Crop"
+          },
+          {
+            "field": "area_1989",
+            "type": "quantitative",
+            "format": ",.1f",
+            "title": "Sown 1989–90 ('000 ha)"
+          },
+          {
+            "field": "area_2026",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Sown 2026–27, forecast ('000 ha)"
+          },
+          {
+            "field": "direction",
+            "type": "nominal",
+            "title": "Since 1989–90"
+          }
+        ]
+      }
+    },
+    {
+      "description": "RIGHT LABELS (2026-27): crop and area. Four crops end close together, so their labels are spread a little (nudge in pixels, turned into thousand hectares: 4000 over 320 px). Bold: the two big climbers.",
+      "transform": [
+        {
+          "filter": "datum.year_start === 2026"
+        },
+        {
+          "calculate": "{'Canola': 0, 'Lentils': -7, 'Oats': -4, 'Chickpeas': 3, 'Lupins': 11}[datum.crop]",
+          "as": "nudge_px"
+        },
+        {
+          "calculate": "datum.crop + '  ' + datum.area_label",
+          "as": "label"
+        },
+        {
+          "calculate": "datum.area_kha - datum.nudge_px * 4000 / 320",
+          "as": "y_label"
+        },
+        {
+          "filter": "datum.crop === 'Canola' || datum.crop === 'Lentils'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 13,
+        "color": "#222",
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        },
+        "y": {
+          "field": "y_label",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#222"
+        }
+      }
+    },
+    {
+      "description": "RIGHT LABELS (2026-27): crop and area. Four crops end close together, so their labels are spread a little (nudge in pixels, turned into thousand hectares: 4000 over 320 px). Regular weight: the other crops.",
+      "transform": [
+        {
+          "filter": "datum.year_start === 2026"
+        },
+        {
+          "calculate": "{'Canola': 0, 'Lentils': -7, 'Oats': -4, 'Chickpeas': 3, 'Lupins': 11}[datum.crop]",
+          "as": "nudge_px"
+        },
+        {
+          "calculate": "datum.crop + '  ' + datum.area_label",
+          "as": "label"
+        },
+        {
+          "calculate": "datum.area_kha - datum.nudge_px * 4000 / 320",
+          "as": "y_label"
+        },
+        {
+          "filter": "!(datum.crop === 'Canola' || datum.crop === 'Lentils')"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 13,
+        "color": "#222"
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        },
+        "y": {
+          "field": "y_label",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#222"
+        }
+      }
+    },
+    {
+      "description": "LEFT LABELS (1989-90) for the two crops that started big.",
+      "transform": [
+        {
+          "filter": "datum.year_start === 1989 && datum.area_kha >= 100"
+        },
+        {
+          "calculate": "datum.crop + '  ' + datum.area_label",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -10,
+        "fontSize": 13,
+        "color": "#222"
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "value": "#222"
+        }
+      }
+    },
+    {
+      "description": "LEFT LABEL for the three crops that started near zero (one shared label, so they don't pile up).",
+      "transform": [
+        {
+          "filter": "datum.year_start === 1989 && datum.area_kha < 100"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "count",
+              "as": "n"
+            }
+          ],
+          "groupby": [
+            "season"
+          ]
+        },
+        {
+          "calculate": "['Canola, chickpeas,', 'lentils: under 100']",
+          "as": "label"
+        },
+        {
+          "calculate": "30",
+          "as": "y_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": -10,
+        "dy": -2,
+        "fontSize": 12,
+        "color": "#555",
+        "lineHeight": 14
+      },
+      "encoding": {
+        "y": {
+          "field": "y_label",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "value": "#555"
+        }
+      }
+    }
+  ]
+}

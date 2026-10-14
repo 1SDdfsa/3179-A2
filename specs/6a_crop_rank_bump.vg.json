@@ -1,0 +1,377 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "6a. Bump chart: each crop's rank by production among all grain crops (every ABARES crop except cotton lint), every season 1989-90 to 2026-27. Rank 1 = the biggest crop that season. Shown: the eight biggest crops of 2026-27. Canola and lentils, the two big climbers, are drawn thicker. Open circles = 2026-27 forecast. Source: ABARES Australian Crop Report, September 2026.",
+  "width": "container",
+  "height": 320,
+  "data": {
+    "url": "data/abares_state_crops.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year_start": "number",
+        "area_kha": "number",
+        "production_kt": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.state === 'Australia' && datum.crop !== 'Cotton lint'"
+    },
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "rank"
+        }
+      ],
+      "groupby": [
+        "year_start"
+      ],
+      "sort": [
+        {
+          "field": "production_kt",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.year_start === 2026 ? datum.rank : null",
+      "as": "rank_2026"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "rank_2026",
+          "as": "final_rank"
+        }
+      ],
+      "groupby": [
+        "crop"
+      ]
+    },
+    {
+      "filter": "datum.final_rank <= 8"
+    },
+    {
+      "calculate": "datum.crop === 'Grain sorghum' ? 'Sorghum' : datum.crop",
+      "as": "crop_name"
+    },
+    {
+      "calculate": "indexof(['Wheat', 'Barley', 'Canola'], datum.crop) >= 0 ? datum.crop : indexof(['Chickpeas', 'Faba beans', 'Field peas', 'Lentils', 'Lupins'], datum.crop) >= 0 ? 'Pulses' : 'Other grains'",
+      "as": "crop_type"
+    },
+    {
+      "calculate": "datum.crop === 'Canola' || datum.crop === 'Lentils'",
+      "as": "climber"
+    },
+    {
+      "calculate": "replace(datum.year, '-', '–') + (datum.status === 'forecast' ? ' (forecast)' : datum.status === 'estimate' ? ' (estimate)' : '')",
+      "as": "season"
+    },
+    {
+      "calculate": "datum.production_kt / 1000",
+      "as": "production_mt"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year_start",
+      "type": "quantitative",
+      "title": null,
+      "scale": {
+        "domain": [
+          1988.3,
+          2031
+        ],
+        "nice": false,
+        "zero": false
+      },
+      "axis": {
+        "values": [
+          1990,
+          1995,
+          2000,
+          2005,
+          2010,
+          2015,
+          2020,
+          2025
+        ],
+        "labelExpr": "datum.value + '–' + slice(toString(datum.value + 1), 2)",
+        "grid": false,
+        "ticks": false,
+        "domainColor": "#999",
+        "labelFontSize": 12
+      }
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "title": null,
+      "scale": {
+        "domain": [
+          1,
+          16
+        ],
+        "reverse": true,
+        "nice": false,
+        "zero": false
+      },
+      "axis": {
+        "values": [
+          1,
+          4,
+          8,
+          12,
+          16
+        ],
+        "labelExpr": "'#' + datum.value",
+        "domain": false,
+        "ticks": false,
+        "gridDash": [
+          2,
+          3
+        ],
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "description": "LINES: one per crop. The two climbers are thick; the rest are thinner and paler until hovered.",
+      "mark": {
+        "type": "line",
+        "interpolate": "monotone",
+        "strokeCap": "round"
+      },
+      "encoding": {
+        "color": {
+          "field": "crop_type",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Wheat",
+              "Barley",
+              "Canola",
+              "Pulses",
+              "Other grains"
+            ],
+            "range": [
+              "#E69F00",
+              "#009E73",
+              "#CC79A7",
+              "#D55E00",
+              "#A39E93"
+            ]
+          }
+        },
+        "detail": {
+          "field": "crop"
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "datum.climber",
+            "value": 3.5
+          },
+          "value": 1.8
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hover_crop",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "length(data('hover_crop_store')) > 0",
+              "value": 0.12
+            },
+            {
+              "test": "datum.climber || datum.crop === 'Wheat' || datum.crop === 'Barley'",
+              "value": 1
+            }
+          ],
+          "value": 0.5
+        }
+      }
+    },
+    {
+      "description": "POINTS: one per crop per season; hovering near any point picks that crop. 2026-27 points are open circles (forecast).",
+      "params": [
+        {
+          "name": "hover_crop",
+          "select": {
+            "type": "point",
+            "fields": [
+              "crop"
+            ],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 16,
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "shape": {
+          "value": "circle"
+        },
+        "fill": {
+          "condition": {
+            "test": "datum.status === 'forecast'",
+            "value": "#FBFAF6"
+          },
+          "field": "crop_type",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Wheat",
+              "Barley",
+              "Canola",
+              "Pulses",
+              "Other grains"
+            ],
+            "range": [
+              "#E69F00",
+              "#009E73",
+              "#CC79A7",
+              "#D55E00",
+              "#A39E93"
+            ]
+          }
+        },
+        "stroke": {
+          "condition": {
+            "param": "hover_crop",
+            "empty": false,
+            "value": "#000"
+          },
+          "field": "crop_type",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Wheat",
+              "Barley",
+              "Canola",
+              "Pulses",
+              "Other grains"
+            ],
+            "range": [
+              "#E69F00",
+              "#009E73",
+              "#CC79A7",
+              "#D55E00",
+              "#A39E93"
+            ]
+          },
+          "legend": null
+        },
+        "opacity": {
+          "condition": [
+            {
+              "param": "hover_crop",
+              "empty": false,
+              "value": 1
+            },
+            {
+              "test": "length(data('hover_crop_store')) > 0",
+              "value": 0.12
+            },
+            {
+              "test": "datum.climber || datum.crop === 'Wheat' || datum.crop === 'Barley'",
+              "value": 1
+            }
+          ],
+          "value": 0.5
+        },
+        "tooltip": [
+          {
+            "field": "crop_name",
+            "type": "nominal",
+            "title": "Crop"
+          },
+          {
+            "field": "season",
+            "type": "nominal",
+            "title": "Season"
+          },
+          {
+            "field": "rank",
+            "type": "quantitative",
+            "title": "Rank (1 = biggest)"
+          },
+          {
+            "field": "production_mt",
+            "type": "quantitative",
+            "format": ",.2f",
+            "title": "Production (million tonnes)"
+          }
+        ]
+      }
+    },
+    {
+      "description": "LABELS at the right-hand end, in 2026-27 rank order, as in the sketch. Bold: the two big climbers.",
+      "transform": [
+        {
+          "filter": "datum.year_start === 2026"
+        },
+        {
+          "filter": "datum.climber"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 9,
+        "fontSize": 13,
+        "color": "#222",
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {
+          "field": "crop_name"
+        },
+        "color": {
+          "value": "#222"
+        }
+      }
+    },
+    {
+      "description": "LABELS at the right-hand end, in 2026-27 rank order, as in the sketch. Regular weight: the other crops.",
+      "transform": [
+        {
+          "filter": "datum.year_start === 2026"
+        },
+        {
+          "filter": "!(datum.climber)"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 9,
+        "fontSize": 13,
+        "color": "#222"
+      },
+      "encoding": {
+        "text": {
+          "field": "crop_name"
+        },
+        "color": {
+          "value": "#222"
+        }
+      }
+    }
+  ]
+}

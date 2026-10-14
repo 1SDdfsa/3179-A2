@@ -219,6 +219,12 @@ cite { font-style: italic; }
 .chart-figure--full .chart { width: 100%; }
 figcaption .hint { display: block; margin-top: 4px; font-style: italic; }
 
+/* Section 6: bump chart and slope chart side by side */
+.row--pair { gap: 40px; }
+.chart-figure--bump { flex: 1.5 1 520px; min-width: 0; }
+.chart-figure--slope { flex: 1 1 340px; min-width: 0; }
+.chart-figure--bump .chart, .chart-figure--slope .chart { width: 100%; }
+
 /* ---------- Placeholders for charts not built yet ---------- */
 /* Delete these once every chart is in. */
 
