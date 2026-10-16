@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "7b. Stacked bars: Australian wheat used at home (light, bottom) and exported (full wheat colour, top), each wheat marketing year (October to September), 2015-16 to 2024-25, in million tonnes. Home use is ABARES's figure for food, feed, seed and industry. 2022-23 onwards are ABARES estimates. Source: ABARES Australian Crop Report, September 2026, Table 15.",
+
+  "width": "container",
+  "height": 240,
+
+  "data": {
+    "url": "data/abares_supply_disposal.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"year_start": "number", "kt": "number", "sub_item": "string"}
+    }
+  },
+
+  "transform": [
+    {
+      "filter": "datum.crop === 'Wheat' && (datum.item === 'exports' || datum.item === 'domestic_use') && !datum.sub_item && datum.year_start >= 2015"
+    },
+    {"calculate": "datum.item === 'exports' ? 'Exported' : 'Used in Australia'", "as": "use"},
+    {"calculate": "datum.item === 'exports' ? 2 : 1", "as": "stack_order"},
+    {"calculate": "datum.kt / 1000", "as": "mt"},
+    {"joinaggregate": [{"op": "sum", "field": "mt", "as": "year_total_mt"}], "groupby": ["year_start"]},
+    {"calculate": "datum.mt / datum.year_total_mt", "as": "share"},
+    {"calculate": "replace(datum.year, '-', '–') + (datum.status === 'estimate' ? ' (estimate)' : '')", "as": "season"}
+  ],
+
+  "encoding": {
+    "x": {
+      "field": "year_start",
+      "type": "ordinal",
+      "title": "Wheat marketing year (October to September)",
+      "scale": {"paddingInner": 0.25},
+      "axis": {
+        "labelExpr": "datum.value % 2 === 1 ? datum.value + '–' + slice(toString(datum.value + 1), 2) : ''",
+        "labelAngle": 0,
+        "ticks": false,
+        "domainColor": "#999",
+        "labelFontSize": 12,
+        "titleFontWeight": 400,
+        "titleColor": "#555",
+        "titlePadding": 8
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "hover_year7b",
+          "select": {"type": "point", "fields": ["year_start"], "on": "pointerover", "clear": "pointerout"}
+        }
+      ],
+      "mark": {"type": "bar", "cursor": "pointer", "strokeWidth": 0.75},
+      "encoding": {
+        "y": {
+          "field": "mt",
+          "type": "quantitative",
+          "stack": "zero",
+          "title": "Million tonnes",
+          "scale": {"domain": [0, 42]},
+          "axis": {"tickCount": 4, "domain": false, "ticks": false, "titleFontWeight": 400, "titleColor": "#555"}
+        },
+        "order": {"field": "stack_order", "sort": "ascending"},
+        "fill": {
+          "field": "use",
+          "type": "nominal",
+          "legend": null,
+          "scale": {"domain": ["Exported", "Used in Australia"], "range": ["#E69F00", "#F5D699"]}
+        },
+        "stroke": {
+          "condition": {"param": "hover_year7b", "empty": false, "value": "#000"},
+          "value": "#9A6A00"
+        },
+        "opacity": {
+          "condition": {"param": "hover_year7b", "value": 1},
+          "value": 0.3
+        },
+        "tooltip": [
+          {"field": "season", "type": "nominal", "title": "Year (Oct–Sep)"},
+          {"field": "use", "type": "nominal", "title": "Wheat"},
+          {"field": "mt", "type": "quantitative", "format": ".1f", "title": "Million tonnes"},
+          {"field": "share", "type": "quantitative", "format": ".0%", "title": "Share of that year's wheat"}
+        ]
+      }
+    },
+
+    {
+      "description": "DIRECT LABELS next to the last bar, in place of a legend (as in the sketch).",
+      "transform": [
+        {"window": [{"op": "max", "field": "year_start", "as": "last_year"}], "frame": [null, null]},
+        {"filter": "datum.year_start === datum.last_year"},
+        {
+          "stack": "mt",
+          "groupby": ["year_start"],
+          "sort": [{"field": "stack_order", "order": "ascending"}],
+          "as": ["y_low", "y_high"]
+        },
+        {"calculate": "(datum.y_low + datum.y_high) / 2", "as": "y_mid"},
+        {"calculate": "datum.use === 'Exported' ? 'exported' : 'used here'", "as": "label"}
+      ],
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 22, "fontSize": 13, "color": "#222"},
+      "encoding": {
+        "y": {"field": "y_mid", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    }
+  ]
+}

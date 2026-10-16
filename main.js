@@ -64,9 +64,9 @@ const CHARTS = [
   { el: "#chart-5a", spec: "specs/5a_winter_crop_bars.vg.json" },
   { el: "#chart-5b", spec: "specs/5b_state_streamgraph.vg.json" },
   { el: "#chart-6a", spec: "specs/6a_crop_rank_bump.vg.json" },
-  { el: "#chart-6b", spec: "specs/6b_crop_area_slope.vg.json" }
-  // { el: "#chart-7a", spec: "specs/7a_map2_port_symbols.vg.json" },
-  // { el: "#chart-7b", spec: "specs/7b_wheat_use_vs_export.vg.json" },
+  { el: "#chart-6b", spec: "specs/6b_crop_area_slope.vg.json" },
+  { el: "#chart-7a", spec: "specs/7a_map2_port_symbols.vg.json" },
+  { el: "#chart-7b", spec: "specs/7b_wheat_use_vs_export.vg.json" }
   // { el: "#chart-8a", spec: "specs/8a_map3_export_flows.vg.json" },
   // { el: "#chart-8b", spec: "specs/8b_top_wheat_buyers.vg.json" }
 ];

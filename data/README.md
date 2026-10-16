@@ -12,7 +12,7 @@ Every file below is a **format conversion or subset** of a published source. No 
 | 2a | MAP 1 choropleth | `abs_sa2_crops_2024-25.csv` + `aus_sa2_states_2021.topojson` (object `sa2`) |
 | 2b | Bars by state | `abares_winter_production.csv` |
 | 3a | Radial rainfall | `bom_monthly_rainfall_4_stations.csv` |
-| 3b | Rain vs yield | `bom_monthly_rainfall_4_stations.csv` + `abares_state_crops.csv` |
+| 3b | Rain vs yield | `bom_monthly_rainfall_4_stations.csv` + `abares_wheat_by_state.csv` |
 | 4a | Export heatmap | `abs_exports_monthly_1995-2026.csv` |
 | 5a, 5b | Bars, streamgraph | `abares_winter_production.csv` |
 | 6a, 6b | Bump, slope | `abares_state_crops.csv` (state = Australia) |
@@ -29,6 +29,12 @@ Every file below is a **format conversion or subset** of a published source. No 
 - **How made:** the seven state/Australia sheets reshaped from wide (one column per year) to long. The flag stuck to each year label was moved into its own column.
 - **Columns:** `state, season (winter|summer), crop, year (e.g. 2024-25), year_start, status (final|estimate|forecast), area_kha ('000 ha), production_kt`
 - **Notes:** 1989-90 to 2026-27. `estimate` = ABARES "s", `forecast` = "f" (2026-27). Yield = production ÷ area planted (ABARES's own definition): compute it in the spec. Cotton area is harvested area. Includes cotton lint, which is not a grain: filter it out.
+
+## abares_wheat_by_state.csv
+- **Source:** extract of `abares_state_crops.csv` above (same ABARES report and licence).
+- **How made:** wheat rows only (all states and Australia, 1989-90 to 2026-27), values unchanged, plus a `key` column (`state_code-year_start`, e.g. `WA-1994`).
+- **Why:** chart 3b joins BoM rainfall to wheat yield with Vega-Lite's `lookup`, which needs one unique key column in the second dataset and cannot filter it.
+- **Columns:** `key, state, state_code (WA|NSW|SA|Vic|Qld|Tas|Aus), year, year_start, status, area_kha, production_kt`
 
 ## abares_winter_production.csv
 - **Source:** same report, "Crop Data Underpinning", Table 1 *Winter crop production, Australia, 1989–90 to 2026–27*.
@@ -76,6 +82,7 @@ Every file below is a **format conversion or subset** of a published source. No 
 - **How made:** the 2021-22 column of each facility × crop table. Facilities summed by port town for the map.
 - **Corrections (all listed in the `note` column):** dropped the Vic column "Riordan (Geelong and Portland)", which double-counts the two Riordan columns; relabelled "Pineknba BCS" → Pinkenba BCS and "Wagner BCS" → Pinkenba Wagner; four cells printed "<0.01" set to 0; "Graincorp" → GrainCorp.
 - **Check:** state sums match the report (WA 18.18, SA 7.21, Vic 6.05, NSW 6.22 vs 6.23 rounding, Qld 2.91 vs 2.90); national 40.57 Mt.
+- **Queensland split:** the Qld facility tables have no barley or canola columns, and `other_mt` there misses the rest of what Qld ships, so for Brisbane, Gladstone and Mackay the four crop columns add up to less than `total_mt` (`total_mt` is right: it matches the state total). Map 2 therefore works out "other grains" in the spec as `total_mt − wheat − barley − canola` for every port.
 - **Coordinates** (`lat, lon, coord_source`): Natural Earth 10m ports for 15 ports; Natural Earth populated places for Kwinana and Wallaroo; Wikipedia for Port Giles and Lucky Bay; Flinders Port Holdings for Thevenard.
 - **Notes:** bulk ship exports only (no containers), **Oct 2021 – Sep 2022 shipping year**, the last year the ACCC published. Port Pirie shipped nothing (`active_2021_22 = false`).
 
@@ -87,7 +94,8 @@ Every file below is a **format conversion or subset** of a published source. No 
 - **Notes:** gaps exist. For April–October totals, count the months and keep only years with all 7 (drops Moree 2017; Horsham 1994, 2001, 2003). Season year Y matches ABARES crop year Y–(Y+1).
 
 ## aus_sa2_states_2021.topojson
-- **Objects:** `sa2` (2,450 SA2s; properties `code, name, state`) and `states` (8 outlines dissolved from the SA2s).
+- **Objects:** `sa2` (2,450 SA2s; properties `code, name, state, area_km2`) and `states` (8 outlines dissolved from the SA2s).
+- **`area_km2`** (used by Map 1 for wheat per km²): in this provisional file it is calculated from the boundaries themselves (spherical area, Earth radius 6,371 km); the total, 7.70 million km², is within 0.1% of Australia's official area. The rebuild below replaces it with the ABS's own `AREASQKM21`.
 - **⚠ Provisional:** built from a public mirror of the ABS ASGS 2021 SA2 boundaries (`absmapsdata`, already simplified). **Before submitting, rebuild from the official ABS file** so the provenance is clean:
   1. Download https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files/SA2_2021_AUST_SHP_GDA2020.zip (CC BY 4.0) and unzip.
   2. Run (adjust the 3% until the file is ~600 KB):
@@ -95,8 +103,8 @@ Every file below is a **format conversion or subset** of a published source. No 
   mapshaper SA2_2021_AUST_GDA2020.shp \
     -filter '["Other Territories","Outside Australia"].indexOf(STE_NAME21) == -1' \
     -filter remove-empty \
-    -filter-fields SA2_CODE21,SA2_NAME21,STE_NAME21 \
-    -rename-fields code=SA2_CODE21,name=SA2_NAME21,state=STE_NAME21 \
+    -filter-fields SA2_CODE21,SA2_NAME21,STE_NAME21,AREASQKM21 \
+    -rename-fields code=SA2_CODE21,name=SA2_NAME21,state=STE_NAME21,area_km2=AREASQKM21 \
     -simplify 3% weighted keep-shapes -rename-layers sa2 \
     -dissolve state copy-fields=state + name=states \
     -o format=topojson quantization=1e5 target=sa2,states aus_sa2_states_2021.topojson
