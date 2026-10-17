@@ -66,9 +66,9 @@ const CHARTS = [
   { el: "#chart-6a", spec: "specs/6a_crop_rank_bump.vg.json" },
   { el: "#chart-6b", spec: "specs/6b_crop_area_slope.vg.json" },
   { el: "#chart-7a", spec: "specs/7a_map2_port_symbols.vg.json" },
-  { el: "#chart-7b", spec: "specs/7b_wheat_use_vs_export.vg.json" }
-  // { el: "#chart-8a", spec: "specs/8a_map3_export_flows.vg.json" },
-  // { el: "#chart-8b", spec: "specs/8b_top_wheat_buyers.vg.json" }
+  { el: "#chart-7b", spec: "specs/7b_wheat_use_vs_export.vg.json" },
+  { el: "#chart-8a", spec: "specs/8a_map3_export_flows.vg.json" },
+  { el: "#chart-8b", spec: "specs/8b_top_wheat_buyers.vg.json" }
 ];
 
 // Keep each chart's Vega view, so later charts can talk to each other
@@ -107,7 +107,24 @@ function linkStateBarsToMap() {
   });
 }
 
+// 8b -> 8a: hovering a buyer's bar rings that country on Map 3 and fades
+// the other flow lines. 8b's hover selection "hover_buyer" holds e.g.
+// {map_name: ["Indonesia"]}; Map 3 has a plain parameter "focus_country".
+function linkBuyersToFlowMap() {
+  const bars = views["#chart-8b"];
+  const map = views["#chart-8a"];
+  if (!bars || !map) return;
+
+  bars.addSignalListener("hover_buyer", (_name, value) => {
+    const picked = value && value.map_name && value.map_name.length ? value.map_name[0] : null;
+    map.signal("focus_country", picked).runAsync();
+  });
+}
+
 // Wait for the web fonts first, so Vega measures text with the right font.
 document.fonts.ready
   .then(() => Promise.all(CHARTS.map(embedChart)))
-  .then(linkStateBarsToMap);
+  .then(() => {
+    linkStateBarsToMap();
+    linkBuyersToFlowMap();
+  });

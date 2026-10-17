@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "8b. Horizontal bars: the ten biggest buyers of Australian wheat in 2024-25 (July to June), in million tonnes, largest first. Hover a bar to find that country on Map 3 (8a). Source: ABARES Agricultural Commodity Statistics 2024-25.",
+
+  "width": "container",
+  "height": 300,
+
+  "data": {
+    "url": "data/abares_exports_by_destination.csv",
+    "format": {"type": "csv", "parse": {"year_start": "number", "export_kt": "number"}}
+  },
+
+  "transform": [
+    {"filter": "datum.crop === 'Wheat' && datum.year === '2024-25'"},
+    {"calculate": "datum.destination === 'World' ? datum.export_kt : 0", "as": "world_kt"},
+    {"joinaggregate": [{"op": "sum", "field": "world_kt", "as": "wheat_total_kt"}]},
+    {"filter": "datum.destination !== 'World' && datum.map_name"},
+    {"window": [{"op": "row_number", "as": "buyer_rank"}], "sort": [{"field": "export_kt", "order": "descending"}]},
+    {"filter": "datum.buyer_rank <= 10"},
+    {"calculate": "datum.export_kt / 1000", "as": "export_mt"},
+    {"calculate": "datum.export_kt / datum.wheat_total_kt", "as": "share"},
+    {"calculate": "format(datum.export_mt, '.1f') + ' Mt'", "as": "label"}
+  ],
+
+  "encoding": {
+    "y": {
+      "field": "map_name",
+      "type": "nominal",
+      "title": null,
+      "sort": {"field": "buyer_rank", "op": "min", "order": "ascending"},
+      "axis": {"domain": false, "ticks": false, "labelFontSize": 13, "labelColor": "#222", "labelPadding": 8, "minExtent": 84}
+    },
+    "x": {
+      "field": "export_mt",
+      "type": "quantitative",
+      "title": null,
+      "axis": null,
+      "scale": {"domain": [0, 4.9]}
+    }
+  },
+
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "hover_buyer",
+          "select": {"type": "point", "fields": ["map_name"], "on": "pointerover", "clear": "pointerout"}
+        }
+      ],
+      "mark": {"type": "bar", "cornerRadiusEnd": 2, "height": {"band": 0.7}, "cursor": "pointer", "fill": "#E69F00"},
+      "encoding": {
+        "stroke": {
+          "condition": {"param": "hover_buyer", "empty": false, "value": "#000"},
+          "value": "#9A6A00"
+        },
+        "strokeWidth": {
+          "condition": {"param": "hover_buyer", "empty": false, "value": 2},
+          "value": 0.75
+        },
+        "opacity": {
+          "condition": {"param": "hover_buyer", "value": 1},
+          "value": 0.3
+        },
+        "tooltip": [
+          {"field": "destination", "type": "nominal", "title": "Buyer"},
+          {"field": "export_mt", "type": "quantitative", "format": ".2f", "title": "Wheat bought 2024–25 (million tonnes)"},
+          {"field": "share", "type": "quantitative", "format": ".1%", "title": "Share of Australia's wheat exports"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 6, "fontSize": 12.5, "color": "#555"},
+      "encoding": {"text": {"field": "label"}}
+    }
+  ]
+}

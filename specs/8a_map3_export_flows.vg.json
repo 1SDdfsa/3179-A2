@@ -1,0 +1,211 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "8a. MAP 3. Flow map: a straight line from Australia to every country that bought Australian grain in 2024-25 (July to June), one crop at a time. Line width = tonnes. Choose wheat, barley or canola with the buttons. Destinations ABARES lists only as 'Other' have no place on the map and are left out. Projection: Equal Earth, centred on 100 degrees E. Source: ABARES Agricultural Commodity Statistics 2024-25; country shapes and points from Natural Earth.",
+
+  "width": "container",
+  "height": 430,
+
+  "params": [
+    {
+      "name": "crop_pick",
+      "value": "Wheat",
+      "bind": {"input": "radio", "options": ["Wheat", "Barley", "Canola"], "name": "Show: "}
+    },
+    {
+      "name": "focus_country",
+      "value": null
+    }
+  ],
+
+  "projection": {
+    "type": "equalEarth",
+    "rotate": [-100, 0],
+    "fit": {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [[-8, 0], [179, 0], [100, 57], [100, -48], [20, -36], [8, 54], [174, -42]]
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "description": "BASE MAP: every country in a quiet grey.",
+      "data": {
+        "url": "data/world_countries_110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "mark": {"type": "geoshape", "fill": "#E9E6DF", "stroke": "#FFFFFF", "strokeWidth": 0.5, "clip": true}
+    },
+
+    {
+      "description": "FLOWS: one line per destination, from Australia's centre point to the destination's. Width = million tonnes. Biggest drawn first so thin lines stay visible on top.",
+      "data": {
+        "url": "data/abares_exports_by_destination.csv",
+        "format": {"type": "csv", "parse": {"year_start": "number", "export_kt": "number"}}
+      },
+      "transform": [
+        {"filter": "datum.year === '2024-25'"},
+        {"calculate": "datum.destination === 'World' ? datum.export_kt : 0", "as": "world_kt"},
+        {"joinaggregate": [{"op": "sum", "field": "world_kt", "as": "crop_total_kt"}], "groupby": ["crop"]},
+        {"filter": "datum.crop === crop_pick && datum.destination !== 'World' && datum.map_name && datum.export_kt > 0"},
+        {
+          "lookup": "map_name",
+          "from": {
+            "data": {"url": "data/destination_points.csv", "format": {"type": "csv", "parse": {"lat": "number", "lon": "number"}}},
+            "key": "map_name",
+            "fields": ["lat", "lon"]
+          }
+        },
+        {"calculate": "134.436", "as": "from_lon"},
+        {"calculate": "-24.499", "as": "from_lat"},
+        {"calculate": "datum.export_kt / 1000", "as": "export_mt"},
+        {"calculate": "datum.export_kt / datum.crop_total_kt", "as": "share"}
+      ],
+      "params": [
+        {
+          "name": "hover_flow",
+          "select": {"type": "point", "fields": ["map_name"], "on": "pointerover", "clear": "pointerout"}
+        }
+      ],
+      "mark": {"type": "rule", "strokeCap": "round", "cursor": "pointer", "clip": true},
+      "encoding": {
+        "longitude": {"field": "from_lon", "type": "quantitative"},
+        "latitude": {"field": "from_lat", "type": "quantitative"},
+        "longitude2": {"field": "lon"},
+        "latitude2": {"field": "lat"},
+        "strokeWidth": {
+          "field": "export_mt",
+          "type": "quantitative",
+          "title": "Million tonnes, 2024–25",
+          "scale": {"type": "linear", "zero": true, "domain": [0, 5.7], "range": [0, 16]},
+          "legend": {
+            "orient": "none",
+            "legendX": 0,
+            "legendY": 330,
+            "values": [0.5, 2, 4],
+            "format": ".1~f",
+            "symbolType": "stroke",
+            "symbolStrokeColor": "#555",
+            "titleFontSize": 13,
+            "labelFontSize": 12,
+            "titleLimit": 300
+          }
+        },
+        "color": {
+          "field": "crop",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": ["Wheat", "Barley", "Canola", "Pulses", "Other grains"],
+            "range": ["#E69F00", "#009E73", "#CC79A7", "#D55E00", "#A39E93"]
+          }
+        },
+        "opacity": {
+          "condition": [
+            {"param": "hover_flow", "empty": false, "value": 1},
+            {"test": "length(data('hover_flow_store')) > 0", "value": 0.25},
+            {"test": "focus_country != null && datum.map_name !== focus_country", "value": 0.2}
+          ],
+          "value": 0.85
+        },
+        "order": {"field": "export_kt", "sort": "descending"},
+        "tooltip": [
+          {"field": "destination", "type": "nominal", "title": "Buyer"},
+          {"field": "crop", "type": "nominal", "title": "Crop"},
+          {"field": "export_mt", "type": "quantitative", "format": ".2f", "title": "Exports 2024–25 (million tonnes)"},
+          {"field": "share", "type": "quantitative", "format": ".1%", "title": "Share of Australia's exports"}
+        ]
+      }
+    },
+
+    {
+      "description": "FOCUS: when a bar in chart 8b is hovered, a black ring marks that country (and the other lines fade).",
+      "data": {
+        "url": "data/abares_exports_by_destination.csv",
+        "format": {"type": "csv", "parse": {"year_start": "number", "export_kt": "number"}}
+      },
+      "transform": [
+        {"filter": "datum.year === '2024-25' && datum.crop === crop_pick && focus_country != null && datum.map_name === focus_country && datum.export_kt > 0"},
+        {
+          "lookup": "map_name",
+          "from": {
+            "data": {"url": "data/destination_points.csv", "format": {"type": "csv", "parse": {"lat": "number", "lon": "number"}}},
+            "key": "map_name",
+            "fields": ["lat", "lon"]
+          }
+        },
+        {"calculate": "134.436", "as": "from_lon"},
+        {"calculate": "-24.499", "as": "from_lat"}
+      ],
+      "mark": {"type": "circle", "size": 120, "fill": null, "stroke": "#000", "strokeWidth": 2},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"}
+      }
+    },
+
+    {
+      "description": "ORIGIN: Australia.",
+      "data": {"values": [{"name": "Australia", "lon": 134.436, "lat": -24.499}]},
+      "layer": [
+        {
+          "mark": {"type": "circle", "size": 70, "fill": "#222", "opacity": 1},
+          "encoding": {"longitude": {"field": "lon", "type": "quantitative"}, "latitude": {"field": "lat", "type": "quantitative"}}
+        },
+        {
+          "mark": {"type": "text", "align": "center", "baseline": "top", "dy": 8, "fontSize": 13, "fontWeight": 700, "color": "#222"},
+          "encoding": {"longitude": {"field": "lon", "type": "quantitative"}, "latitude": {"field": "lat", "type": "quantitative"}, "text": {"field": "name"}}
+        }
+      ]
+    },
+
+    {
+      "description": "LABELS for the biggest buyers of the chosen crop (top nine, at least 200 thousand tonnes). Countries that sit close together get their own nudge, in degrees. lon/lat come from a lookup, which leaves them as text, so they are turned into numbers before adding the nudge.",
+      "data": {
+        "url": "data/abares_exports_by_destination.csv",
+        "format": {"type": "csv", "parse": {"year_start": "number", "export_kt": "number"}}
+      },
+      "transform": [
+        {"filter": "datum.year === '2024-25' && datum.crop === crop_pick && datum.destination !== 'World' && datum.map_name && datum.export_kt >= 200"},
+        {"window": [{"op": "row_number", "as": "buyer_rank"}], "sort": [{"field": "export_kt", "order": "descending"}]},
+        {"filter": "datum.buyer_rank <= 9"},
+        {
+          "lookup": "map_name",
+          "from": {
+            "data": {"url": "data/destination_points.csv", "format": {"type": "csv", "parse": {"lat": "number", "lon": "number"}}},
+            "key": "map_name",
+            "fields": ["lat", "lon"]
+          }
+        },
+        {
+          "calculate": "{'Indonesia': [-2, -3.5], 'Malaysia': [-3.5, -1], 'Thailand': [-2.5, 1], 'Vietnam': [3, 1.5], 'Philippines': [2.5, 0], 'China': [0, 4], 'Japan': [2, 0], 'South Korea': [-1, 3.5], 'Taiwan': [2.5, -1], 'Yemen': [-2, -2.5], 'Saudi Arabia': [-3, 2], 'United Arab Emirates': [2, -2.5], 'Kuwait': [-2, 2.5], 'Belgium': [-3, 1], 'Netherlands': [-1, 4], 'Germany': [3, 1], 'France': [-3, -3], 'Pakistan': [-2, 3], 'Bangladesh': [2, -2.5], 'South Africa': [0, -4], 'New Zealand': [-2, 3]}[datum.map_name] || [2, 0]",
+          "as": "nudge"
+        },
+        {"calculate": "toNumber(datum.lon) + datum.nudge[0]", "as": "label_lon"},
+        {"calculate": "toNumber(datum.lat) + datum.nudge[1]", "as": "label_lat"},
+        {"calculate": "datum.nudge[0] < 0 ? 'right' : datum.nudge[0] > 0 ? 'left' : 'center'", "as": "side"},
+        {"calculate": "(datum.map_name === 'South Korea' ? 'Korea' : datum.map_name === 'United Arab Emirates' ? 'UAE' : datum.map_name) + ' ' + format(datum.export_kt / 1000, '.1f')", "as": "label"}
+      ],
+      "layer": [
+        {
+          "transform": [{"filter": "datum.side === 'left'"}],
+          "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#222"},
+          "encoding": {"longitude": {"field": "label_lon", "type": "quantitative"}, "latitude": {"field": "label_lat", "type": "quantitative"}, "text": {"field": "label"}}
+        },
+        {
+          "transform": [{"filter": "datum.side === 'right'"}],
+          "mark": {"type": "text", "align": "right", "baseline": "middle", "fontSize": 12, "color": "#222"},
+          "encoding": {"longitude": {"field": "label_lon", "type": "quantitative"}, "latitude": {"field": "label_lat", "type": "quantitative"}, "text": {"field": "label"}}
+        },
+        {
+          "transform": [{"filter": "datum.side === 'center'"}],
+          "mark": {"type": "text", "align": "center", "baseline": "middle", "fontSize": 12, "color": "#222"},
+          "encoding": {"longitude": {"field": "label_lon", "type": "quantitative"}, "latitude": {"field": "label_lat", "type": "quantitative"}, "text": {"field": "label"}}
+        }
+      ]
+    }
+  ]
+}

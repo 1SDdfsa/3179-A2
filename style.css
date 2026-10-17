@@ -225,6 +225,20 @@ figcaption .hint { display: block; margin-top: 4px; font-style: italic; }
 .chart-figure--slope { flex: 1 1 340px; min-width: 0; }
 .chart-figure--bump .chart, .chart-figure--slope .chart { width: 100%; }
 
+/* Section 8: buyers chart beside its note; crop buttons under Map 3 */
+.chart-figure--buyers { flex: 1 1 420px; max-width: 560px; }
+.chart-figure--buyers .chart { width: 100%; }
+
+.vega-bindings {
+  margin-top: 6px;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink);
+}
+.vega-bind-name { font-weight: 600; margin-right: 6px; }
+.vega-bind-radio label { margin-right: 14px; cursor: pointer; }
+.vega-bind-radio input { accent-color: #4D4D4D; margin-right: 4px; }
+
 /* ---------- Placeholders for charts not built yet ---------- */
 /* Delete these once every chart is in. */
 
